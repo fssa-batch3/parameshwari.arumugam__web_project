@@ -142,6 +142,5 @@ footer{
 }
 .links{
     display:flex;
-    flex-direction: column; 
-    justify-content: space-around;
+    flex-direction: column;
 }
