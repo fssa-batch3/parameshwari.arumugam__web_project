@@ -135,7 +135,7 @@ footer{
 .links a{
     display: flex;
     text-decoration: none;
-    justify-content:space-evenly;
+    justify-content:space-around;
     color: black;
    
 }
