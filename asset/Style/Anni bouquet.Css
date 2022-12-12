@@ -58,8 +58,7 @@ input{
 }
 .dropdown-menu{
     display: none;
-    position: absolute;
-   
+    position: absolute; 
     min-width:160px;
     z-index: 1;
 }
