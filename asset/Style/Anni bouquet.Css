@@ -61,6 +61,7 @@ input{
     position: absolute; 
     min-width:160px;
     z-index: 1;
+    background-color: white;
 }
 .dropdown-menu a{
     color: black;
