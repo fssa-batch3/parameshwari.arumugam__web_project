@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..\asset/Style/Buy Now.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+</head>
+<body>
+    <header>
+        <h5>Flowery Bouquet</h5> 
+        <div class="search">
+            <img src="..\asset\IMG/home page/search.png" alt="" width="13px" height="13px">
+            <input type="name" placeholder="Search" id="name"/>
+        </div> 
+        <div class="cart">
+           <span class="material-symbols-outlined">
+            account_circle
+           </span>
+           <span class="material-symbols-outlined">
+            add_shopping_cart
+           </span>
+        </div>
+    </header>
+    <div class="main">
+       <h1>Place your Order Now</h1>
+     <div class="for">
+         <label for="name"> Name<input type="text" id="ntext"></label><br><br>
+	     <label for="email">Email<input type="email" id="email"></label><br><br>
+	     <label for="number">Phone Number<input type="pnumber" id="pnumber"></label><br><br>
+	     <label for="name">Address<input type="text" id="aname"></label><br><br>
+           <div class="details">
+               <label for="text">Country<input type="text" id="text" ></label><br><br>
+	          <label for="text">state<input type="text" id="stext" required></label><br><br>
+               <label for="number">Pincode<input type="text" id="cnumber" required></label><br><br>
+           </div>
+     </div>
+      <h3>Payment method</h3>
+        <input type="radio" id="gpay" name="paymethod" value="gpay">
+        <label for="label">G pay</label><br>
+        <input type="radio" id="paytm" name="paymethod" value="paytm">
+        <label for="label">Paytm</label><br>
+        <input type="radio" id="phonepay" name="paymethod" value="phonepay">
+        <label for="label">Phone pay</label><br>
+        <input type="radio" id="delivery" name="paymethod" value="delivery">
+        <label for="label">Cash on delivery</label><br><br><br>
+	    <a href="Order.html"><button>Buy Now</button></a>
+    </div>
+</body>
+</html>

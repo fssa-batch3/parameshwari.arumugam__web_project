@@ -1,0 +1,152 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid rgb(204, 211, 211);
+    background-color: rgb(204, 218, 218);
+    height: 80px;
+    border-radius: 15px;
+}
+.search img{
+    position: absolute;
+    margin-top:10px;
+    margin-left:14%; 
+}
+h5{
+    font-size: 19px;
+    margin-left: 10px;
+   position: relative;
+   bottom: 9px;
+}
+.search{
+    margin-top: 20px;
+    margin-right:15px; 
+    color: black;
+   
+}
+input{
+    width: 500px;
+    height: 30px;
+    border-color: hotpink;   
+    background-color: hotpink;
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    margin-top:0px;
+    height: 40px;
+}
+.navbar a{
+    text-decoration: none;
+    margin-top: 10px;
+    font-size: 20px;
+    color: darkviolet;
+}
+.txt{
+    position:absolute;
+    margin-left:33%; 
+    font-size: 35px;
+    bottom:53%;
+    color:black;
+}
+#name{
+    text-align: center;
+
+}
+.cart{
+    margin-top: 20px;
+    display: inline-block;
+    padding: 2px 10px; 
+}
+#back{
+    margin-top: 10px;
+} 
+.first{
+    margin-top:40px;
+    background-color: rgb(210, 216, 222);
+    display: flex;
+    justify-content: space-around;
+    border-radius: 15px;
+}
+.second{
+    margin-top:20px;
+    background-color:  rgb(210, 216, 222);
+    display: flex;
+    justify-content: space-around;
+    border-radius: 15px;
+}
+.third{
+    margin-top:20px;
+    background-color:  rgb(210, 216, 222);
+    display: flex;
+    justify-content: space-around;
+    border-radius: 15px;
+}
+#flower{
+    margin-top: 30px;
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: lightslategray;
+    margin-top: 20px;
+    height: 400px;
+    border-radius: 15px;
+}
+.links a{
+    display: flex;
+    text-decoration: none;
+    justify-content:space-evenly;
+    color: black;
+   
+}
+.links{
+    display:flex;
+    flex-direction: column; 
+}
+.dropdown-menu{
+    display: none;
+    position: absolute;
+   
+    min-width:160px;
+    z-index: 1;
+}
+.dropdown-menu a{
+    color: black;
+    padding:5px 12px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown{
+   display: inline-block;
+   position: relative;
+}
+.dropbtn{ 
+ color:darkviolet;
+ padding:16px;
+ font-size:15px;
+ border: none;
+ background-color: white;
+}
+.dropdown:hover .dropdown-menu{
+   display: block;
+}
+h3{
+    font-size: 29px;
+}
+.color{
+    background-color:rgb(214, 208, 208);
+    width: 300px;
+    height:28%;
+    position: relative;
+    bottom: 30px;
+}
+
+#star{
+    color:goldenrod;   
+}
+.all{
+    position: relative;
+    bottom: 20px;
+    margin-left: 10px;
+}

@@ -1,0 +1,25 @@
+body{
+    background-color:white;
+
+}
+h1 {
+    color:black;
+    text-align: center;
+    margin-top: 22%;
+    font-size:100px;
+    position: relative;
+    bottom: 280px;
+    margin-left: 20px;
+}
+p{
+    text-align: center;
+    position: relative;
+    bottom:300px;
+    font-size:25px;
+}
+i{
+  font-size: 150px;  
+  color: darkgreen;
+  margin-left:45%;
+  margin-top: 20%;
+}
