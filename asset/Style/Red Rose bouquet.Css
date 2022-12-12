@@ -147,7 +147,7 @@ button{
 footer{
     display: flex;
     justify-content: space-around;
-    background-color:rgb(85, 85, 85);
+    background-color: lightslategray;
     margin-top: 80px;
     height: 400px;
     border-radius: 15px;
