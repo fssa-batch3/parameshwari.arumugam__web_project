@@ -5,7 +5,7 @@ h1 {
     color:black;
     text-align: center;
     margin-top: 22%;
-    font-size:100px;
+    font-size:80px;
     position: relative;
     bottom: 280px;
     margin-left: 20px;
@@ -23,7 +23,13 @@ i{
   margin-top: 20%;
 }
 a h6{
-  margin-left: 30%;
+  margin-left: 48%;
   position: relative;
-  bottom: 500px;
+  bottom: 330px;
+  color: black;
+  font-size: 25px;
+
+}
+a{
+  text-decoration: none;
 }
