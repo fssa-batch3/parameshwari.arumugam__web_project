@@ -112,6 +112,7 @@ h3{
 }
 .main-content img:hover{
     background-color: gray;
+    box-shadow: 3px 3px 3px;
 }
 .main-content1{
     margin-top:20px;
