@@ -110,6 +110,9 @@ h3{
     border-radius: 15px;
     
 }
+.main-content img:hover{
+    background-color: gray;
+}
 .main-content1{
     margin-top:20px;
     background-color:  rgb(210, 216, 222);
