@@ -1,9 +1,9 @@
 body{
     height:100px;
+   
 }
 .login{
-    background-color:antiquewhite;
-    border: 2px solid antiquewhite;
+    border: 2px solid black;
     width: 400px;
     height: 600px;
     text-align: center;

@@ -1,5 +1,5 @@
 body{
-    background-color:bisque;
+    background-color:white;
 }
 header{
     display: flex;
@@ -81,7 +81,7 @@ input{
  padding:16px;
  font-size:15px;
  border: none;
- background-color:bisque;
+ background-color:white;
 }
 .dropdown:hover .dropdown-menu{
    display: block;

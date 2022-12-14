@@ -36,17 +36,19 @@ input{
 }
 .navbar a{
     text-decoration: none;
-    margin-top: 10px;
-    font-size: 20px;
-    color: darkviolet;
+    margin-top: 12px;
+    font-size: 25px;
+    color: black;
+    font-style:oblique;
+    
 }
 .txt{
     position:absolute;
     margin-left:33%; 
     font-size: 35px;
-    bottom:50%;
+    bottom:48%;
     color:black;
-    font-style: italic;
+    font-style:normal;
 }
 .sample{
     margin-top: 5%;
@@ -72,7 +74,7 @@ input{
     padding: 2px 10px; 
 }
 #back{
-    margin-top: 10px;
+    margin-top: 40px;
     border-radius: 15px;
 } 
 footer{
@@ -120,11 +122,13 @@ footer{
     position: relative;
 }
 .dropbtn{ 
-  color:darkviolet;
+  color:black;
   padding:16px;
-  font-size:15px;
+  font-size:20px;
   border: none;
   background-color: white;
+  font-style:oblique;
+  
 }
 .dropdown:hover .dropdown-menu{
     display: block;
