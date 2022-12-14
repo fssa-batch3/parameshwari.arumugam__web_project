@@ -39,7 +39,6 @@ input{
     margin-top: 12px;
     font-size: 25px;
     color: black;
-    font-style:oblique;
     
 }
 .txt{
@@ -48,7 +47,7 @@ input{
     font-size: 35px;
     bottom:48%;
     color:black;
-    font-style:normal;
+    font-style:italic;
 }
 .sample{
     margin-top: 5%;
@@ -126,8 +125,7 @@ footer{
   padding:16px;
   font-size:20px;
   border: none;
-  background-color: white;
-  font-style:oblique;
+  background-color:white;
   
 }
 .dropdown:hover .dropdown-menu{
