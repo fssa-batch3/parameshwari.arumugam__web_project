@@ -16,12 +16,12 @@ body{
 #email{
     margin-top: 30px;
     width:300px;
-    height: 30px;
+    height: 40px;
 }
 #password{
     margin-top: 30px;
     width:300px;
-    height: 30px;  
+    height: 40px;  
 }
 a{
     color: deepskyblue;
@@ -34,4 +34,7 @@ button{
     height: 30px;
     margin-top: 40px;
     
+}
+h1{
+    font-size:50px;
 }
