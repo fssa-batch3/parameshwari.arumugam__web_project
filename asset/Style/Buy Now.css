@@ -1,5 +1,5 @@
 body{
-    background-color: wheat;
+    background-color:wheat;
 }
 header{
     display: flex;
@@ -74,7 +74,7 @@ button{
 }
 label{
     position: relative;
-    bottom:8px;
+    top:10px;
     font-family:cursive; 
 }
 .for{
@@ -119,17 +119,19 @@ label{
 }
 p{
     margin-left:15%;
-    margin-top: 50px;
+    margin-top: 100px;
     font-size:25px;
 }
 h1{
     margin-left: 15%;
+    margin-top:40px;
 }
 .details{
-    display: flex;
-    justify-content:space-around;
     position: relative;
-    margin-right:40px;
+    top: 10px;
+    display: flex;
+    justify-content: space-around;
+    
 }
 .details input{
     margin-left: 25px;   
