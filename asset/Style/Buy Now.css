@@ -49,6 +49,9 @@ input{
 .for{
     margin-left:17%;
     font-size: larger;
+    position: relative;
+    top: 35px;
+    font-family:cursive;  
 }
 #phonepay{
     width: 50px;
@@ -78,11 +81,6 @@ label{
     position: relative;
     bottom:1px;
     font-family:cursive; 
-}
-.for{
-    position: relative;
-    top: 35px;
-    font-family:cursive;   
 }
 #pnumber{
     width: 250px;
