@@ -22,11 +22,11 @@ i{
   margin-left:45%;
   margin-top: 20%;
 }
-a h6{
-  margin-left: 48%;
+a p{
+  margin-left:5%;
   position: relative;
-  bottom: 330px;
-  color: black;
+  bottom:300px;
+  color:blueviolet;
   font-size: 25px;
 
 }
