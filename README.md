@@ -7,4 +7,4 @@ User flow: https://drive.google.com/file/d/1nOmb0MV2jpzuPQ91fpAvSWmA9dV0mu66/vie
 
 Wireframe: https://drive.google.com/file/d/1Hb2650PpbO628c63NoVpQNJfcQTpbWrZ/view?usp=sharing
 
-Live server:
+Live server: https://parameshwari2004.github.io/Flower-Bouquet/
