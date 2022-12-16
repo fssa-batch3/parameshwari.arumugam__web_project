@@ -75,11 +75,11 @@ input{
    position: relative;
 }
 .dropbtn{ 
- color:black;
- padding:16px;
- font-size:20px;
- border: none;
- background-color: white;
+  color:black;
+  padding:16px;
+  font-size:20px;
+  border: none;
+  background-color: white;
 }
 .dropdown:hover .dropdown-menu{
    display: block;
@@ -101,6 +101,7 @@ h3{
     height:28%;
     position: relative;
     bottom: 30px;
+    border-radius:15px;
 }
 .main-content{
     margin-top:40px;
@@ -113,6 +114,7 @@ h3{
 .main-content img:hover{
     background-color: gray;
     box-shadow: 5px 5px 5px;
+    border-radius: 15px;
 }
 .main-content1{
     margin-top:30px;
@@ -121,11 +123,17 @@ h3{
     justify-content: space-around;
     border-radius: 15px;
 }
+.main-content1 img{
+    border-radius: 15px;
+}
 .main-content2{
     margin-top:30px;
     background-color:  rgb(210, 216, 222);
     display: flex;
     justify-content: space-around;
+    border-radius: 15px;
+}
+.main-content2 img{
     border-radius: 15px;
 }
 footer{
