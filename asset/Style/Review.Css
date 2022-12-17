@@ -1,0 +1,196 @@
+body{
+   background-color: white;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid rgb(204, 211, 211);
+    background-color: rgb(204, 218, 218);
+    height: 80px;
+    border-radius: 15px;
+}
+.search img{
+    position: absolute;
+    margin-top:10px;
+    margin-left:14%; 
+}
+h5{
+    font-size: 19px;
+    margin-left: 10px;
+   position: relative;
+   bottom: 9px;
+}
+.search{
+    margin-top: 20px;
+    margin-right:15px; 
+    color: black;
+   
+}
+#flower{
+    margin-top: 30px;
+}
+input{
+    width: 500px;
+    height: 30px;
+    border-color: hotpink;   
+    background-color: hotpink;
+     
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    margin-top:0px;
+    height: 40px;
+}
+.navbar a{
+    text-decoration: none;
+    margin-top: 10px;
+    font-size: 25px;
+    color:black;
+}
+
+#name{
+    text-align: center;
+
+}
+.cart{
+    margin-top: 20px;
+    display: inline-block;
+    padding: 2px 10px; 
+}
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    background-color:pink;
+    min-width:160px;
+    z-index: 1;
+}
+.dropdown-menu a{
+    color: black;
+    padding:5px 12px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown{
+   display: inline-block;
+   position: relative;
+}
+.dropbtn{ 
+ color:black;
+ padding:16px;
+ font-size:20px;
+ border: none;
+ background-color:white;
+}
+.dropdown:hover .dropdown-menu{
+   display: block;
+}
+h2{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 80px;
+}
+#star{
+    color:goldenrod;   
+}
+.all{
+    position: relative;
+    bottom: 40px;
+    margin-left:28%;
+}
+.customer-part{
+    display: flex;
+    justify-content: space-around;
+}
+.customer-part1{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top:5%;
+}
+.review1{
+    margin-left: 30px;
+    border: 2px solid black;
+    width: 450px;
+    font-size: 30px;
+    background-color:pink;
+    border-radius: 30px;
+}
+.review2{
+    margin-left: 30px;
+    border: 2px solid black;
+    width: 450px;
+    font-size: 30px;
+    background-color:pink;
+    border-radius: 30px;
+    position: relative;
+    bottom: 10px;
+}
+h3{
+    font-size: 50px;
+    color: black;
+    border: 2px solid black;
+    background-color: green;
+    width: 70px;
+    margin-left:40%;
+    text-align: center;
+    border-radius:60px;
+}
+h4{
+    margin-left:38%;
+    position: relative;
+    bottom:8px;
+}
+p{
+    margin-left: 30px;
+    position: relative;
+    bottom: 30px;
+    font-size: smaller;
+}
+h6{
+    font-size: 30px;
+}
+.icon p{
+    position: relative;
+    margin-left: 20px;
+    font-size: 15px;
+}
+.pay p{
+    font-size:20px;
+    position: relative;
+    margin-left: 10px;
+}
+.pay img{
+    position: relative;
+    bottom:20px;
+}
+.contact p{
+    font-size:15px;
+    position: relative;
+    margin-right:20px;
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: lightslategray;
+    margin-top: 30px;
+    height: 400px;
+    border-radius: 15px;
+}
+ .links a{
+    display: flex;
+    text-decoration: none;
+    justify-content:space-around;
+    color: black;
+    position: relative;
+    bottom: 40px;
+    font-size:15px;
+    line-height:30px;
+}
+.links{
+    display:flex;
+    flex-direction: column; 
+}
+.footer p{
+    font-size:20px;
+}
