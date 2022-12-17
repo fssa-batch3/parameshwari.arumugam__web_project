@@ -116,6 +116,11 @@ h3{
     box-shadow: 5px 5px 5px;
     border-radius: 15px;
 }
+.pink img:hover{
+    background-color: gray;
+    box-shadow: 5px 5px 5px;
+    border-radius: 15px;
+}
 .main-content1{
     margin-top:30px;
     background-color:  rgb(210, 216, 222);
