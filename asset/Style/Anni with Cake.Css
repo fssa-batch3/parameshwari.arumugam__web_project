@@ -111,20 +111,29 @@ h2{
     background-color:  rgb(210, 216, 222);
     display: flex;
     justify-content: space-around;
-    border-radius: 15px; 
+    border-radius:15px; 
+}
+.main-flow img{
+    border-radius: 15px;
 }
 .main-flow1{
     margin-top: 30px;
     background-color:rgb(210, 216, 222);
     display: flex;
     justify-content: space-around;
-    border-radius: 15px;
+    border-radius:15px;
+}
+.main-flow1 img{
+    border-radius:15px;
 }
 .main-flow2{
     margin-top: 30px;
     background-color:rgb(210, 216, 222);
     display: flex;
     justify-content: space-around;
+    border-radius:15px;
+}
+.main-flow2 img{
     border-radius: 15px;
 }
 footer{
