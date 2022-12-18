@@ -18,7 +18,7 @@ h5{
    bottom: 9px;
 }
 legend{
-    font-size:35px;
+    font-size:45px;
 }
 .search{
     margin-top: 20px;
@@ -45,12 +45,16 @@ input{
     font-size: 25px;
     color:black;
 }
-.txt{
-    position:absolute;
-    margin-left:33%; 
-    font-size: 35px;
-    bottom:53%;
-    color:black;
+.text span{
+    font-size:35px;
+}
+.text h4{
+    font-size:45px;
+    position: relative;
+    bottom:30px;
+}
+h4{
+    font-size:20px;
 }
 #name{
     text-align: center;
@@ -89,12 +93,13 @@ input{
  font-size:20px;
  border: none;
  background-color:white;
+ margin-top: 40px;
 }
 .dropdown:hover .dropdown-menu{
    display: block;
 }
 h3{
-    font-size: 29px;
+    font-size: 25px;
 }
 .color{
     background-color:rgb(214, 208, 208);
@@ -110,8 +115,9 @@ h3{
 }
 .all{
     position: relative;
-    bottom: 10px;
+    bottom:60px;
     margin-left: 30px;
+    font-size: 30px;
 }
 .cart-page{
     margin-top: 70px;
@@ -133,12 +139,12 @@ fieldset{
     margin-left:5px;
     border-radius: 15px;
 }
-button{
+.flow button{
     width: 200px;
     height: 40px;
    padding: 7px 18px;
    margin-left: 30px;
-   margin-top: 40px;
+   margin-top:5px;
    background-color:orchid;
    border: 2px solid orchid;
    border-radius: 15px;
