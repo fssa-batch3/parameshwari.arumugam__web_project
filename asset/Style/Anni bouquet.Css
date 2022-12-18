@@ -110,6 +110,9 @@ h3{
     border-radius: 15px;
     
 }
+.main-content img {
+    border-radius: 20px;
+}
 .main-content img:hover{
     background-color: gray;
     box-shadow: 5px 5px 5px;
@@ -128,7 +131,7 @@ h3{
     border-radius: 15px;
 }
 .main-content1 img{
-    border-radius: 15px;
+    border-radius:20px;
 }
 .main-content2{
     margin-top:30px;
@@ -138,7 +141,7 @@ h3{
     border-radius: 15px;
 }
 .main-content2 img{
-    border-radius: 15px;
+    border-radius:20px;
 }
 footer{
     display: flex;
