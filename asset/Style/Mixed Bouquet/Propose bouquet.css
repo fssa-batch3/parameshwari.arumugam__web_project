@@ -9,7 +9,7 @@ header{
 .search img{
     position: absolute;
     margin-top:10px;
-    margin-left:14%;
+    margin-left:14%; 
 }
 h5{
     font-size: 19px;
@@ -17,21 +17,20 @@ h5{
    position: relative;
    bottom: 9px;
 }
+legend{
+    font-size:45px;
+}
 .search{
     margin-top: 20px;
     margin-right:15px; 
     color: black;
    
 }
-#flower{
-    margin-top: 30px;
-}
 input{
     width: 500px;
     height: 30px;
     border-color: hotpink;   
     background-color: hotpink;
-     
 }
 .navbar{
     display: flex;
@@ -46,7 +45,6 @@ input{
     font-size: 25px;
     color:black;
 }
-
 #name{
     text-align: center;
 
@@ -56,10 +54,13 @@ input{
     display: inline-block;
     padding: 2px 10px; 
 }
+#back{
+    margin-top: 10px;
+} 
 .dropdown-menu{
     display: none;
     position: absolute;
-    background-color :white;
+    background-color: white;
     min-width:160px;
     z-index: 1;
 }
@@ -68,92 +69,104 @@ input{
     padding:5px 12px;
     text-decoration: none;
     display: block;
+   
 }
 .dropdown{
    display: inline-block;
    position: relative;
+   bottom: 39px;
 }
 .dropbtn{ 
-    color:black;
-    padding:16px;
-    font-size:20px;
-    border: none;
-    background-color: white;
+ color:black;
+ padding:16px;
+ font-size:20px;
+ border: none;
+ background-color:white;
 }
 .dropdown:hover .dropdown-menu{
-    display: block;
-}
-#star{
-       color:goldenrod;   
-}
-.all{
-       position: relative;
-       bottom: 20px;
-       margin-left: 10px;
+   display: block;
 }
 h3{
-       font-size: 29px;
- }
+    font-size: 25px;
+}
+.text span{
+    font-size: 35px;
+}
+.text h4{
+    font-size:45px;
+    position: relative;
+    bottom:10px;
+}
+h4{
+    font-size:20px;
+}
 .color{
-       background-color:rgb(214, 208, 208);
-       width: 300px;
-       height:28%;
-       position: relative;
-       bottom: 30px;
+    background-color:rgb(214, 208, 208);
+    width: 300px;
+    height:28%;
+    position: relative;
+    bottom: 30px;
 }
-.main-box1{
-    margin-top:40px;
-    background-color:  rgb(210, 216, 222);
+
+#star{
+    color:goldenrod; 
+   
+}
+.all{
+    position: relative;
+    bottom: 10px;
+    margin-left: 30px;
+    font-size: 30px;
+}
+.cart-page{
+    margin-top: 70px;
+    margin-left: 50px;
     display: flex;
-    justify-content: space-around;
-    border-radius: 15px; 
+    font-size: larger;
+
 }
-.main-box1 img:hover{
-    background-color:darkblue;
-    box-shadow: 5px 5px 5px;
+fieldset{
+    margin-top: 90px;
+    margin-left: 15%;
+    width: 1000px;
+    border-radius: 20px;
+    background-color: wheat;
+}
+.cart-page img{
+    position: relative;
+    bottom: 30px;
+    margin-left:5px;
     border-radius: 15px;
 }
-.main-box1 img{
-    border-radius: 15px;
+button{
+    width: 200px;
+    height: 40px;
+   padding: 7px 18px;
+   margin-left: 30px;
+   margin-top: 40px;
+   background-color:orchid;
+   border: 2px solid orchid;
+   border-radius: 15px;
+   font-size: 15px;
+ 
 }
- .main-box2{
-    margin-top:30px;
-    background-color:  rgb(210, 216, 222);
-    display: flex;
-    justify-content: space-around;
-    border-radius: 15px; 
+.text{
+    margin-left: 30px;
 }
-.pot img:hover{
-    background-color:darkblue;
-    box-shadow: 5px 5px 5px;
-    border-radius: 15px;
-}
-.main-box2 img{
-    border-radius: 15px;
-}
-.main-box3{
-    margin-top:30px;
-    background-color:  rgb(210, 216, 222);
-    display: flex;
-    justify-content: space-around;
-    border-radius: 15px; 
- }
-.main-box3 img{
-    border-radius: 15px;
-}
- footer{
+footer{
     display: flex;
     justify-content: space-around;
     background-color: lightslategray;
-    margin-top: 30px;
+    margin-top: 80px;
     height: 400px;
     border-radius: 15px;
+    color:black;
 }
- .links a{
+.links a{
     display: flex;
     text-decoration: none;
     justify-content:space-evenly;
-    color: black;
+    color:black;
    
 }
 .links{
