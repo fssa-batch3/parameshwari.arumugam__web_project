@@ -68,6 +68,14 @@ input{
     justify-content: space-around;
     border-radius: 15px;
 }
+.flower-content img{
+    border-radius: 15px;
+}
+.flower-content img:hover{
+    background-color:darkblue;
+    box-shadow: 5px 5px 5px;
+    border-radius: 15px;
+}
 .flower-content1{
     margin-top:30px;
     background-color:  rgb(210, 216, 222);
@@ -75,11 +83,22 @@ input{
     justify-content: space-around;
     border-radius: 15px;
 }
+.pink img:hover{
+    background-color:darkblue;
+    box-shadow: 5px 5px 5px;
+    border-radius: 15px;
+}
+.flower-content1 img{
+    border-radius: 15px;
+}
 .flower-content2{
     margin-top:30px;
     background-color:  rgb(210, 216, 222);
     display: flex;
     justify-content: space-around;
+    border-radius: 15px;
+}
+.flower-content2 img{
     border-radius: 15px;
 }
 #flower{

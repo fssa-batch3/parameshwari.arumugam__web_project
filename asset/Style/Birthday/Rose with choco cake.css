@@ -17,21 +17,20 @@ h5{
    position: relative;
    bottom: 9px;
 }
+legend{
+    font-size:45px;
+}
 .search{
     margin-top: 20px;
     margin-right:15px; 
     color: black;
    
 }
-#flower{
-    margin-top: 30px;
-}
 input{
     width: 500px;
     height: 30px;
     border-color: hotpink;   
     background-color: hotpink;
-     
 }
 .navbar{
     display: flex;
@@ -46,7 +45,6 @@ input{
     font-size: 25px;
     color:black;
 }
-
 #name{
     text-align: center;
 
@@ -56,6 +54,9 @@ input{
     display: inline-block;
     padding: 2px 10px; 
 }
+#back{
+    margin-top: 10px;
+} 
 .dropdown-menu{
     display: none;
     position: absolute;
@@ -68,97 +69,104 @@ input{
     padding:5px 12px;
     text-decoration: none;
     display: block;
+   
 }
 .dropdown{
    display: inline-block;
    position: relative;
+   bottom: 39px;
 }
 .dropbtn{ 
-    color:black;
-    padding:16px;
-    font-size:20px;
-    border: none;
-    background-color: white;
+ color:black;
+ padding:16px;
+ font-size:20px;
+ border: none;
+ background-color:white;
 }
 .dropdown:hover .dropdown-menu{
-    display: block;
+   display: block;
 }
+h3{
+    font-size: 25px;
+}
+.text span{
+    font-size: 35px;
+}
+.text h4{
+    font-size:45px;
+    position: relative;
+    bottom:10px;
+}
+h4{
+    font-size:20px;
+}
+.color{
+    background-color:rgb(214, 208, 208);
+    width: 300px;
+    height:28%;
+    position: relative;
+    bottom: 30px;
+}
+
 #star{
-    color:goldenrod;   
+    color:goldenrod; 
+   
 }
 .all{
     position: relative;
-    bottom: 20px;
-    margin-left: 10px;
+    bottom: 10px;
+    margin-left: 30px;
+    font-size: 30px;
 }
-h3{
-    font-size: 29px;
+.cart-page{
+    margin-top: 70px;
+    margin-left: 50px;
+    display: flex;
+    font-size: larger;
+
 }
-h2{
+fieldset{
+    margin-top: 90px;
+    margin-left: 15%;
+    width: 1000px;
+    border-radius: 20px;
+    background-color: wheat;
+}
+.cart-page img{
     position: relative;
-    top:10px;
-}
-.color{
- background-color:rgb(214, 208, 208);
- width: 300px;
- height:32%;
- position: relative;
- bottom:30px;
- border-radius: 15px;
-}
-.main-flow{
-    margin-top:40px;
-    background-color:  rgb(210, 216, 222);
-    display: flex;
-    justify-content: space-around;
-    border-radius:15px; 
-}
-.main-flow img:hover{
-    background-color:darkblue;
-    box-shadow: 5px 5px 5px;
+    bottom: 30px;
+    margin-left:5px;
     border-radius: 15px;
 }
-.main-flow img{
-    border-radius: 15px;
+button{
+    width: 200px;
+    height: 40px;
+   padding: 7px 18px;
+   margin-left: 30px;
+   margin-top: 40px;
+   background-color:orchid;
+   border: 2px solid orchid;
+   border-radius: 15px;
+   font-size: 15px;
+ 
 }
-.main-flow1{
-    margin-top: 30px;
-    background-color:  rgb(210, 216, 222);
-    display: flex;
-    justify-content: space-around;
-    border-radius:15px;
-}
-.heart img:hover{
-    background-color:darkblue;
-    box-shadow: 5px 5px 5px;
-    border-radius: 15px;
-}
-.main-flow1 img{
-    border-radius:15px;
-}
-.main-flow2{
-    margin-top: 30px;
-    background-color:  rgb(210, 216, 222);
-    display: flex;
-    justify-content: space-around;
-    border-radius:15px;
-}
-.main-flow2 img{
-    border-radius: 15px;
+.text{
+    margin-left: 30px;
 }
 footer{
     display: flex;
     justify-content: space-around;
     background-color: lightslategray;
-    margin-top: 30px;
+    margin-top: 80px;
     height: 400px;
     border-radius: 15px;
+    color:black;
 }
- .links a{
+.links a{
     display: flex;
     text-decoration: none;
     justify-content:space-evenly;
-    color: black;
+    color:black;
    
 }
 .links{
