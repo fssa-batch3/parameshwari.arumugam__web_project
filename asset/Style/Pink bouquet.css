@@ -18,7 +18,7 @@ h5{
    bottom: 9px;
 }
 legend{
-    font-size:35px;
+    font-size:45px;
 }
 .search{
     margin-top: 20px;
@@ -45,12 +45,16 @@ input{
     font-size: 25px;
     color:black;
 }
-.txt{
-    position:absolute;
-    margin-left:33%; 
+.text h4{
+    font-size:45px;
+    position: relative;
+    bottom:10px;
+}
+h4{
+    font-size:20px;
+}
+.text span{
     font-size: 35px;
-    bottom:53%;
-    color:black;
 }
 #name{
     text-align: center;
@@ -94,7 +98,7 @@ input{
    display: block;
 }
 h3{
-    font-size: 29px;
+    font-size: 25px;
 }
 .color{
     background-color:rgb(214, 208, 208);
@@ -112,6 +116,7 @@ h3{
     position: relative;
     bottom: 10px;
     margin-left: 30px;
+    font-size: 30px;
 }
 .cart-page{
     margin-top: 70px;

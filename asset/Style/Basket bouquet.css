@@ -18,7 +18,8 @@ h5{
    bottom: 9px;
 }
 legend{
-    font-size:35px;
+    font-size:45px;
+    font-family:sans-serif;
 }
 .search{
     margin-top: 20px;
@@ -45,16 +46,13 @@ input{
     font-size: 25px;
     color:black;
 }
-.txt{
-    position:absolute;
-    margin-left:33%; 
-    font-size: 35px;
-    bottom:53%;
-    color:black;
-}
+
 #name{
     text-align: center;
 
+}
+h3{
+    font-size: 25px;
 }
 .cart{
     margin-top: 20px;
@@ -93,8 +91,16 @@ input{
 .dropdown:hover .dropdown-menu{
    display: block;
 }
-h3{
-    font-size: 29px;
+.text h4{
+    font-size:45px;
+    position: relative;
+    bottom:10px;
+}
+.text span{
+    font-size: 35px;
+}
+h4{
+    font-size:20px;
 }
 .color{
     background-color:rgb(214, 208, 208);
@@ -112,6 +118,7 @@ h3{
     position: relative;
     bottom: 10px;
     margin-left: 30px;
+    font-size:30px;
 }
 .cart-page{
     margin-top: 70px;
