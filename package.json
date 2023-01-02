@@ -1,0 +1,22 @@
+{
+  "name": "flowery_bouquet",
+  "version": "1.0.0",
+  "description": "Problem statement: https://docs.google.com/document/d/1g-pijpGiQ7aD2wujdnUFN79C6PCILGKnXUB7qmqkwcE/edit?usp=sharing",
+  "main": "main.js",
+  "scripts": {
+    "dev": "http-server ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fssa-batch3/parameshwari.arumugam__web_project.git"
+  },
+  "author": "parameshwari2004",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fssa-batch3/parameshwari.arumugam__web_project/issues"
+  },
+  "homepage": "https://github.com/fssa-batch3/parameshwari.arumugam__web_project#readme",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
