@@ -137,3 +137,54 @@ footer{
 .dropdown:hover .dropdown-menu{
     display: block;
 }
+/* media start */
+
+@media screen and (max-width: 600px){
+
+    .example{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .sample{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .search img{
+        position: absolute;
+        margin-top:5px;
+        margin-left:4%; 
+    }
+    #back{
+        width:400px;
+        height:150px ;
+        margin-top:20%;
+    }
+    .navbar{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    input{
+      width:100px;  
+      height:20px;
+    }
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .txt{
+        font-size: 20px;
+        position:absolute;
+        bottom:58%;
+    }
+    .icon h4{
+        font-size:14px;
+    }
+    
+    
+}
