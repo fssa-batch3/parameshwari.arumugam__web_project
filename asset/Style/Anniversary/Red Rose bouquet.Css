@@ -54,6 +54,9 @@ input{
     display: inline-block;
     padding: 2px 10px; 
 }
+.cart i{
+    font-size:30px;
+}
 #back{
     margin-top: 10px;
 } 
