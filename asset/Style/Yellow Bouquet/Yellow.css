@@ -160,3 +160,53 @@ footer{
     display:flex;
     flex-direction: column; 
 }
+
+
+@media screen and (max-width: 600px){
+
+    h5{
+        font-size:15px;
+        margin-top:30px;
+    }
+
+    .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top:20%;
+    }
+    .main1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .main2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .navbar{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .search img{
+        position: absolute;
+        margin-top:5px;
+        margin-left:4%; 
+    }
+    input{
+      width:100px;  
+      height:20px;
+    }
+    footer{
+        display: flex;
+       flex-wrap: wrap;
+       height:600px;
+    }
+    
+}

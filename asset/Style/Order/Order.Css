@@ -33,3 +33,46 @@ a p{
 a{
   text-decoration: none;
 }
+
+@media screen and (max-width: 600px){
+
+  body{
+    background-color: white;
+ }
+ h1 {
+     color:black;
+     text-align: center;
+     margin-top: 22%;
+     font-size:35px;
+     position: relative;
+     bottom: 60px;
+     margin-left: 20px;
+ }
+ p{
+     text-align: center;
+     position: relative;
+     bottom:60px;
+     font-size:25px;
+ }
+ i{
+   font-size:100px;  
+   color: darkgreen;
+   margin-left:37%;
+   margin-top:60%;
+ }
+ a p{
+   margin-left:2%;
+   position: relative;
+   bottom:70px;
+   color:blueviolet;
+   font-size: 25px;
+ 
+ }
+ a{
+   text-decoration: none;
+ }
+
+
+
+
+}

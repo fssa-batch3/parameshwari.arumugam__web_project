@@ -169,3 +169,66 @@ h3{
     bottom: 20px;
     margin-left: 10px;
 }
+
+
+
+@media screen and (max-width: 600px){
+
+    h5{
+        font-size:15px;
+        margin-top:30px;
+    }
+
+    .flower-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top:20%;
+    }
+    .flower-content1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .flower-content2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .navbar{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .navbar a{
+        font-size:30px;
+    }
+    .dropbtn{
+        font-size:20px;
+    }
+    .dropdown a{
+        font-size:25px;
+    }
+    .search img{
+        position: absolute;
+        margin-top:5px;
+        margin-left:4%; 
+    }
+    input{
+      width:100px;  
+      height:20px;
+    }
+    footer{
+        display: flex;
+       flex-wrap: wrap;
+       height:600px;
+    }
+    
+}
+
+
+

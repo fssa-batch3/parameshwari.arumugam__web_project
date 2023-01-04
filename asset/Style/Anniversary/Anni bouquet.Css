@@ -169,6 +169,10 @@ footer{
 
 
 @media screen and (max-width: 600px){
+    h5{
+        font-size:15px;
+        margin-top:30px;
+    }
 
     .main-content{
         display: flex;
