@@ -29,14 +29,14 @@
     <div class="main">
        <h1>Place your Order Now</h1>
      <div class="for">
-         <label for="name"> Name<input type="text" id="ntext"></label><br><br>
-	     <label for="email">Email<input type="email" id="email"></label><br><br>
-	     <label for="number">Phone Number<input type="pnumber" id="pnumber"></label><br><br>
-	     <label for="name">Address<input type="text" id="aname"></label><br><br>
+         <label for="name"> Name<input type="text" id="ntext" value="paramu"></label><br><br>
+	     <label for="email">Email<input type="email" id="email" value="paramu@2004"></label><br><br>
+	     <label for="number">Phone Number<input type="pnumber" id="pnumber" value="123456789"></label><br><br>
+	     <label for="name">Address<input type="text" id="aname" value="no.2 sathyamoorthi street kandhanchavadi chennai"></label><br><br>
            <div class="details">
-               <label for="text">Country<input type="text" id="text" ></label><br><br>
-	          <label for="text">state<input type="text" id="stext" required></label><br><br>
-               <label for="number">Pincode<input type="text" id="cnumber" required></label><br><br>
+               <label for="text">Country<input type="text" id="text" value="india" ></label><br><br>
+	          <label for="text">state<input type="text" id="stext" value="tamilnadu" required></label><br><br>
+               <label for="number">Pincode<input type="text" id="cnumber" value="600096" required></label><br><br>
            </div>
      </div>
       <p>Payment method</p>
@@ -51,5 +51,27 @@
 	    <a href="../Order/Order.html"><button>Buy Now</button></a>
     </div>
   <!-- main end --> 
+
+  <script>
+    const email= document.getElementById("email").value
+    const name= document.getElementById("ntext").value
+    const phonenumber= document.getElementById("pnumber").value
+    const addres= document.getElementById("aname").value
+    const countery= document.getElementById("text").value
+    const state= document.getElementById("stext").value
+    const pincode= document.getElementById("cnumber").value
+
+    console.log(email)
+    console.log(name)
+    console.log(phonenumber)
+    console.log(addres)
+    console.log(countery)
+    console.log(state)
+    console.log(pincode)
+  </script>
+
+
+
+
 </body>
 </html>

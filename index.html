@@ -13,13 +13,25 @@
    <div class="login">
        <h1>Login</h1>
        <form action="./pages/Home.html">
-        <input type="email" placeholder="E-mail" id="email" required><br><br>
-        <input type="password" placeholder="Password" id="password" required/><br><br>
+        <input type="email" placeholder="E-mail" id="email" value="paramu@2004" required><br><br>
+        <input type="password" placeholder="Password" id="password" value="12345" required/><br><br>
         <button>Login</button><br><br>
        </form>
         <a href="https://www.facebook.com"><p> facebook</p></a><br>
         <a href="https://www.Google.com"><p> Google</p></a>
    </div>
  <!--login end--> 
+
+
+ <script>
+    const email= document.getElementById("email").value
+    const password= document.getElementById("password").value
+
+    console.log(email)
+    console.log(password)
+
+ </script>
+
+
 </body>
 </html>
