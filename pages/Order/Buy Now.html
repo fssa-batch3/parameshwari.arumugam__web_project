@@ -29,30 +29,31 @@
     <div class="main">
        <h1>Place your Order Now</h1>
      <div class="for">
-         <label for="name"> Name<input type="text" id="ntext" value="paramu"></label><br><br>
-	     <label for="email">Email<input type="email" id="email" value="paramu@2004"></label><br><br>
-	     <label for="number">Phone Number<input type="pnumber" id="pnumber" value="123456789"></label><br><br>
-	     <label for="name">Address<input type="text" id="aname" value="no.2 sathyamoorthi street kandhanchavadi chennai"></label><br><br>
+         <label for="name"> Name<input type="text" id="ntext"></label><br><br>
+	     <label for="email">Email<input type="email" id="email" ></label><br><br>
+	     <label for="number">Phone Number<input type="pnumber" id="pnumber"></label><br><br>
+	     <label for="name">Address<input type="text" id="aname"></label><br><br>
            <div class="details">
-               <label for="text">Country<input type="text" id="text" value="india" ></label><br><br>
-	          <label for="text">state<input type="text" id="stext" value="tamilnadu" required></label><br><br>
-               <label for="number">Pincode<input type="text" id="cnumber" value="600096" required></label><br><br>
+               <label for="text">Country<input type="text" id="text"  ></label><br><br>
+	          <label for="text">state<input type="text" id="stext"required></label><br><br>
+               <label for="number">Pincode<input type="text" id="cnumber"required></label><br><br>
            </div>
      </div>
       <p>Payment method</p>
-        <input type="radio" id="gpay" name="paymethod" value="gpay">
+        <input type="radio" id="gpay" name="paymethod">
         <label for="gpay">G pay</label><br>
-        <input type="radio" id="paytm" name="paymethod" value="paytm">
+        <input type="radio" id="paytm" name="paymethod" >
         <label for="paytm">Paytm</label><br>
-        <input type="radio" id="phonepay" name="paymethod" value="phonepay">
+        <input type="radio" id="phonepay" name="paymethod" >
         <label for="phonepay">Phone pay</label><br>
-        <input type="radio" id="delivery" name="paymethod" value="delivery">
+        <input type="radio" id="delivery" name="paymethod">
         <label for="delivery">Cash on delivery</label><br><br><br>
-	    <a href="../Order/Order.html"><button>Buy Now</button></a>
+	      <button type="button" onclick="buynow()">Buy Now</button>
     </div>
   <!-- main end --> 
 
   <script>
+  function buynow(){
     const email= document.getElementById("email").value
     const name= document.getElementById("ntext").value
     const phonenumber= document.getElementById("pnumber").value
@@ -68,6 +69,9 @@
     console.log(countery)
     console.log(state)
     console.log(pincode)
+
+    window.location.href="../Order/Order.html"
+  }
   </script>
 
 
