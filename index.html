@@ -31,9 +31,12 @@
 
     console.log(email)
     console.log(password)
-
+    localStorage.setItem("user_email",email)
+    localStorage.setItem("password",password)
 
     window.location.href="pages/Home.html"
+
+   
 
 
  }
