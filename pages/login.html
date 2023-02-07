@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../asset/Style/login.css">
+</head>
+<body>
+ <form action="" id="signupform">
+     <div class="login">
+       <h2>Login</h2>
+       <input name="email" type="email" placeholder="E-mail" id="email"><br><br>
+       <input name="password" type="password" placeholder="Password" id="password"/><br><br>  
+       <button type="submit">Login</button>
+     </div>
+    </form>
+    <script>
+         
+         const checklogin= document.getElementById("signupform");
+
+        checklogin.onsubmit =function(e){
+
+            e.preventDefault();
+
+            const email= document.getElementById("email").value;
+            const password= document.getElementById("password").value;
+
+            const localdata = JSON.parse(localStorage.getItem("user_records"));
+         
+            // if(!localdata) {
+            //     alert("login fail");
+            //     return;
+            // }
+            let success;
+            for(i=0; i<localdata.length; i++){
+
+            
+                if((localdata[i].emailid === email) && (localdata[i].password === password)){
+                    success=true;
+                    break;
+                }
+            }
+            if(success){
+                alert("login successful");
+                window.location.href ="../pages/Home.html";
+            }else{
+                alert("login fail");
+            }
+        }
+   
+    </script>
+</body>
+
+</html>

@@ -1,31 +1,26 @@
 body{
-    height:100px;
-   
+    background-image:url(../IMG/index/color.jpg);
+    
 }
 .login{
     border: 2px solid black;
     width: 400px;
-    height: 600px;
-    text-align: center;
-    margin-top:10%;
-   margin-left: 65%;
-   position: relative;
-   bottom:900px;
+    height: 500px;
+    margin-left:40%;
+    margin-top:15%;
 }
+
 #email{
     margin-top: 30px;
     width:300px;
-    height: 40px;
-}
-#text{
-    margin-top: 30px;
-    width:300px;
     height: 30px;
+    margin-left: 30px;
 }
 #password{
     margin-top: 30px;
     width:300px;
-    height: 40px;  
+    height: 30px;  
+    margin-left:30px;
 }
 a{
     color: deepskyblue;
@@ -37,8 +32,10 @@ button{
     width: 200px;
     height: 30px;
     margin-top: 40px;
+    margin-left: 20%;
     
 }
-h1{
-    font-size:50px;
+h2{
+    margin-left:40%;
+    margin-top:30px;
 }
