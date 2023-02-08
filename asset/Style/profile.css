@@ -1,0 +1,80 @@
+body{
+    background-color: rgb(219, 96, 238);
+}
+.profile{
+    background-color: white;
+    border: 2px solid black;
+    border-radius:5%;
+    width: 1000px;
+    height:750px;
+    margin-left:20%;
+    margin-top:7%;
+}
+img{
+    position: relative;
+    bottom:70%;
+    width:400px;
+    margin-left:10%;
+   
+}
+#email{
+    margin-top: 30px;
+    width:300px;
+    height: 40px;
+    margin-left: 60%;
+    border-radius:10px;
+}
+#text{
+    margin-top: 30px;
+    width:300px;
+    height: 40px;
+    margin-left:60%;
+    border-radius:10px;
+}
+#password{
+    margin-top: 30px;
+    width:300px;
+    height: 40px;  
+    margin-left:60%;
+    border-radius:10px;
+}
+#date_of_birth{
+
+    margin-top: 30px;
+    width:300px;
+    height: 40px;  
+    margin-left:60%;
+    border-radius:10px;
+}
+
+#phone_number{
+
+    margin-top: 30px;
+    width:300px;
+    height: 40px;  
+    margin-left:60%;
+    border-radius:10px;
+}
+
+#address{
+
+    margin-top: 30px;
+    width:300px;
+    height: 50px;  
+    margin-left:60%;
+    border-radius:10px;
+}
+
+button{
+    width: 200px;
+    height: 35px;
+    margin-top:40px;
+    margin-left:30%;
+    background-color: rgb(223, 125, 238);
+    border-radius:10px;
+    
+}
+h1{
+    margin-left:45%;
+    margin-top:50px;
+}

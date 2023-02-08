@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../asset/Style/profile.css">
+</head>
+<body>
+    <form action="" id="profilepage">
+     <div class="profile">
+        <h1>Profile Page</h1>
+       <input type="text" name="name" placeholder=" Name" id="text" class="text"><br><br>
+        <input name="email" type="email" placeholder="E-mail" id="email"><br><br>
+        <input name="date_of_birth" type="date" placeholder="DOB" id="date_of_birth"/><br><br> 
+        <input type="phone_number" name="number" placeholder="phone number" id="phone_number" class="text"><br><br> 
+        <input type="address" name="text" placeholder="address" id="address" class="text">
+        <a href="../pages/Home.html" ><button type="button">Profile Save</button></a>
+        <img src="../asset/IMG/home page/profile2.jpg">
+      </div>
+    </form>
+    <script>
+
+        let bio = JSON.parse(localStorage.getItem('user_records'));
+        for (let i=0; i <= bio.length; i++){
+        document.getElementById("text").value = bio[i]["name"];
+        document.getElementById("email").value = bio[i]["emailid"];
+       }
+
+    </script>
+</body>
+</html>
