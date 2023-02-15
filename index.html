@@ -1,62 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="asset/Style/Index.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./asset/Style/Index.css"/>
 </head>
+
 <body>
-   <form action="./pages/Home.html" id="signupform">
-      <img src="asset/IMG/index/back3.jpg" alt="" width="1470px"> 
-      <div class="login">
-        <h2> Sing up</h2>
-        <input type="text" name="user_name" placeholder=" Name" id="text" class="text"><br><br>
-        <input type="email" name="email" placeholder="E-mail" id="email"><br><br>
-         <input type="password" name="password" placeholder="Password" id="password"/><br><br>
-         <p>Already have a account?<a href="./pages/login.html">login</a></p>
-         <button type="button" onclick="login()">Sign up</button>
-         </div>
-        </div>
-      </div>
-    </form>
- 
- <script>
+  <form action="./pages/profile.html" id="signupform">
+    <img src="asset/IMG/index/back3.jpg" alt="" width="1470px" />
+    <div class="login">
+      <h2>Sing up</h2>
+      <input type="text" name="user_name" id="user_name" pattern="[A-Za-z]{1,24}"
+        title="username is cannot contain space" placeholder=" Name" required /><br /><br />
+      <input type="email" name="email" id="email" placeholder="E-mail" required /><br /><br />
+      <input type="password" name="password" id="password" placeholder="Password" pattern="[A-Za-z]{1,8}" required /><br /><br />
+      <p>Already have a account?<a href="pages/login.html">login</a></p>
+      <button type="submit">Sign up</button>
+    </div>
+  </form>
 
-const userform = document.getElementById("signupform");
-    
-    function login() {
-    
-      // e.preventDefault();
-    
-      const username = userform["user_name"].value;
-      const emailid = userform["email"].value;
-      const password = userform["password"].value;
-    
-      const records = [];
-    
-      const user = {};
-    
-      user["name"] = username;
-      user["emailid"] = emailid;
-      user ["password"] = password;
-    
-     
-      const userslist = JSON.parse(localStorage.getItem("user_records")) || records;
-    
-      userslist.push(user);
-    
-      localStorage.setItem("user_records", JSON.stringify(userslist));
+  <script>
+   
+let userform = document.getElementById("signupform");
 
-      window.location.href = "pages/Home.html"
+let username = document.getElementById("user_name");
+
+let email = document.getElementById("email");
+
+let password = document.getElementById("password");
+
+let user_records = JSON.parse(localStorage.getItem("user_list"));
+
+userform.addEventListener("submit", e => {
+  e.preventDefault();
+
+  validateform();
+});
+
+function validateform(){
+
     
+  let namevalue = username.value.trim();
+
+  let emailvalue = email.value.trim();
+
+  let passwordvalue = password.value.trim();
+
+  let records = [];
+
+  let user = {};
+
+  user["name"] = namevalue;
+  user["emailid"] = emailvalue;
+  user["password"] = passwordvalue;
+
+   
+  let user_information = JSON.parse(localStorage.getItem("user_list")) ?? records;
+
+  let success = true;
+
+  if (user_information != null) {
+  for ( let i = 0; i < user_information.length; i++){    
+
+    if (user_information[i].emailid == emailvalue) {
+      success = false;
+      break;
     }
-    
-    
+  }
+}
 
- </script>
+  if(success) {
 
+    user_information.push(user);
+    localStorage.setItem("user_list",JSON.stringify(user_information));
+    alert("account create successfuly");
 
+    window.location.href = "pages/profile.html"
+
+  }
+
+  else{
+    alert("Already you have an account")
+  }
+  
+}
+  </script>
 </body>
+
 </html>

@@ -11,11 +11,11 @@
  <form action="" id="signupform">
      <div class="login">
        <h2>Login</h2>
-       <input name="email" type="email" placeholder="E-mail" id="email"><br><br>
-       <input name="password" type="password" placeholder="Password" id="password"/><br><br>  
+       <input name="email" type="email" placeholder="E-mail" id="email" required ><br><br>
+       <input name="password" type="password" placeholder="Password" id="password" required maxlength="6"><br><br>  
        <button type="submit">Login</button>
      </div>
-    </form>
+    </form> 
     <script>
          
          const checklogin= document.getElementById("signupform");
@@ -27,7 +27,7 @@
             const email= document.getElementById("email").value;
             const password= document.getElementById("password").value;
 
-            const localdata = JSON.parse(localStorage.getItem("user_records"));
+            const localdata = JSON.parse(localStorage.getItem("user_list"));
          
             // if(!localdata) {
             //     alert("login fail");
