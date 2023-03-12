@@ -1,18 +1,18 @@
 body{
-    background-color: rgb(219, 96, 238);
+    background-color: rgb(234, 77, 228);
 }
 .profile{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border: 2px solid black;
     border-radius:5%;
     width: 1000px;
     height:750px;
-    margin-left:20%;
+    margin-left:15%;
     margin-top:7%;
 }
 img{
     position: relative;
-    bottom:70%;
+    bottom:80%;
     width:400px;
     margin-left:10%;
    
@@ -76,9 +76,10 @@ i{
 }
 
 button{
+    display: flex;
     width: 200px;
     height: 35px;
-    margin-top:40px;
+    margin-top:20px;
     margin-left:30%;
     background-color: rgb(223, 125, 238);
     border-radius:10px;

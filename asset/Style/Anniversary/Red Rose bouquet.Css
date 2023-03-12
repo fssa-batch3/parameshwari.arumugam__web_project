@@ -19,6 +19,15 @@ h5{
 }
 legend{
     font-size:45px;
+    margin-left:55%;
+    position: relative;
+    bottom:350px;
+}
+h6{
+    margin-left:70%;
+    font-size:40px;
+    position: relative;
+    bottom:400px;
 }
 .search{
     margin-top: 20px;
@@ -55,7 +64,8 @@ input{
     padding: 2px 10px; 
 }
 .cart i{
-    font-size:30px;
+    font-size:30px;color: black;
+
 }
 #back{
     margin-top: 10px;
@@ -79,7 +89,7 @@ input{
    position: relative;
    bottom: 39px;
 }
-.dropbtn{ 
+.drop{ 
  color:black;
  padding:16px;
  font-size:20px;
@@ -102,56 +112,64 @@ h3{
 
 #star{
     color:goldenrod; 
+    font-size:25px;
+    position: relative;
+    top:-500px;
+    left:650px;
+    padding:5px;
+    
    
 }
-.all{
-    position: relative;
-    bottom: 10px;
-    margin-left: 30px;
-    font-size: 30px;
-}
-.text h4{
+.cart_page h4{
     font-size:45px;
     position: relative;
     bottom:10px;
+    margin-left: 45%;
+}
+#flower{
+    width: 400px;
+    height: 400px;
+    margin-left: 70px;
+    border-radius: 15px;
+    margin-top: 40px
+
+}
+fieldset:hover{
+    box-shadow: rgba(5, 5, 30, 0.2) 0px 7px 29px 8px;
+   
 }
 h4{
     font-size:20px;
-}
-.text span{
-    font-size: 35px;
-}
-.cart-page{
-    margin-top: 70px;
-    margin-left: 50px;
-    display: flex;
-    font-size: larger;
-
 }
 fieldset{
     margin-top: 90px;
     margin-left: 15%;
     width: 1000px;
+    height: 500px;
     border-radius: 20px;
     background-color: wheat;
 }
-.cart-page img{
-    position: relative;
-    bottom: 30px;
-    margin-left:5px;
-    border-radius: 15px;
-}
 button{
-    width: 200px;
-    height: 40px;
+   width: 200px;
+   height: 40px;
    padding: 7px 18px;
    margin-left: 30px;
-   margin-top: 40px;
-   background-color:orchid;
-   border: 2px solid orchid;
-   border-radius: 15px;
-   font-size: 15px;
+   margin-top:40px;  
+   font-size:20px;
  
+}
+#buy_now{ 
+
+    width:200px;
+    height:40px;
+    position: relative;
+    bottom:420px;
+    left:320px;
+    background-color:orchid;
+    border: 2px solid orchid;
+    padding:5px;
+    border-radius: 15px;
+   
 }
 .text{
     margin-left: 30px;

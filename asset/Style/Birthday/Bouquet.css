@@ -60,7 +60,28 @@ input{
 }
 #back{
     margin-top: 10px;
+}
+/* .main_box{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    background-color: rgb(221, 223, 223);
+    text-align: center;
+    justify-content: space-around;
+    border-radius:10px;
+    padding-bottom: 40px;
+
 } 
+.main_box #flower{
+    padding:10px;
+    border-radius:15%;
+    width:300px;
+    height:300px;
+    
+}
+.main_box #flower:hover{
+    box-shadow: rgba(3, 3, 16, 0.2) 0px 7px 29px 8px;
+} */
 .flower-content{
     margin-top:40px;
     background-color: rgb(210, 216, 222);

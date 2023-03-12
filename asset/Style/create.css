@@ -1,0 +1,48 @@
+body{
+    background-color: rgb(215, 226, 154);
+}
+
+label{ 
+    margin-left: 5px;
+    font-size:40px;   
+ } 
+ button{ 
+     font-family:cursive;
+     font-size:30px;
+     margin-top:10px;
+ } 
+ .btn{
+    display: flex;
+ }
+ input{
+    width: 400px;
+    height: 40px;
+ }
+ #price{ 
+    margin-left:194px;	
+    border-bottom-color:black;
+    
+ } 
+ #img{
+     margin-left:70px;
+     border-bottom-color:black;
+     
+ } 
+ #tittle{ 
+     margin-left:200px;
+     border-bottom-color:black;	
+     
+     
+ } 
+ #rating{ 
+      margin-left:170px;	
+      border-bottom-color:black;
+      
+ } 
+ .no{ 
+ 
+    margin-left:500px;
+    margin-top:15%;
+    
+ } 
+ 

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../asset/Style/create.css" />
+  </head>
+  <body>
+    <div class="no">
+      <form action="">
+        <label for="img">Imagesource<input type="text" id="img" /></label
+        ><br /><br />
+        <label for="Tittle"> Title<input type="text" id="tittle" /></label
+        ><br /><br />
+        <label for="price">Price<input type="number" id="price" /></label
+        ><br /><br />
+        <label for="rate">Rating<input type="text" id="rating" /></label
+        ><br /><br />
+        <div class="btn">
+          <button onclick="createproduct()">Create</button><br /><br />
+          <button onclick="updateproduct()">Update</button><br /><br />
+          <button onclick="deleteproduct()">Delete</button><br /><br />
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function createproduct() {
+        let bouquet = {};
+
+        let bouquets = JSON.parse(localStorage.getItem("bouquet")) ?? [];
+
+        const image = document.getElementById("img").value;
+        const tittle = document.getElementById("tittle").value;
+        const price = document.getElementById("price").value;
+        const rating = document.getElementById("rating").value;
+
+        bouquet["img"] = image;
+        bouquet["tittle"] = tittle;
+        bouquet["price"] = price;
+        bouquet["rating"] = rating;
+
+        bouquets.push(bouquet);
+
+        localStorage.setItem("bouquet", JSON.stringify(bouquets));
+      }
+
+      function updateproduct() {
+        // event.preventDefault();
+
+        let bouquets = JSON.parse(localStorage.getItem("bouquet"));
+        // for (let i = 0; i < bouquets.length; i++) {
+        bouquet.forEach((e) => {
+          if (document.getElementById("tittle").value == bouquets[i]["tittle"]) {
+            // username[i].number= document.getElementById(number).value
+            localStorage.setItem("bouquet", JSON.stringify(bouquets));
+          }
+        });
+      }
+      // }
+
+      function deleteproduct() {
+        let bouquets = JSON.parse(localStorage.getItem("bouquet"));
+        // confirm("Are you sure want to delete your account?")
+        for (let i = 0; i < bouquets.length; i++) {
+          if (
+            document.getElementById("tittle").value == bouquets[i]["tittle"]
+          ) {
+            confirm("Are you sure want to delete your account?");
+            bouquets.splice(i, 1);
+            localStorage.setItem("bouquet", JSON.stringify(bouquets));
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

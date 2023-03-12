@@ -18,7 +18,7 @@
            <input type="name" placeholder="Search" id="name"/>
         </div> 
         <div class="cart">
-          <i class="fa-solid fa-user"></i>
+          <a href="../profile.html"><i class="fa-solid fa-user"></i></a>
           <a href="../Order/Cart.html"><i class="fa-solid fa-cart-plus"></i></a>
         </div>
     </header>
@@ -28,21 +28,21 @@
     <div class="navbar">
         <a href="../Home.html">Home</a>
         <div class="dropdown">
-          <button class="dropbtn">Anniversary</button>
+          <button class="drop">Anniversary</button>
           <div class="dropdown-menu">
              <a href="../Anniversary/Anni-bouquet.html">Bouquet</a>
               <a href="../Anniversary/Anni with Cake.html">Bouquet with cake</a>
            </div>
        </div>
        <div class="dropdown">
-         <button class="dropbtn">Birthday</button>
+         <button class="drop">Birthday</button>
          <div class="dropdown-menu">
              <a href="../Birthday/Bouquet.html">Bouquet</a>
              <a href="../Birthday/Birth with cake.html">Bouquet with cake</a>
          </div>
       </div>
        <div class="dropdown">
-         <button class="dropbtn">Flower</button>
+         <button class="drop">Flower</button>
           <div class="dropdown-menu">
              <a href="../Red Bouquet/Red.html">Red</a>
              <a href="../Pink Bouquet/Pink.html">Pink</a>
@@ -57,13 +57,13 @@
  <!-- fieldset start -->
  <fieldset>
     <div class="cart-page">
-     <img src="../../asset/IMG/anniversary bouquet/red.webp" alt="" width="400" height="400">
+     <!-- <img src="../../asset/IMG/anniversary bouquet/red.webp" id="flower" alt="" width="400" height="400">
       <div class="flow">
         <div class="text">
           <legend>Red Rose Bouquet</legend>
-          <h4><span class="material-symbols-outlined">
+          <h6><span class="material-symbols-outlined">
           currency_rupee
-          </span>900</h4>
+          </span>900</h6>
         </div>
         <div class="all">
           <i  id="star" class="fa-regular fa-star"></i>
@@ -72,9 +72,13 @@
           <i id="star"class="fa-regular fa-star"></i>
           <i  id="star" class="fa-regular fa-star"></i>
         </div>
+        <div class="btn">
         <a href="../Order/Cart.html"><button>Add To Cart</button></a>
+        </div>
+        <div class="button1">
         <a href="../Order/Buy Now.html"><button>Buy Now </button></a>
-      </div>
+        </div>
+      </div> -->
     </div>
   </fieldset>
  <!-- fieldset end -->
@@ -114,5 +118,70 @@
      </div>
    </footer>
  <!--footer end-->
+
+
+ <script>
+ 
+ let div_cart_page;
+ let legend;
+ let h6;
+ let image_flower;
+ let icon;
+ let button;
+
+
+
+ const products_sample=[
+  { "image":"../../asset/IMG/anniversary bouquet/red.webp",
+    "alt":"red_bouquet",
+    "name":"Red Rose Bouquet",
+    "price":900}
+ ]
+ 
+      div_cart_page = document.createElement("div");
+      div_cart_page.setAttribute("class","red");
+      console.log(div_cart_page);
+
+
+
+      image_flower=document.createElement("img");
+      image_flower.setAttribute("id","flower");
+      image_flower.setAttribute("src", products_sample[0]["image"]);
+      image_flower.setAttribute("alt", products_sample[0]["alt"]);
+      div_cart_page.append(image_flower);
+
+
+      legend=document.createElement("legend");
+      legend.innerText = products_sample[0]["name"];
+      div_cart_page.append(legend);
+
+      h6=document.createElement("h6");
+      h6.setAttribute("class","price");
+      h6.innerText= "₹" + products_sample[0]["price"];
+      div_cart_page.append(h6)
+
+      
+      for (let i=1; i<=5; i++){
+        icon = document.createElement("i");
+        icon.setAttribute("id", "star");
+        icon.setAttribute("class","fa-regular fa-star");
+        div_cart_page.append(icon)
+      
+      }
+
+      button=document.createElement("button");
+      button.setAttribute("id","buy_now");
+      button.innerText = ["Add to cart"];
+      div_cart_page.append(button)
+
+      
+      button=document.createElement("button");
+      button.setAttribute("id","buy_now");
+      button.setAttribute("class","buy_now");
+      button.innerText = ["Buy Now"];
+      div_cart_page.append(button)
+
+    document.querySelector("fieldset").append(div_cart_page)
+ </script>
 </body>
 </html>

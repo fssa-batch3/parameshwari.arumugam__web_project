@@ -10,12 +10,11 @@
 </head>
 
 <body>
-  <form action="./pages/profile.html" id="signupform">
+  <form action="./pages/login.html" id="signupform">
     <img src="asset/IMG/index/back3.jpg" alt="" width="1470px" />
     <div class="login">
       <h2>Sing up</h2>
-      <input type="text" name="user_name" id="user_name" pattern="[A-Za-z]{1,24}"
-        title="username is cannot contain space" placeholder=" Name" required /><br /><br />
+      <input type="text" name="user_name" id="user_name" pattern="[A-Za-z]{1,24}" title="username is cannot contain space" placeholder=" Name" required /><br /><br />
       <input type="email" name="email" id="email" placeholder="E-mail" required /><br /><br />
       <input type="password" name="password" id="password" placeholder="Password" pattern="[A-Za-z]{1,8}" required /><br /><br />
       <p>Already have a account?<a href="pages/login.html">login</a></p>
@@ -25,69 +24,72 @@
 
   <script>
    
-let userform = document.getElementById("signupform");
+    let userform = document.getElementById("signupform");
 
-let username = document.getElementById("user_name");
+    let username = document.getElementById("user_name");
 
-let email = document.getElementById("email");
+    let email = document.getElementById("email");
 
-let password = document.getElementById("password");
+    let password = document.getElementById("password");
 
-let user_records = JSON.parse(localStorage.getItem("user_list"));
+    let user_records = JSON.parse(localStorage.getItem("user_list"));
 
-userform.addEventListener("submit", e => {
-  e.preventDefault();
+    userform.addEventListener("submit", e => {
+    e.preventDefault();
 
-  validateform();
-});
-
-function validateform(){
+    validateform();
+    });
+ 
+   function validateform(){
 
     
-  let namevalue = username.value.trim();
+    let namevalue = username.value.trim();
+ 
+    let emailvalue = email.value.trim();
 
-  let emailvalue = email.value.trim();
+    let passwordvalue = password.value.trim();
 
-  let passwordvalue = password.value.trim();
+    let records = [];
 
-  let records = [];
+    let user = {};
 
-  let user = {};
-
-  user["name"] = namevalue;
-  user["emailid"] = emailvalue;
-  user["password"] = passwordvalue;
+    user["name"] = namevalue;
+    user["emailid"] = emailvalue;
+    user["password"] = passwordvalue;
+    user["date_of_birth"] = "";
+    user["Phone_number"] = "";
+    user["address"] = "";
 
    
-  let user_information = JSON.parse(localStorage.getItem("user_list")) ?? records;
+    let user_information = JSON.parse(localStorage.getItem("user_list")) ?? records;
+ 
+    let success = true;
 
-  let success = true;
+    if (user_information != null) {
+     for ( let i = 0; i < user_information.length; i++){    
 
-  if (user_information != null) {
-  for ( let i = 0; i < user_information.length; i++){    
-
-    if (user_information[i].emailid == emailvalue) {
+     if (user_information[i].emailid == emailvalue) {
       success = false;
       break;
+      }
+     }
     }
-  }
-}
 
-  if(success) {
+    if(success) {
 
     user_information.push(user);
     localStorage.setItem("user_list",JSON.stringify(user_information));
     alert("account create successfuly");
 
-    window.location.href = "pages/profile.html"
+    window.location.href = "pages/login.html"
 
-  }
+    }
 
-  else{
-    alert("Already you have an account")
-  }
+    else{
+      alert("Already you have an account")
+    }
   
-}
+    }
   </script>
 </body>
 
