@@ -27,6 +27,7 @@
     </div>
 
     <script>
+      const productid= Math.floor(Math.random()*100);
       function createproduct() {
         let bouquet = {};
 
@@ -36,7 +37,7 @@
         const tittle = document.getElementById("tittle").value;
         const price = document.getElementById("price").value;
         const rating = document.getElementById("rating").value;
-
+        bouquet["product_id"]=productid; 
         bouquet["img"] = image;
         bouquet["tittle"] = tittle;
         bouquet["price"] = price;
@@ -47,19 +48,19 @@
         localStorage.setItem("bouquet", JSON.stringify(bouquets));
       }
 
-      function updateproduct() {
-        // event.preventDefault();
+      // function updateproduct() {
+      //   // event.preventDefault();
 
-        let bouquets = JSON.parse(localStorage.getItem("bouquet"));
-        // for (let i = 0; i < bouquets.length; i++) {
-        bouquet.forEach((e) => {
-          if (document.getElementById("tittle").value == bouquets[i]["tittle"]) {
-            // username[i].number= document.getElementById(number).value
-            localStorage.setItem("bouquet", JSON.stringify(bouquets));
-          }
-        });
-      }
+      //   let bouquets = JSON.parse(localStorage.getItem("bouquet"));
+      //   // for (let i = 0; i < bouquets.length; i++) {
+      //   bouquet.forEach((e) => {
+      //     if (document.getElementById("tittle").value == bouquets[i]["tittle"]) {
+      //       // username[i].number= document.getElementById(number).value
+      //       localStorage.setItem("bouquet", JSON.stringify(bouquets));
+      //     }
+      //   });
       // }
+      // // }
 
       function deleteproduct() {
         let bouquets = JSON.parse(localStorage.getItem("bouquet"));

@@ -73,7 +73,8 @@ input{
 .dropdown-menu{
     display: none;
     position: absolute;
-    background-color: white;
+    /* background-color: white; */
+    background: transparent;
     min-width:160px;
     z-index: 1;
 }
@@ -94,7 +95,8 @@ input{
  padding:16px;
  font-size:20px;
  border: none;
- background-color:white;
+ /* background-color:white; */
+ background: transparent;
 }
 .dropdown:hover .dropdown-menu{
    display: block;

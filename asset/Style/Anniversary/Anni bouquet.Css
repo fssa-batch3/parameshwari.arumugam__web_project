@@ -43,8 +43,8 @@ input{
 .navbar a{
     text-decoration: none;
     margin-top: 10px;
-    font-size: 20px;
-    color: darkviolet;
+    font-size: 25px;
+    color: black;
 }
 
 #name{
@@ -63,8 +63,7 @@ input{
 }
 .dropdown-menu{
     display: none;
-    position: absolute;
-   
+    position: absolute;  
     min-width:160px;
     z-index: 1;
 }
@@ -79,9 +78,9 @@ input{
    position: relative;
 }
 .dropbtn{ 
- color:darkviolet;
+ color:black;
  padding:16px;
- font-size:15px;
+ font-size:20px;
  border: none;
  background-color: white;
 }
@@ -117,7 +116,7 @@ h3{
 .content_box{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top:30px;
     background-color: rgb(221, 223, 223);
     text-align: center;
     justify-content: space-around;

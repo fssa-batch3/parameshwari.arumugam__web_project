@@ -36,8 +36,8 @@ input{
 .navbar a{
     text-decoration: none;
     margin-top: 10px;
-    font-size: 20px;
-    color: darkviolet;
+    font-size: 25px;
+    color:black;
 }
 .txt{
     position:absolute;
@@ -95,7 +95,7 @@ input{
     padding: 2px 3px; 
 }
 #back{
-    margin-top: 10px;
+    margin-top: 20px;
     border-radius: 15px;
 } 
 footer{
@@ -144,9 +144,9 @@ footer{
     position: relative;
 }
 .dropbtn{ 
-  color:darkviolet;
+  color:black;
   padding:16px;
-  font-size:15px;
+  font-size:20px;
   border: none;
   background-color: white;
 }

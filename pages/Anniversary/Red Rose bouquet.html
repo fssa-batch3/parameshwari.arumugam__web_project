@@ -158,30 +158,30 @@
       h6=document.createElement("h6");
       h6.setAttribute("class","price");
       h6.innerText= "₹" + products_sample[0]["price"];
-      div_cart_page.append(h6)
+      div_cart_page.append(h6);
 
       
       for (let i=1; i<=5; i++){
         icon = document.createElement("i");
         icon.setAttribute("id", "star");
         icon.setAttribute("class","fa-regular fa-star");
-        div_cart_page.append(icon)
+        div_cart_page.append(icon);
       
       }
 
       button=document.createElement("button");
       button.setAttribute("id","buy_now");
       button.innerText = ["Add to cart"];
-      div_cart_page.append(button)
+      div_cart_page.append(button);
 
       
       button=document.createElement("button");
       button.setAttribute("id","buy_now");
       button.setAttribute("class","buy_now");
       button.innerText = ["Buy Now"];
-      div_cart_page.append(button)
+      div_cart_page.append(button);
 
-    document.querySelector("fieldset").append(div_cart_page)
+    document.querySelector("fieldset").append(div_cart_page);
  </script>
 </body>
 </html>
