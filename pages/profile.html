@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="../asset/Style/profile.css"/>
   </head>
-  <body>
+  <body> 
     <form action="" id="profilepage">
       <div class="profile">
         <a href="../pages/Home.html"
           ><i id="back" class="fa-sharp fa-solid fa-arrow-left"></i
         ></a>
         <h1>Profile Page</h1>
-        <input type="text"name="name"placeholder=" Name" id="text"class="text"/><br/><br/>
+        <input type="text"name="firstname"placeholder=" FirstName" id="first_name"class="text"/><br/><br/>
+        <input type="text"name="lastname"placeholder=" LastName" id="last_name"class="text"/><br/><br/>
         <input name="email" type="email" placeholder="E-mail" id="email"/><br/><br/>
         <input name="date_of_birth" type="date" placeholder="DOB" id="date_of_birth"/><br/><br/>
         <input type="phone_number" name="number" placeholder="phone number" id="phone_number" class="text"/><br/><br/>
@@ -25,47 +26,6 @@
        <img src="../asset/IMG/home page/profile2.jpg" alt="empty profile"/>
       </div>
     </form>
-    <script>
-
-      let bio = JSON.parse(localStorage.getItem("user_list"));
-      for (let i = 0; i < bio.length; i++) {
-        document.getElementById("text").value = bio[i]["name"];
-        document.getElementById("email").value = bio[i]["emailid"];
-        document.getElementById("date_of_birth").value=bio[i]["date_of_birth"]
-        document.getElementById("phone_number").value=bio[i]["Phone_number"]
-        document.getElementById("address").value=bio[i]["address"]
-      }
-
-      function update() {
-        event.preventDefault();
-
-        let bio = JSON.parse(localStorage.getItem("user_list"));
-        for (let i = 0; i < bio.length; i++) {
-          if (document.getElementById("email").value == bio[i]["emailid"]) {
-            bio[i].name = document.getElementById("text").value;
-            bio[i].date_of_birth = document.getElementById("date_of_birth").value;
-            bio[i].Phone_number = document.getElementById("phone_number").value;
-            bio[i].address = document.getElementById("address").value;
-            // username[i].number= document.getElementById(number).value
-          }
-          localStorage.setItem("user_list", JSON.stringify(bio));
-        }
-      }
-
-      function delete_profile(){
-    let bio = JSON.parse(localStorage.getItem("user_list"));
-            // confirm("Are you sure want to delete your account?")
-            for (let i = 0; i <  bio.length; i++) {
-            if(document.getElementById("email").value == bio[i]["emailid"]){
-                bio.splice(i,1)
-                localStorage.setItem("user_list", JSON.stringify(bio));
-            }
-            }
-        }
-
-    
-
-
-    </script>
+    <script src="../asset/js/profile.js"></script>
   </body>
 </html>

@@ -120,68 +120,6 @@
  <!--footer end-->
 
 
- <script>
- 
- let div_cart_page;
- let legend;
- let h6;
- let image_flower;
- let icon;
- let button;
-
-
-
- const products_sample=[
-  { "image":"../../asset/IMG/anniversary bouquet/red.webp",
-    "alt":"red_bouquet",
-    "name":"Red Rose Bouquet",
-    "price":900}
- ]
- 
-      div_cart_page = document.createElement("div");
-      div_cart_page.setAttribute("class","red");
-      console.log(div_cart_page);
-
-
-
-      image_flower=document.createElement("img");
-      image_flower.setAttribute("id","flower");
-      image_flower.setAttribute("src", products_sample[0]["image"]);
-      image_flower.setAttribute("alt", products_sample[0]["alt"]);
-      div_cart_page.append(image_flower);
-
-
-      legend=document.createElement("legend");
-      legend.innerText = products_sample[0]["name"];
-      div_cart_page.append(legend);
-
-      h6=document.createElement("h6");
-      h6.setAttribute("class","price");
-      h6.innerText= "₹" + products_sample[0]["price"];
-      div_cart_page.append(h6);
-
-      
-      for (let i=1; i<=5; i++){
-        icon = document.createElement("i");
-        icon.setAttribute("id", "star");
-        icon.setAttribute("class","fa-regular fa-star");
-        div_cart_page.append(icon);
-      
-      }
-
-      button=document.createElement("button");
-      button.setAttribute("id","buy_now");
-      button.innerText = ["Add to cart"];
-      div_cart_page.append(button);
-
-      
-      button=document.createElement("button");
-      button.setAttribute("id","buy_now");
-      button.setAttribute("class","buy_now");
-      button.innerText = ["Buy Now"];
-      div_cart_page.append(button);
-
-    document.querySelector("fieldset").append(div_cart_page);
- </script>
+ <script src="../../asset/js/red_rose.js"></script>
 </body>
 </html>
