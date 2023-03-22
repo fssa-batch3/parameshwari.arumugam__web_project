@@ -89,16 +89,16 @@ label{
     width: 250px;
     height: 40px;
     position: relative;
-    margin-left:40px;
+    margin-left:49px;
 }
 #ntext{
     width: 250px;
     height: 40px;
 }
-#email{
+#quantity{
     width: 250px;
     height: 40px;
-    margin-right: 10px;
+    margin-left:95px;
 }
 #cnumber{
     width: 250px;
@@ -118,7 +118,7 @@ label{
     width: 250px;
     height: 60px;
     position: relative;
-    margin-left:90px;
+    margin-left:100px;
 }
 p{
     margin-left:15%;

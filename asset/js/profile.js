@@ -20,7 +20,7 @@ function update() {
       bio[i].date_of_birth = document.getElementById("date_of_birth").value;
       bio[i].Phone_number = document.getElementById("phone_number").value;
       bio[i].address = document.getElementById("address").value;
-      // username[i].number= document.getElementById(number).value
+     
     }
     localStorage.setItem("user_list", JSON.stringify(bio));
   }
@@ -28,7 +28,7 @@ function update() {
 
 function delete_profile(){
 let bio = JSON.parse(localStorage.getItem("user_list"));
-      // confirm("Are you sure want to delete your account?")
+      confirm("Are you sure want to delete your account?")
       for (let i = 0; i <  bio.length; i++) {
       if(document.getElementById("email").value == bio[i]["emailid"]){
           bio.splice(i,1)

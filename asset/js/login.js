@@ -8,11 +8,7 @@ checklogin.onsubmit =function(e){
     const password= document.getElementById("password").value;
 
     const localdata = JSON.parse(localStorage.getItem("user_list"));
- 
-    // if(!localdata) {
-    //     alert("login fail");
-    //     return;
-    // }
+
     let success;
     for(i=0; i<localdata.length; i++){
 

@@ -16,14 +16,7 @@ let bouquets = JSON.parse(localStorage.getItem("bouquet"));
       }
      
     });
-
-    
-
-    
-    
-
   
- 
  let div_cart_page;
  let legend;
  let h6;
@@ -53,7 +46,7 @@ let bouquets = JSON.parse(localStorage.getItem("bouquet"));
       image_flower=document.createElement("img");
       image_flower.setAttribute("id","flower");
       image_flower.setAttribute("src", result["img"]);
-      // image_flower.setAttribute("alt", result["alt"]);
+      image_flower.setAttribute("alt", result["alt"]);
       div_cart_page.append(image_flower);
 
 

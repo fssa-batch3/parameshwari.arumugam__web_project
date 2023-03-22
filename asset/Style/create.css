@@ -18,6 +18,11 @@ label{
     width: 400px;
     height: 40px;
  }
+ #value{ 
+    margin-left:185px;	
+    border-bottom-color:black;
+    
+ }
  #price{ 
     margin-left:194px;	
     border-bottom-color:black;

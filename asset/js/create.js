@@ -20,7 +20,6 @@ const productid= Math.floor(Math.random()*1000);
       }
       function deleteproduct() {
         let bouquets = JSON.parse(localStorage.getItem("bouquet"));
-        // confirm("Are you sure want to delete your account?")
         for (let i = 0; i < bouquets.length; i++) {
           if (
             document.getElementById("tittle").value == bouquets[i]["tittle"]
