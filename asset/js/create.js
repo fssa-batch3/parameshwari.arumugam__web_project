@@ -19,16 +19,7 @@ function createproduct() {
 
   localStorage.setItem("bouquet", JSON.stringify(bouquets));
 }
-function deleteproduct() {
-  let bouquets = JSON.parse(localStorage.getItem("bouquet"));
-  for (let i = 0; i < bouquets.length; i++) {
-    if (document.getElementById("tittle").value == bouquets[i]["tittle"]) {
-      confirm("Are you sure want to delete your account?");
-      bouquets.splice(i, 1);
-      localStorage.setItem("bouquet", JSON.stringify(bouquets));
-    }
-  }
-}
+
 
 let output = "";
 
@@ -41,8 +32,7 @@ for (let i = 0; i < bouquets.length; i++) {
   <td class="td-img"><img src="${bouquets[i].img}"></td>
   <td>${bouquets[i].tittle}</td>
   <td>${bouquets[i].price}</td>
-  <td><a href=""></a></td>
-  <td onclick="updateproduct(${bouquets[i].product_id})"><button id="update-btn">Update</button></td>
+  <td onclick="updateproduct(${bouquets[i].product_id})"><button>Update</button></td>
 </tr>`;
 
   append_div.innerHTML = output;
@@ -80,3 +70,15 @@ function updatenew(){
   localStorage.setItem("bouquet", JSON.stringify(bouquets));
 
 }
+
+
+// function deleteproduct() {
+//   let bouquets = JSON.parse(localStorage.getItem("bouquet"));
+//   for (let i = 0; i < bouquets.length; i++) {
+//     if (document.getElementById("tittle").value == bouquets[i]["tittle"]) {
+//       confirm("Are you sure want to delete your account?");
+//       bouquets.splice(i, 1);
+//       localStorage.setItem("bouquet", JSON.stringify(bouquets));
+//     }
+//   }
+// }
