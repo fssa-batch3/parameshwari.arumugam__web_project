@@ -1,6 +1,7 @@
 body{
-    background-image:url(../IMG/index/color.jpg);
-    
+    background-image:url(../IMG/index/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .login{
     border: 2px solid black;
