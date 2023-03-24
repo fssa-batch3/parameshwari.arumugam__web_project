@@ -50,4 +50,12 @@ label{
     margin-top:15%;
     
  } 
+
+table tbody tr td {
+   padding: 1em;
+}
+
+table tbody tr td img{
+   width: 40px;
+}
  
