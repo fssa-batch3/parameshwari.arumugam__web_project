@@ -12,29 +12,29 @@ Live server: https://fssa-batch3.github.io/parameshwari.arumugam__web_project/
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=fssa-batch3_parameshwari.arumugam__web_project&metric=bugs)](https://sonarcloud.io/summary/new_code?id=fssa-batch3_parameshwari.arumugam__web_project)
 
 
-Features
+### Features
 
-user module
+### user module
 
-registration - completed
-login - completed
-profile create - completed
-profile read - completed
-profile_update - completed
-profile_delete - completed
+- registration - completed
+- login - completed
+- profile create - completed
+- profile read - completed
+- profile_update - completed
+- profile_delete - completed
 
-product module
+### product module
 
-Create Product - completed
-Product Read - completed
-Product Update -completed
-product delete -completed
+- Create Product - completed
+- Product Read - completed
+- Product Update -completed
+- product delete -completed
 
-cart module
+### cart module
 
-Create cart - yet to start
-cart Read - yet to start 
-cart delete - yet to start 
+- Create cart - yet to start
+- cart Read - yet to start 
+- cart delete - yet to start
 
 
 # E-commerce
