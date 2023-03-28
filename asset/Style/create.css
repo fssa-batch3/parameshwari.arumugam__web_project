@@ -53,9 +53,10 @@ label{
 
 table tbody tr td {
    padding: 1em;
+   font-size: 30px;
 }
 
 table tbody tr td img{
-   width: 40px;
+   width: 100px;
 }
  
