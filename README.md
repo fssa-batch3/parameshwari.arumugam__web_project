@@ -67,3 +67,29 @@ Our profile created
         6. Click the "Save" button.
     - Expected Result:
         - The product details are updated.
+
+    ### Add product/item to cart
+ - Scenario 1: Successfully add product/item to cart
+    - Steps:
+        1. Log in as a buyer.
+        2. Navigate to the product listing page.
+        3. Select a product/item to add to cart.
+        4. Click the "Add to Cart" button.
+    - Expected Result:
+        - The product/item is added to the user's cart.
+ ### View items in cart
+ - Scenario 1: Successfully view items in cart
+    - Steps:
+        1. Log in as a buyer.
+        2. Navigate to the cart page.
+        3. View the list of items in the cart.
+    - Expected Result:
+        - The user can view the list of items in the cart.
+ ### Remove item from cart
+ - Scenario 1: Successfully remove item from cart
+    - Steps:
+        1. Log in as a buyer.
+        2. Navigate to the cart page.
+        3. Remove the selected item from the cart.
+    - Expected Result:
+        - The item is removed from the user's cart.
