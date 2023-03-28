@@ -784,6 +784,6 @@ if(localStorage.getItem("bouquet")){
   console("obj");
 }
 else{
-  localStorage.setItem("bouquet", JSON.stringif(bouquet));
+  localStorage.setItem("bouquet", JSON.stringify(bouquet));
   console.log("yes");
 }
