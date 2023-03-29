@@ -44,7 +44,7 @@ Live server: https://fssa-batch3.github.io/parameshwari.arumugam__web_project/
     - Steps:
         1.  Navigate to the registration page.
         2.  Enter the required information such as name, email, and password.
-        3.  Click the "Create Account" button.
+        3.  Click the "signup" button.
     - Expected Result:
         - The user is redirected to the login page.
         
