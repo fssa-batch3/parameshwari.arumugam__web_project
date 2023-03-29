@@ -18,7 +18,7 @@ let bouquets = JSON.parse(localStorage.getItem("bouquet"));
     });
   
  let div_cart_page;
- let legend;
+ let h1;
  let h6;
  let image_flower;
  let icon;
@@ -50,9 +50,9 @@ let bouquets = JSON.parse(localStorage.getItem("bouquet"));
       div_cart_page.append(image_flower);
 
 
-      legend=document.createElement("legend");
-      legend.innerText = result["tittle"];
-      div_cart_page.append(legend);
+      h1=document.createElement("h1");
+      h1.innerText = result["tittle"];
+      div_cart_page.append(h1);
 
       h6=document.createElement("h6");
       h6.setAttribute("class","price");
@@ -94,4 +94,4 @@ let bouquets = JSON.parse(localStorage.getItem("bouquet"));
     
 
 
-    document.querySelector("fieldset").append(div_cart_page);
+    document.querySelector("legend").append(div_cart_page);

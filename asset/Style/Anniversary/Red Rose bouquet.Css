@@ -17,17 +17,17 @@ h5{
    position: relative;
    bottom: 9px;
 }
-legend{
+h1{
     font-size:45px;
     margin-left:55%;
     position: relative;
-    bottom:350px;
+    bottom:390px;
 }
 h6{
     margin-left:70%;
     font-size:40px;
     position: relative;
-    bottom:400px;
+    bottom:430px;
 }
 .search{
     margin-top: 20px;
@@ -116,7 +116,7 @@ h3{
     color:goldenrod; 
     font-size:25px;
     position: relative;
-    top:-500px;
+    top:-520px;
     left:650px;
     padding:5px;
     
@@ -136,14 +136,14 @@ h3{
     margin-top: 40px
 
 }
-fieldset:hover{
+legend:hover{
     box-shadow: rgba(5, 5, 30, 0.2) 0px 7px 29px 8px;
    
 }
 h4{
     font-size:20px;
 }
-fieldset{
+legend{
     margin-top: 90px;
     margin-left: 15%;
     width: 1000px;
