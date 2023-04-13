@@ -72,13 +72,13 @@ function updatenew(){
 }
 
 
-// function deleteproduct() {
-//   let bouquets = JSON.parse(localStorage.getItem("bouquet"));
-//   for (let i = 0; i < bouquets.length; i++) {
-//     if (document.getElementById("tittle").value == bouquets[i]["tittle"]) {
-//       confirm("Are you sure want to delete your account?");
-//       bouquets.splice(i, 1);
-//       localStorage.setItem("bouquet", JSON.stringify(bouquets));
-//     }
-//   }
-// }
+function deleteproduct() {
+  let bouquets = JSON.parse(localStorage.getItem("bouquet"));
+  for (let i = 0; i < bouquets.length; i++) {
+    if (document.getElementById("tittle").value == bouquets[i]["tittle"]) {
+      confirm("Are you sure want to delete your account?");
+      bouquets.splice(i, 1);
+      localStorage.setItem("bouquet", JSON.stringify(bouquets));
+    }
+  }
+}
