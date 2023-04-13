@@ -44,7 +44,7 @@ Live server: https://fssa-batch3.github.io/parameshwari.arumugam__web_project/
     - Steps:
         1.  Navigate to the registration page.
         2.  Enter the required information such as name, email, and password.
-        3.  Click the "Create Account" button.
+        3.  Click the "signup" button.
     - Expected Result:
         - The user is redirected to the login page.
         
@@ -71,7 +71,7 @@ Live server: https://fssa-batch3.github.io/parameshwari.arumugam__web_project/
 ### Create a new product to sell ( completed :white_check_mark: )
 - Scenario 1: Successfully create a new product to sell
     - Steps:
-        1.  Log in as a seller.
+        1.  Log in as a buyer.
         2.  Navigate to the product creation page.
         3.  Enter the product details such as name,  price, and stock.
         4.  Upload product images.
@@ -82,7 +82,7 @@ Live server: https://fssa-batch3.github.io/parameshwari.arumugam__web_project/
 ### View list of products ( completed :white_check_mark: )
 - Scenario 1: Successfully view list of products
     - Steps:
-        1.  Log in as a seller.
+        1.  Log in as a buyer.
         2.  Navigate to the products page.
         3.  View the list of products.
     - Expected Result:
@@ -91,7 +91,7 @@ Live server: https://fssa-batch3.github.io/parameshwari.arumugam__web_project/
 ### Edit product details ( completed :white_check_mark: )
 - Scenario 1: Successfully edit product details
     - Steps:
-        1.  Log in as a seller.
+        1.  Log in as a buyer.
         2.  Navigate to the products page.
         3.  Select a product to edit.
         4.  Click the “Update Product" button.
