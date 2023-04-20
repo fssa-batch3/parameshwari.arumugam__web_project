@@ -133,3 +133,25 @@ for (let i=20; i< 32; i++) {
  }
   document.querySelector("div.content_main").append(div_content_main)
  }
+
+ let search = document.getElementById("name");
+
+    search.addEventListener("keyup", (e) =>{
+       
+      let words = e.target.value.toLowerCase();
+
+      let letter = document.querySelectorAll(".red");
+
+      letter.forEach(element =>{
+
+        let content = element.children[1].textContent.toLowerCase();
+
+        if(content.includes(words)){
+          element.style.display="block"
+        }
+        else{
+          element.style.display="none"
+        }
+      })
+
+    })

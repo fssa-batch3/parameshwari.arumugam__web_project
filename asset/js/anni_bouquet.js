@@ -141,6 +141,30 @@ let div_content_box;
 
     }
 
+
+    let search = document.getElementById("name");
+
+    search.addEventListener("keyup", (e) =>{
+       
+      let words = e.target.value.toLowerCase();
+
+      let letter = document.querySelectorAll(".red");
+
+      letter.forEach(element =>{
+
+        let content = element.children[1].textContent.toLowerCase();
+
+        if(content.includes(words)){
+          element.style.display="block"
+        }
+        else{
+          element.style.display="none"
+        }
+      })
+
+    })
+
+
    //  let Cart = JSON.parse(localStorage.getItem("Cart"))
    //  let user = JSON.parse(localStorage.getItem("active_user"));
 

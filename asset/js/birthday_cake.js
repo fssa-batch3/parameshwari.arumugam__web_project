@@ -109,6 +109,36 @@ let icon;
 //     ]
 
 
+
+
+let search = document.getElementById("name");
+
+search.addEventListener("keyup", (e) =>{
+   
+  let words = e.target.value.toLowerCase();
+
+  let letter = document.querySelectorAll(".red");
+
+  letter.forEach(element =>{
+
+    let content = element.children[1].textContent.toLowerCase();
+
+    if(content.includes(words)){
+      element.style.display="block"
+    }
+    else{
+      element.style.display="none"
+    }
+  })
+
+})
+
+
+
+
+
+
+
 let bouquets = JSON.parse(localStorage.getItem("bouquet"))
 
 for (let i=44; i< 57; i++) {
@@ -118,16 +148,16 @@ for (let i=44; i< 57; i++) {
    div_main_content.setAttribute("class","red");
    console.log(div_main_content);
 
-  a=document.createElement("a");
+  a = document.createElement("a");
   a.setAttribute("href","../../pages/Anniversary/Red Rose bouquet.html?id=" + bouquets[i]["product_id"]);
-  div_main_content.append(a);
-  console.log(a);
+  div_main_content.prepend(a);
+  // console.log(a);
 
    image_flower=document.createElement("img");
    image_flower.setAttribute("id","flower");
    image_flower.setAttribute("src",bouquets[i]["img"]);
    image_flower.setAttribute("alt", bouquets[i]["alt"]);
-   a.prepend(image_flower);
+   a.append(image_flower);
 
 
    h2=document.createElement("h2");

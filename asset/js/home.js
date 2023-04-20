@@ -82,3 +82,26 @@ Cart.forEach((e) => {
 
 let count = document.getElementById("cartcount");
 count.innerText = cartCount.length;
+
+
+let search = document.getElementById("name");
+
+    search.addEventListener("keyup", (e) =>{
+       
+      let words = e.target.value.toLowerCase();
+
+      let letter = document.querySelectorAll(".mixed");
+
+      letter.forEach(element =>{
+
+        let content = element.children[1].textContent.toLowerCase();
+
+        if(content.includes(words)){
+          element.style.display="block"
+        }
+        else{
+          element.style.display="none"
+        }
+      })
+
+    })
