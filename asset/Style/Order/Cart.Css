@@ -76,6 +76,12 @@ input{
    display: inline-block;
    position: relative;
 }
+
+.align_flex{
+    display: flex;
+    flex-direction: row;
+}
+
 .dropbtn{ 
  color:black;
  padding:16px;
@@ -106,7 +112,11 @@ input{
 }
 .black{
     display: flex;
-    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    /* position: relative; */
+
+    /* flex-wrap: wrap; */
 }
 .txt{
     margin-top:10%;
@@ -115,7 +125,7 @@ input{
 }
 .txt1{
     margin-top:3%;
-    margin-left: 30px;
+    margin-left: 50px;
     font-size:20px;
 }
 .pink img{
@@ -164,7 +174,7 @@ hr{
     color: black;
     background-color: white;
     border-style: none;
-    margin-right:1000px;
+    margin-left:500px;
     font-size:25px;
 }
 #icon{

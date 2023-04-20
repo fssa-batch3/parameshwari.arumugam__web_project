@@ -9,11 +9,14 @@ function createproduct() {
   const tittle = document.getElementById("tittle").value;
   const price = document.getElementById("price").value;
   const rating = document.getElementById("rating").value;
+
+  const category=document.querySelector(".selectoption").value
   bouquet["product_id"] = productid;
   bouquet["img"] = image;
   bouquet["tittle"] = tittle;
   bouquet["price"] = price;
   bouquet["rating"] = rating;
+  bouquet["category"]=category;
 
   bouquets.push(bouquet);
 

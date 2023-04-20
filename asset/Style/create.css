@@ -3,7 +3,7 @@ body{
 }
 
 label{ 
-    margin-left: 5px;
+    margin-left:5px;
     font-size:40px;   
  } 
  button{ 
@@ -19,7 +19,7 @@ label{
     height: 40px;
  }
  #value{ 
-    margin-left:185px;	
+    margin-left:180px;	
     border-bottom-color:black;
     
  }
@@ -58,5 +58,13 @@ table tbody tr td {
 
 table tbody tr td img{
    width: 100px;
+}
+.selectoption{
+   border:80px;
+   width:150px;
+   height: 50px;
+   position: relative;
+   bottom:40px;
+   
 }
  

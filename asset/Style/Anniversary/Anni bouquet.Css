@@ -176,3 +176,10 @@ footer{
     display:flex;
     flex-direction: column; 
 }
+#cartcount{
+    margin-left:80px;
+    font-size:20px;
+    position: relative;
+    bottom:70px;
+    
+}

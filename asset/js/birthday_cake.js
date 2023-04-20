@@ -111,7 +111,7 @@ let icon;
 
 let bouquets = JSON.parse(localStorage.getItem("bouquet"))
 
-for (let i=44; i< 56; i++) {
+for (let i=44; i< 57; i++) {
    console.log("hello")
 
    div_main_content=document.createElement("div");

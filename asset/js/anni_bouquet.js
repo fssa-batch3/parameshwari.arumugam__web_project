@@ -141,3 +141,19 @@ let div_content_box;
 
     }
 
+   //  let Cart = JSON.parse(localStorage.getItem("Cart"))
+   //  let user = JSON.parse(localStorage.getItem("active_user"));
+
+   //  let cartCount = [];
+
+   //  Cart.forEach( e => {
+
+   //  if(e["emailid"] == user["emailid"]){
+   //      cartCount.push(e)
+   //  }
+
+   //  })
+
+   //   let count = document.getElementById("cartcount")
+   //   count.innerText = cartCount.length;
+

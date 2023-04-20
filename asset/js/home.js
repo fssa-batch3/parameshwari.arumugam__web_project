@@ -1,5 +1,5 @@
-
 let div_main_box;
+let a;
 let h2;
 let image_flower;
 
@@ -44,30 +44,41 @@ let image_flower;
 //     alt : "white_bouquet",
 //     name:"White Rose Bouquet",
 //   }
-  
+
 // ]
 
+let bouquets = JSON.parse(localStorage.getItem("bouquet"));
+
+for (let i = 0; i < 8; i++) {
+  div_main_box = document.createElement("div");
+  div_main_box.setAttribute("class", "mixed");
+  console.log(div_main_box);
+
+  image_flower = document.createElement("img");
+  image_flower.setAttribute("id", "flower");
+  image_flower.setAttribute("src", bouquets[i]["img"]);
+  image_flower.setAttribute("alt", "image");
+  div_main_box.append(image_flower);
+
+  
+  h2 = document.createElement("h2");
+  h2.innerText = bouquets[i]["tittle"];
+  div_main_box.append(h2);
 
 
-let bouquets = JSON.parse(localStorage.getItem("bouquet"))
-
-
-for (let i=0; i < 8; i++) {
-
-div_main_box=document.createElement("div");
-div_main_box.setAttribute("class","mixed");
-console.log(div_main_box);
-
-image_flower=document.createElement("img");
-image_flower.setAttribute("id","flower");
-image_flower.setAttribute("src", bouquets[i]["img"]);
-image_flower.setAttribute("alt", "image");
-div_main_box.prepend(image_flower);
-
-h2=document.createElement("h2");
-h2.innerText= bouquets[i]["tittle"];
-div_main_box.append(h2);
-
-document.querySelector("div.main_box").append(div_main_box)
-
+  document.querySelector("div.main_box").append(div_main_box);
 }
+
+let Cart = JSON.parse(localStorage.getItem("Cart"));
+let user = JSON.parse(localStorage.getItem("active_user"));
+
+let cartCount = [];
+
+Cart.forEach((e) => {
+  if (e["emailid"] == user["emailid"]) {
+    cartCount.push(e);
+  }
+});
+
+let count = document.getElementById("cartcount");
+count.innerText = cartCount.length;

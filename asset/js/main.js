@@ -781,7 +781,7 @@ let bouquet =
 
 
 if(localStorage.getItem("bouquet")){
-  console("obj");
+  console.log("obj");
 }
 else{
   localStorage.setItem("bouquet", JSON.stringify(bouquet));
