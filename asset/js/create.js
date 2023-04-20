@@ -1,4 +1,4 @@
-const productid = Math.floor(Math.random() * 1000);
+let productid = Math.floor(Math.random() * 1000);
 
 let bouquets = JSON.parse(localStorage.getItem("bouquet")) ?? [];
 
