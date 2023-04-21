@@ -34,7 +34,7 @@ function delete_profile(){
 let bio = JSON.parse(localStorage.getItem("user_list"));
       confirm("Are you sure want to delete your account?")
       for (let i = 0; i <  bio.length; i++) {
-      if(document.getElementById("email").value == bio[i]["6"]){
+      if(document.getElementById("email").value == bio[i]["emailid"]){
           bio.splice(i,1)
           localStorage.setItem("user_list", JSON.stringify(bio));
       }
@@ -48,7 +48,7 @@ let bio = JSON.parse(localStorage.getItem("user_list"));
     let deletelogout= delete log_out
     
 
-    localStorage.setItem("active_user",deletelogout)
+    localStorage.setItem("active_user",deletelogout)  
     window.location.href = "../pages/login.html"
 
 
