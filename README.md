@@ -101,7 +101,7 @@ Live server: https://fssa-batch3.github.io/parameshwari.arumugam__web_project/
         - The product details are updated.
         
 
-    ### Add product/item to cart (yet to start :x:)
+    ### Add product/item to cart (completed :white_check_mark:)
  - Scenario 1: Successfully add product/item to cart
     - Steps:
         1.  Log in as a buyer.
@@ -110,7 +110,7 @@ Live server: https://fssa-batch3.github.io/parameshwari.arumugam__web_project/
         4.  Click the "Add to Cart" button.
     - Expected Result:
         - The product/item is added to the user's cart.
- ### View items in cart (yet to start :x:)
+ ### View items in cart (completed :white_check_mark:)
  - Scenario 1: Successfully view items in cart
     - Steps:
         1.  Log in as a buyer.
