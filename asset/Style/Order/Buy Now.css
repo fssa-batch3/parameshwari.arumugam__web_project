@@ -1,6 +1,5 @@
 body{
-    background-image: url("../../IMG/index/flower.webp");
-    background-size: cover;
+  overflow: hidden;
 }
 header{
     display: flex;
@@ -26,6 +25,10 @@ h5{
     margin-right:15px; 
     color: black;  
 }
+.pay{
+    position: relative;
+    bottom:340px;
+}
 input{
     width: 500px;
     height: 30px;
@@ -47,10 +50,10 @@ input{
  background-color: white;
  border: 2px solid black;
  margin-left:10%;
- border-radius:15px;
+
 }
 .for{
-    margin-left:17%;
+    margin-left:5%;
     font-size: larger;
     position: relative;
     top: 35px;
@@ -94,6 +97,7 @@ label{
 #ntext{
     width: 250px;
     height: 40px;
+    margin-left:125px;
 }
 #quantity{
     width: 250px;
@@ -103,15 +107,18 @@ label{
 #cnumber{
     width: 250px;
     height: 40px;
+    margin-left:35px;
 }
 #stext{
     width: 250px;
     height: 40px;
+    margin-left:56px;
    
 }
 #text{
     width: 250px;
     height: 40px;
+    margin-left:35px;
    
 }
 #aname{
@@ -126,18 +133,32 @@ p{
     font-size:25px;
 }
 h1{
-    margin-left: 15%;
+    margin-left:35%;
     margin-top:40px;
 }
-.details{
+.details label{
     position: relative;
-    bottom: 15px;
-    display: flex;
-    justify-content: space-around;
-    
+    bottom:290px;
+    margin-left:55%;
+    display:flex;
+     
 }
 .details input{
+   position: relative;
+   bottom:5px;
+}
+
+
+.details input{
     margin-left: 25px;   
+}
+
+#buynow{
+    margin-left:15%;
+    margin-top:5%;
+    border: 2px solid black;
+    width:1000px;
+    height:800px;
 }
 
 

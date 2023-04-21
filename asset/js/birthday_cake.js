@@ -141,7 +141,7 @@ search.addEventListener("keyup", (e) =>{
 
 let bouquets = JSON.parse(localStorage.getItem("bouquet"))
 
-for (let i=44; i< 57; i++) {
+for (let i=44; i< 60; i++) {
    console.log("hello")
 
    div_main_content=document.createElement("div");

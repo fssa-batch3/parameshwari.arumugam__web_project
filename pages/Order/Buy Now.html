@@ -26,7 +26,8 @@
   <!--header end -->
  
  <!--main start-->
-    <div class="main">
+   <form id="buynow">
+     <div class="main">
        <h1>Place your Order Now</h1>
      <div class="for">
       <label for="name"> Name<input type="text" id="ntext"></label><br><br>
@@ -38,8 +39,9 @@
 	      <label for="text">state<input type="text" id="stext"required></label><br><br>
         <label for="number">Pincode<input type="text" id="cnumber"required></label><br><br>
       </div>
-    </div>
-      <p>Payment method</p>
+     </div>
+     <div class="pay">
+        <p>Payment method</p>
         <input type="radio" id="gpay" name="paymethod">
         <label for="gpay">G pay</label><br>
         <input type="radio" id="paytm" name="paymethod" >
@@ -48,33 +50,13 @@
         <label for="phonepay">Phone pay</label><br>
         <input type="radio" id="delivery" name="paymethod">
         <label for="delivery">Cash on delivery</label><br><br><br>
-	      <button type="button" onclick="buynow()">Buy Now</button>
-    </div>
+	      <a href="../Order/Order.html"><button type="button">Buy Now</button></a>
+      </div>
+      </div>
+    
+   </form>
   <!-- main end --> 
 
-  <script>
-  function buynow(){
-    const quantity= document.getElementById("quantity").value
-    const name= document.getElementById("ntext").value
-    const phonenumber= document.getElementById("pnumber").value
-    const addres= document.getElementById("aname").value
-    const countery= document.getElementById("text").value
-    const state= document.getElementById("stext").value
-    const pincode= document.getElementById("cnumber").value
 
-    console.log(quantity)
-    console.log(name)
-    console.log(phonenumber)
-    console.log(addres)
-    console.log(countery)
-    console.log(state)
-    console.log(pincode)
-    
-
-    window.location.href="../Order/Order.html"
-
-   
-  }
-  </script>
 </body>
 </html>

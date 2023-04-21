@@ -41,6 +41,18 @@ let bio = JSON.parse(localStorage.getItem("user_list"));
       }
   }
 
+  function logout(){
+    let log_out = JSON.parse(localStorage.getItem("active_user"));
+    console.log(log_out);
+    
+    let deletelogout= delete log_out
+    
+
+    localStorage.setItem("active_user",deletelogout)
+    window.location.href = "../pages/login.html"
+
+
+  }
   
 
 

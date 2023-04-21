@@ -1,20 +1,21 @@
 body{
-    background-color: rgb(234, 77, 228);
+    background-color:rgb(213, 189, 253);
+    overflow: hidden;
 }
 .profile{
     background-color: rgb(255, 255, 255);
     border: 2px solid black;
     border-radius:5%;
     width: 1000px;
-    height:900px;
+    height:800px;
     margin-left:15%;
-    margin-top:7%;
+    margin-top:4%;
 }
 img{
     position: relative;
-    bottom:70%;
+    top:-830px;
     width:400px;
-    margin-left:10%;
+    margin-left:4%;
    
 }
 #back {
@@ -23,7 +24,7 @@ img{
 }
 i{
       position: relative;
-      top: 20px;
+     top:20px;
       margin-left:15px;
       color: black;
 }
@@ -83,13 +84,16 @@ i{
 }
 
 button{
+    font-size:20px;
     display: flex;
     width: 200px;
-    height: 35px;
-    margin-top:20px;
-    margin-left:30%;
-    background-color: rgb(223, 125, 238);
+    height: 45px;
+    position: relative;
+    bottom:250px;
+    margin-left:13%;
+    background-color:white;
     border-radius:10px;
+    margin-top: 20px;
     
 }
 h1{
