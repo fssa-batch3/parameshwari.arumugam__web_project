@@ -7,6 +7,9 @@ let label;
 let button;
 let icon1;
 
+
+
+
 // let cart_sample =
 //   {
 //     image: "../../asset/IMG/birth with cake/black forest.webp",
@@ -20,16 +23,18 @@ let user = JSON.parse(localStorage.getItem("active_user"));
 
 let total = 0;
 
-cart_sample.find((e) => {
-  if (e["emailid"] == user["emailid"]) {
-    total += Number(e["price"]);
+// cart_sample.find((e) => {
+
+for(let i=0; i<cart_sample.length; i++){
+  if (user["emailid"] == cart_sample[i]["emailid"]) {
+    total += Number(cart_sample[i]["price"]);
 
     div_cart_page = document.createElement("div");
     div_cart_page.setAttribute("class", "align_flex");
 
     image_flower = document.createElement("img");
     image_flower.setAttribute("id", "flower");
-    image_flower.setAttribute("src", e["img"]);
+    image_flower.setAttribute("src", cart_sample[i]["img"]);
     // image_flower.setAttribute("alt", cart_sample["alt"]);
     div_cart_page.prepend(image_flower);
 
@@ -38,11 +43,11 @@ cart_sample.find((e) => {
     div_cart_page.append(div_text);
 
     h1 = document.createElement("h1");
-    h1.innerText = e["tittle"];
+    h1.innerText = cart_sample[i]["tittle"];
     div_text.append(h1);
 
     h6 = document.createElement("h2");
-    h6.innerText = "₹" + e["price"];
+    h6.innerText = "₹" + cart_sample[i]["price"];
     div_text.append(h6);
 
     for (let i = 1; i <= 5; i++) {
@@ -76,8 +81,24 @@ cart_sample.find((e) => {
     button.append(icon1);
 
     document.querySelector("div.black").append(div_cart_page);
+
+    button.addEventListener("click", (e) => {
+      for (let j = 0; j < cart_sample.length; j++) {
+        if (user["emailid"] == cart_sample[i]["emailid"] && cart_sample[i]["tittle"] == cart_sample[j]["tittle"]) {
+          cart_sample.splice(i, 1);
+          localStorage.setItem("Cart", JSON.stringify(cart_sample));
+        location.reload();
+        break;
+        }
+        
+      }
+    });
+    // console.log(button);
   }
-});
+};
+// });
+
+
 
 let totalAmount = document.getElementById("total_count");
 

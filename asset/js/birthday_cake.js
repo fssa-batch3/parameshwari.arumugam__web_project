@@ -136,13 +136,33 @@ search.addEventListener("keyup", (e) =>{
 
 
 
+let Cart = JSON.parse(localStorage.getItem("Cart"));
+let user = JSON.parse(localStorage.getItem("active_user"));
+
+let cartCount = [];
+
+Cart.forEach((e) => {
+  if (e["emailid"] == user["emailid"]) {
+    cartCount.push(e);
+  }
+});
+
+let count = document.getElementById("cartcount");
+count.innerText = cartCount.length;
+
+
+
+
 
 
 
 let bouquets = JSON.parse(localStorage.getItem("bouquet"))
 
+
 for (let i=44; i< 60; i++) {
    console.log("hello")
+if(bouquets[i]["status"]){
+
 
    div_main_content=document.createElement("div");
    div_main_content.setAttribute("class","red");
@@ -178,4 +198,7 @@ for (let i=44; i< 60; i++) {
 
  }
   document.querySelector("div.main_content").append(div_main_content)
+};
+
  }
+

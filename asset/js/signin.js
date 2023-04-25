@@ -39,6 +39,10 @@ user["password"] = passwordvalue;
 user["date_of_birth"] = "";
 user["Phone_number"] = "";
 user["address"] = "";
+user["city"] = "";
+user["state"] = "";
+user["pincode"] = "";
+
 
 
 let user_information = JSON.parse(localStorage.getItem("user_list")) ?? records;
@@ -61,7 +65,7 @@ user_information.push(user);
 localStorage.setItem("user_list",JSON.stringify(user_information));
 alert("account create successfuly");
 
-window.location.href = "pages/login.html"
+window.location.href = "pages/home.html"
 
 }
 

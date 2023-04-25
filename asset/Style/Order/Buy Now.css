@@ -18,7 +18,7 @@ h5{
     font-size: 19px;
     margin-left: 10px;
    position: relative;
-   bottom: 9px;
+   
 }
 .search{
     margin-top: 20px;
@@ -27,14 +27,10 @@ h5{
 }
 .pay{
     position: relative;
-    bottom:340px;
+    bottom:330px;
+    margin-right:100px;
 }
-input{
-    width: 500px;
-    height: 30px;
-    border-color: hotpink;   
-    background-color: hotpink;
-}
+
 #name{
     text-align: center;
 }
@@ -59,29 +55,19 @@ input{
     top: 35px;
     font-family:cursive;  
 }
-#phonepay{
-    width: 50px;
-    margin-left: 22%;
-}
-#gpay{
-    width: 50px;
-    margin-left: 22%;
-    position: relative;
-}
-#paytm{
-    width: 50px;
-    margin-left: 22%;
-}
-#delivery{
-    width: 50px;
-    margin-left: 22%;
-}
+
 button{
     width: 130px;
     height: 40px;
-    margin-left: 30%;
+    margin-left:50%;
     background-color: deepskyblue;
     border-radius: 10px;
+    position: relative;
+    bottom:180px;
+}
+button a{
+    text-decoration:none; 
+    color: black;
 }
 label{
     position: relative;
@@ -118,7 +104,7 @@ label{
 #text{
     width: 250px;
     height: 40px;
-    margin-left:35px;
+    margin-left:65px;
    
 }
 #aname{
@@ -138,28 +124,87 @@ h1{
 }
 .details label{
     position: relative;
-    bottom:290px;
-    margin-left:55%;
+    top:60px;
+    margin-left:12%;
     display:flex;
+    font-size: large;
+    /* color: white; */
      
 }
 .details input{
    position: relative;
-   bottom:5px;
-}
+   bottom: 10px;
+   margin-left:105px;  
+   border: 2px solid black;
+   
 
-
-.details input{
-    margin-left: 25px;   
 }
 
 #buynow{
     margin-left:15%;
     margin-top:5%;
     border: 2px solid black;
-    width:1000px;
+    width:1100px;
     height:800px;
 }
+.total{
+    margin-left:-150px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    bottom:10px;
+}
+.order{
+    margin-left:-60px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    bottom:230px;
+   
+}
+.price{
+   margin-left:700px;
+   position: relative;
+   top:-50px;
+   border: 2px solid black;
+   width: 380px;
+   height:200px;
+   background-color: rgb(248, 219, 166);
+
+
+}
+.order p{
+    font-size: 30px;
+}
+.price p{
+    font-size: 30px;
+}
+#flower{
+   width:250px;
+   position: relative;
+   bottom:840px;
+   left:90px;
+}
+#tittle{
+    font-size:30px;
+    position: relative;
+   bottom:870px;
+   left:-20px;
+}
+#rupees{
+    font-size:30px;
+    position: relative;
+    bottom:920px;
+    left:180px;
+}
+h2{
+    margin-left:90px;
+    position: relative;
+    top:30px;
+
+}
+
+
 
 
 @media screen and (max-width: 600px){

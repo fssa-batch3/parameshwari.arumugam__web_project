@@ -10,6 +10,9 @@ for (let i = 0; i < bio.length; i++) {
   document.getElementById("date_of_birth").value=bio[i]["date_of_birth"]
   document.getElementById("phone_number").value=bio[i]["Phone_number"]
   document.getElementById("address").value=bio[i]["address"]
+   document.getElementById("city").value = bio[i]["city"]
+  document.getElementById("state").value =  bio[i]["state"]
+   document.getElementById("pincode").value =  bio[i]["pincode"]
   }
 }
 
@@ -24,7 +27,9 @@ function update() {
       bio[i].date_of_birth = document.getElementById("date_of_birth").value;
       bio[i].Phone_number = document.getElementById("phone_number").value;
       bio[i].address = document.getElementById("address").value;
-     
+      bio[i].city = document.getElementById("city").value;
+      bio[i].state = document.getElementById("state").value;
+      bio[i].pincode = document.getElementById("pincode").value;
     }
     localStorage.setItem("user_list", JSON.stringify(bio));
   }
@@ -38,6 +43,7 @@ let bio = JSON.parse(localStorage.getItem("user_list"));
           bio.splice(i,1)
           localStorage.setItem("user_list", JSON.stringify(bio));
       }
+      window.location.href = "../pages/Home.html"
       }
   }
 

@@ -32,13 +32,16 @@ input{
     text-decoration: none;
     margin-top:0px;
     height: 40px;
+   
 }
 .navbar a{
     text-decoration: none;
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 25px;
     color:black;
+    
 }
+
 .txt{
     position:absolute;
     margin-left:33%; 
@@ -95,7 +98,7 @@ input{
     padding: 2px 3px; 
 }
 #back{
-    margin-top: 20px;
+    margin-top:40px;
     border-radius: 15px;
 } 
 footer{
@@ -142,6 +145,8 @@ footer{
 .dropdown{
     display: inline-block;
     position: relative;
+   
+    margin-top: 10px;
 }
 .dropbtn{ 
   color:black;
@@ -150,9 +155,11 @@ footer{
   border: none;
   background-color: white;
 }
+
 .dropdown:hover .dropdown-menu{
     display: block;
 }
+
 #cartcount{
     margin-left:65px;
     text-align: center;

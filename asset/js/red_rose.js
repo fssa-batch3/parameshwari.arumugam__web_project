@@ -57,18 +57,18 @@ for (let i = 1; i <= 5; i++) {
   div_cart_page.append(icon);
 }
 
-a1 = document.createElement("a");
-a1.setAttribute("href", "../Order/Cart.html");
-div_cart_page.append(a1);
-
-a2 = document.createElement("a");
-a2.setAttribute("href", "../Order/Buy Now.html");
-div_cart_page.append(a2);
-
 button1 = document.createElement("button");
 button1.setAttribute("id", "buy_now");
 button1.innerText = ["Add to cart"];
-a1.append(button1);
+div_cart_page.append(button1);
+
+
+
+a2 = document.createElement("a");
+a2.setAttribute("href", "../Order/Buy Now.html?id=" + result.product_id);
+div_cart_page.append(a2);
+
+
 
 button2 = document.createElement("button");
 button2.setAttribute("id", "buy_now");

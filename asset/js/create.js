@@ -17,6 +17,7 @@ function createproduct() {
   bouquet["price"] = price;
   bouquet["rating"] = rating;
   bouquet["category"]=category;
+  bouquet["status"]=true;
 
   bouquets.push(bouquet);
 
@@ -36,6 +37,7 @@ for (let i = 0; i < bouquets.length; i++) {
   <td>${bouquets[i].tittle}</td>
   <td>${bouquets[i].price}</td>
   <td onclick="updateproduct(${bouquets[i].product_id})"><button>Update</button></td>
+  <td onclick="deleteproduct(${bouquets[i].product_id})"><button>Delete</button></td>
 </tr>`;
 
   append_div.innerHTML = output;
@@ -75,13 +77,13 @@ function updatenew(){
 }
 
 
-function deleteproduct() {
-  let bouquets = JSON.parse(localStorage.getItem("bouquet"));
-  for (let i = 0; i < bouquets.length; i++) {
-    if (document.getElementById("tittle").value == bouquets[i]["tittle"]) {
-      confirm("Are you sure want to delete your account?");
-      bouquets.splice(i, 1);
-      localStorage.setItem("bouquet", JSON.stringify(bouquets));
+function deleteproduct(id) {
+  bouquets.find(function(obj){
+    console.log(obj.product_id)
+    if(obj.product_id==id){
+      obj.status=false;
+      localStorage.setItem("bouquet",JSON.stringify(bouquets));
     }
-  }
+  })
+  
 }
