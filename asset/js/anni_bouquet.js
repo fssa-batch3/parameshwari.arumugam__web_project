@@ -107,7 +107,7 @@ count.innerText = cartCount.length;
 
 let bouquets = JSON.parse(localStorage.getItem("bouquet"));
 
-for (let i = 8; i < 20; i++) {
+for (let i = 8; i < 21; i++) {
   console.log("hello");
 
   if(bouquets[i]["status"]){

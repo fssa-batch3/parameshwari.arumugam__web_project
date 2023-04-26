@@ -59,13 +59,14 @@ if (user_information != null) {
  }
 }
 
+
 if(success) {
 
 user_information.push(user);
 localStorage.setItem("user_list",JSON.stringify(user_information));
 alert("account create successfuly");
 
-window.location.href = "pages/home.html"
+window.location.href = "pages/login.html"
 
 }
 

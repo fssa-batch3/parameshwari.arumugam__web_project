@@ -123,11 +123,13 @@ let count = document.getElementById("cartcount");
 count.innerText = cartCount.length;
 
 
-        let bouquets = JSON.parse(localStorage.getItem("bouquet"))
+  let bouquets = JSON.parse(localStorage.getItem("bouquet"))
     
   
-   for (let i=32; i< 44; i++) {
+   for (let i=33; i< 45; i++) {
       console.log("hello")
+
+      if(bouquets[i]["status"]){
 
       div_main_box=document.createElement("div");
       div_main_box.setAttribute("class","main");
@@ -167,8 +169,8 @@ count.innerText = cartCount.length;
 
      document.querySelector("div.main_box").append(div_main_box)
 
-
-    }
+  }
+    };
 
 
     let search = document.getElementById("name");
@@ -191,4 +193,4 @@ count.innerText = cartCount.length;
         }
       })
 
-    })
+    });

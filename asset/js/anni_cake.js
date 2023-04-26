@@ -108,7 +108,7 @@ count.innerText = cartCount.length;
 
 let bouquets = JSON.parse(localStorage.getItem("bouquet"))
 
-for (let i=20; i< 32; i++) {
+for (let i=21; i< 33; i++) {
    console.log("hello")
 
    div_content_main=document.createElement("div");
