@@ -2,13 +2,10 @@ let h1;
 let h6;
 let image_flower;
 let icon;
-let ouantity;
+let quantity;
 let label;
 let button;
 let icon1;
-
-
-
 
 // let cart_sample =
 //   {
@@ -23,9 +20,12 @@ let user = JSON.parse(localStorage.getItem("active_user"));
 
 let total = 0;
 
+
+
+
 // cart_sample.find((e) => {
 
-for(let i=0; i<cart_sample.length; i++){
+for (let i = 0; i < cart_sample.length; i++) {
   if (user["emailid"] == cart_sample[i]["emailid"]) {
     total += Number(cart_sample[i]["price"]);
 
@@ -67,6 +67,9 @@ for(let i=0; i<cart_sample.length; i++){
 
     quantity = document.createElement("input");
     quantity.setAttribute("type", "number");
+    quantity.setAttribute("min", "1");
+    quantity.setAttribute("max", "10");
+    quantity.setAttribute("value", "1");
     quantity.setAttribute("id", "qnumber");
     label.append(quantity);
 
@@ -82,23 +85,26 @@ for(let i=0; i<cart_sample.length; i++){
 
     document.querySelector("div.black").append(div_cart_page);
 
+    
+
     button.addEventListener("click", (e) => {
       for (let j = 0; j < cart_sample.length; j++) {
-        if (user["emailid"] == cart_sample[i]["emailid"] && cart_sample[i]["tittle"] == cart_sample[j]["tittle"]) {
+        if (
+          user["emailid"] == cart_sample[i]["emailid"] &&
+          cart_sample[i]["tittle"] == cart_sample[j]["tittle"]
+        ) {
           cart_sample.splice(i, 1);
           localStorage.setItem("Cart", JSON.stringify(cart_sample));
-        location.reload();
-        break;
+          location.reload();
+          break;
         }
-        
       }
     });
+
     // console.log(button);
   }
-};
+}
 // });
-
-
 
 let totalAmount = document.getElementById("total_count");
 
@@ -107,3 +113,11 @@ totalAmount.innerText = total;
 let totalAmount1 = document.getElementById("total_count1");
 
 totalAmount1.innerText = total;
+
+
+let continue_btn =  document.getElementById("continue")
+continue_btn.addEventListener("click", function(){
+
+  window.location.href = "../../pages/Order/Buy Now.html?id=" + user.emailid
+
+})

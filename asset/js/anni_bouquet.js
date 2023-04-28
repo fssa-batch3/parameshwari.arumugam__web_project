@@ -110,45 +110,44 @@ let bouquets = JSON.parse(localStorage.getItem("bouquet"));
 for (let i = 8; i < 21; i++) {
   console.log("hello");
 
-  if(bouquets[i]["status"]){
+  if (bouquets[i]["status"]) {
+    div_content_box = document.createElement("div");
+    div_content_box.setAttribute("class", "red");
+    console.log(div_content_box);
 
-  div_content_box = document.createElement("div");
-  div_content_box.setAttribute("class", "red");
-  console.log(div_content_box);
+    a = document.createElement("a");
+    a.setAttribute(
+      "href",
+      "../../pages/Anniversary/Red Rose bouquet.html?id=" +
+        bouquets[i]["product_id"]
+    );
+    div_content_box.append(a);
+    console.log(a);
 
-  a = document.createElement("a");
-  a.setAttribute(
-    "href",
-    "../../pages/Anniversary/Red Rose bouquet.html?id=" +
-      bouquets[i]["product_id"]
-  );
-  div_content_box.append(a);
-  console.log(a);
+    image_flower = document.createElement("img");
+    image_flower.setAttribute("id", "flower");
+    image_flower.setAttribute("src", bouquets[i]["img"]);
+    image_flower.setAttribute("alt", bouquets[i]["alt"]);
+    a.append(image_flower);
 
-  image_flower = document.createElement("img");
-  image_flower.setAttribute("id", "flower");
-  image_flower.setAttribute("src", bouquets[i]["img"]);
-  image_flower.setAttribute("alt", bouquets[i]["alt"]);
-  a.append(image_flower);
+    h2 = document.createElement("h2");
+    h2.innerText = bouquets[i]["tittle"];
+    div_content_box.append(h2);
 
-  h2 = document.createElement("h2");
-  h2.innerText = bouquets[i]["tittle"];
-  div_content_box.append(h2);
+    h3 = document.createElement("h3");
+    h3.setAttribute("class", "price");
+    h3.innerText = "₹" + bouquets[i]["price"];
+    div_content_box.append(h3);
 
-  h3 = document.createElement("h3");
-  h3.setAttribute("class", "price");
-  h3.innerText = "₹" + bouquets[i]["price"];
-  div_content_box.append(h3);
+    for (let i = 1; i <= 5; i++) {
+      icon = document.createElement("i");
+      icon.setAttribute("id", "star");
+      icon.setAttribute("class", "fa-regular fa-star");
+      div_content_box.append(icon);
+    }
 
-  for (let i = 1; i <= 5; i++) {
-    icon = document.createElement("i");
-    icon.setAttribute("id", "star");
-    icon.setAttribute("class", "fa-regular fa-star");
-    div_content_box.append(icon);
+    document.querySelector("div.content_box").append(div_content_box);
   }
-
-  document.querySelector("div.content_box").append(div_content_box);
-}
 }
 
 let search = document.getElementById("name");

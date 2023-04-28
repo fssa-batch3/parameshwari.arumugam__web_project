@@ -1,14 +1,4 @@
-// let newdate;
-// let dateObj = new Date();
-// let month = dateObj.getUTCMonth() + 1; //months from 1-12
-// let day = dateObj.getUTCDate();
-// let year = dateObj.getUTCFullYear();
-// newdate = day + "/" + month + "/" + year;
-// console.log(newdate);
-// // orders id code
-// let order_id = Date.now();
-// console.log(order_id);
-console.log("why");
+const payment_method=document.querySelector('input["name=paymethod"]:checked').value
 
 let bouquets = JSON.parse(localStorage.getItem("bouquet"));
 
@@ -44,6 +34,7 @@ placeorder.addEventListener("click", (e) => {
   obj["product_id"] = product["product_id"];
   obj["order_date"] = product["order_date"];
   obj["emailid"] = user["emailid"];
+  obj["order-method"]= 
  
     order.push(obj);
     localStorage.setItem("order", JSON.stringify(order));
