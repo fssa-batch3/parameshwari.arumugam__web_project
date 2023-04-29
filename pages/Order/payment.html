@@ -8,117 +8,160 @@
     <link rel="stylesheet" href="../../asset/Style/payment.css" />
   </head>
   <body>
-    <div class="images">
-      <img
-        id="google1"
-        src="../../asset/IMG/index/google-pay (1).png"
-        width="50px"
-      /><br />
-      <img
-        id="wallet1"
-        src="../../asset/IMG/index/wallet (1).png"
-        width="50px"
-      /><br /><br /><br />
-      <img
-        id="atm1"
-        src="../../asset/IMG/index/atm-card.png"
-        width="50px"
-      /><br /><br /><br />
-      <img
-        id="net1"
-        src="../../asset/IMG/index/cashless-payment (1).png"
-        width="50px"
-      /><br /><br />
-      <img
-        id="delivery1"
-        src="../../asset/IMG/index/cash-on-delivery (1).png"
-        width="50px"
-      />
-    </div>
-    <h2>Select Payment method</h2>
-    <h3>Pay online and get EXTRA 13 off</h3>
-    <div id="pay">
-      <input type="radio" id="UPI" name="paymethod" value="UPI"/>
-      <label for="gpay">UPI(Gpay/phonepay/Paytm)</label><br />
-      <hr />
-      <input type="radio" id="Wallet" name="paymethod" value="wallet" />
-      <label for="paytm">Wallet/Postpaid</label><br />
-      <hr />
-      <input type="radio" id="Credit" name="paymethod"  value="Debite"/>
-      <label for="phonepay">Debite/Credit Cards</label>
-      <hr />
-      <input type="radio" id="Banking" name="paymethod" value="netbanking" />
-      <label for="phonepay">Net Banking</label>
-      <hr />
-      <input type="radio" id="delivery" name="paymethod" value="cash-on-delivery" />
-      <label for="delivery">Cash on delivery</label>
-      <hr />
-    </div>
-    <div class="btn">
-      <a href="../../pages/Home.html"><button type="button">Cancel</button></a>
-      <a href="../../pages/Order/Order.html"
-        ><button type="button" id="order">Place Order</button></a
-      >
-    </div>
+    <form id="form">
+      <div class="images">
+        <img
+          id="google1"
+          src="../../asset/IMG/index/google-pay (1).png"
+          width="50px"
+        /><br />
+        <img
+          id="wallet1"
+          src="../../asset/IMG/index/wallet (1).png"
+          width="50px"
+        /><br /><br /><br />
+        <img
+          id="atm1"
+          src="../../asset/IMG/index/atm-card.png"
+          width="50px"
+        /><br /><br /><br />
+        <img
+          id="net1"
+          src="../../asset/IMG/index/cashless-payment (1).png"
+          width="50px"
+        /><br /><br />
+        <img
+          id="delivery1"
+          src="../../asset/IMG/index/cash-on-delivery (1).png"
+          width="50px"
+        />
+      </div>
+      <h2>Select Payment method</h2>
+      <h3>Pay online and get EXTRA 13 off</h3>
+      <div id="pay">
+        <input
+          class="payment_option"
+          type="radio"
+          id="UPI"
+          name="paymethod"
+          value="UPI"
+          required
+        />
+        <label for="gpay">UPI(Gpay/phonepay/Paytm)</label><br />
+        <hr />
+        <input
+          class="payment_option"
+          type="radio"
+          id="Wallet"
+          name="paymethod"
+          value="wallet"
+          required
+        />
+        <label for="paytm">Wallet/Postpaid</label><br />
+        <hr />
+        <input
+          class="payment_option"
+          type="radio"
+          id="Credit"
+          name="paymethod"
+          value="Debite"
+          required
+        />
+        <label for="phonepay">Debite/Credit Cards</label>
+        <hr />
+        <input
+          class="payment_option"
+          type="radio"
+          id="Banking"
+          name="paymethod"
+          value="netbanking"
+          required
+        />
+        <label for="phonepay">Net Banking</label>
+        <hr />
+        <input
+          class="payment_option"
+          type="radio"
+          id="delivery"
+          name="paymethod"
+          value="cash-on-delivery"
+          required
+        />
+        <label for="delivery">Cash on delivery</label>
+
+        <hr />
+      </div>
+      <div class="btn">
+        <a href="../../pages/Home.html"
+          ><button type="button">Cancel</button></a
+        >
+        <a href="../../pages/Order/Order.html"
+          ><button type="submit" id="order">Place Order</button>
+        </a>
+      </div>
+    </form>
 
     <script>
-
-const payment_method=document.querySelector('input["name=paymethod"]:checked').value
-
-
       let newdate;
-let dateObj = new Date();
-let month = dateObj.getUTCMonth() + 1; //months from 1-12
-let day = dateObj.getUTCDate();
-let year = dateObj.getUTCFullYear();
-newdate = day + "/" + month + "/" + year;
-console.log(newdate);
-// orders id code
-let order_id = Date.now();
-console.log(order_id);
-      
+      let dateObj = new Date();
+      let month = dateObj.getUTCMonth() + 1; //months from 1-12
+      let day = dateObj.getUTCDate();
+      let year = dateObj.getUTCFullYear();
+      newdate = day + "/" + month + "/" + year;
+      console.log(newdate);
 
-let bouquets = JSON.parse(localStorage.getItem("bouquet"));
+      // orders id code
+      let order_id = Date.now();
+      console.log(order_id);
 
-const url = window.location.search;
-console.log(url);
-const urlparams = new URLSearchParams(url);
-console.log(urlparams);
-const urlserached_value = urlparams.get("id");
-console.log(urlserached_value);
+      let bouquets = JSON.parse(localStorage.getItem("bouquet"));
 
-let result;
-let product;
-let bouquet = bouquets.find(function (e) {
-  if (e["product_id"] == urlserached_value) {
-     product=e
-    return (result = e);
-  } else {
-    return (result = 0);
-  }
-});
+      const url = window.location.search;
+      console.log(url);
+      const urlparams = new URLSearchParams(url);
+      console.log(urlparams);
+      const urlserached_value = urlparams.get("id");
+      console.log(urlserached_value);
 
-console.log(product);
+      let result;
+      let product;
+      let bouquet = bouquets.find(function (e) {
+        if (e["product_id"] == urlserached_value) {
+          product = e;
+          return (result = e);
+        } else {
+          return (result = 0);
+        }
+      });
 
-let user = JSON.parse(localStorage.getItem("active_user"));
-let order = JSON.parse(localStorage.getItem("order")) ?? [];
+      console.log(product);
 
-let placeorder = document.getElementById("order");
-placeorder.addEventListener("click", (e) => {
-  let obj = {};
+      let form = document.getElementById("form");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-  obj["img"] = product["img"];
-  obj["price"] = product["price"];
-  obj["product_id"] = product["product_id"];
-  obj["order_id"] = order_id
-  obj["order_date"] = newdate
-  obj["order-method"] =
-  obj["emailid"] = user["emailid"];
- 
-    order.push(obj);
-    localStorage.setItem("order", JSON.stringify(order));
-});
+        let payment_option = document.querySelector(
+          ".payment_option:checked"
+        ).value;
+        console.log(payment_option);
+
+        let user = JSON.parse(localStorage.getItem("active_user"));
+        let order = JSON.parse(localStorage.getItem("order")) ?? [];
+
+        let obj = {};
+
+        obj["img"] = product["img"];
+        obj["price"] = product["price"];
+        obj["product_id"] = product["product_id"];
+        obj["order_id"] = order_id;
+        obj["order_date"] = newdate;
+        obj["payment_option"] = payment_option;
+
+        order.push(obj);
+        localStorage.setItem("order", JSON.stringify(order));
+
+        window.location.href = "Order.html";
+      });
     </script>
-   
   </body>
 </html>

@@ -20,8 +20,9 @@ for (let i = 0; i < bio.length; i++) {
   }
 }
 
-function update() {
-  event.preventDefault();
+
+let profilepage = document.getElementById("profilepage")
+profilepage.addEventListener("submit", function(){
 
   let bio = JSON.parse(localStorage.getItem("user_list"));
   for (let i = 0; i < bio.length; i++) {
@@ -37,7 +38,9 @@ function update() {
     }
     localStorage.setItem("user_list", JSON.stringify(bio));
   }
-}
+
+})
+
 
 function delete_profile(){
 let bio = JSON.parse(localStorage.getItem("user_list"));

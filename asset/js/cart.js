@@ -48,6 +48,9 @@ for (let i = 0; i < cart_sample.length; i++) {
 
     h6 = document.createElement("h2");
     h6.innerText = "₹" + cart_sample[i]["price"];
+    h6.setAttribute("data-keyword", cart_sample[i]["price"])
+    h6.setAttribute("id", "rs")
+    h6.setAttribute("id", "rs")
     div_text.append(h6);
 
     for (let i = 1; i <= 5; i++) {
@@ -67,6 +70,7 @@ for (let i = 0; i < cart_sample.length; i++) {
 
     quantity = document.createElement("input");
     quantity.setAttribute("type", "number");
+    quantity.setAttribute("class", "qty")
     quantity.setAttribute("min", "1");
     quantity.setAttribute("max", "10");
     quantity.setAttribute("value", "1");
@@ -95,6 +99,7 @@ for (let i = 0; i < cart_sample.length; i++) {
         ) {
           cart_sample.splice(i, 1);
           localStorage.setItem("Cart", JSON.stringify(cart_sample));
+          alert("Confirm you remove cart");
           location.reload();
           break;
         }
@@ -121,3 +126,24 @@ continue_btn.addEventListener("click", function(){
   window.location.href = "../../pages/Order/Buy Now.html?id=" + user.emailid
 
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

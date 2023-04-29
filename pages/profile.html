@@ -24,9 +24,9 @@
         <input type="address" name="text" placeholder="address" id="address" class="text"/><br><br>
         <input type="address" name="text" placeholder="city" id="city" class="text"/><br><br>
         <input type="address" name="text" placeholder="state" id="state" class="text"/><br><br>
-        <input type="number" name="text" placeholder="pincode" id="pincode" class="text"/><br><br>
+        <input type="number" name="text" placeholder="pincode" id="pincode" class="text"  pattern="[0-9]{8}"/><br><br>
       </div>
-        <button type="button" onclick="update()">save</button>
+        <button type="submit">save</button>
         <button type="button" onclick="delete_profile()">Delete</button>
         <button type="button"  onclick="logout()">Log Out</button>
        <img src="../asset/IMG/home page/profile2.jpg" alt="empty profile"/>

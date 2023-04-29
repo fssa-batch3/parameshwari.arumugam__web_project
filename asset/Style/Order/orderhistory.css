@@ -110,3 +110,8 @@ table  tr{
     align-items: center;
     
 }
+.main_content{
+    display: flex;
+    flex-flow:column;
+
+}
