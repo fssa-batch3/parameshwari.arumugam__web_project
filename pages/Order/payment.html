@@ -115,6 +115,8 @@
       console.log(order_id);
 
       let bouquets = JSON.parse(localStorage.getItem("bouquet"));
+      let cart = JSON.parse(localStorage.getItem("Cart"));
+
 
       const url = window.location.search;
       console.log(url);
@@ -125,20 +127,32 @@
 
       let result;
       let product;
-      let bouquet = bouquets.find(function (e) {
-        if (e["product_id"] == urlserached_value) {
-          product = e;
-          return (result = e);
-        } else {
-          return (result = 0);
-        }
-      });
+
+      if (Number(urlserached_value) == urlserached_value) {
+        let bouquet = bouquets.find((e) => {
+          if (e["product_id"] == urlserached_value) {
+            product = e;
+            return;
+          } else {
+            return;
+          }
+        });
+      } 
+      else {
+        let bouquet = cart.find((e) => {
+          if (e["emailid"] == urlserached_value) {
+            product = e;
+          } else {
+            return;
+          }
+        });
+      }
 
       console.log(product);
 
       let form = document.getElementById("form");
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
+      form.addEventListener("submit", function (el) {
+        el.preventDefault();
 
         let payment_option = document.querySelector(
           ".payment_option:checked"
@@ -148,18 +162,37 @@
         let user = JSON.parse(localStorage.getItem("active_user"));
         let order = JSON.parse(localStorage.getItem("order")) ?? [];
 
-        let obj = {};
+        if (Number(urlserached_value) == urlserached_value) {
+          let obj = {};
 
-        obj["img"] = product["img"];
-        obj["price"] = product["price"];
-        obj["product_id"] = product["product_id"];
-        obj["order_id"] = order_id;
-        obj["order_date"] = newdate;
-        obj["payment_option"] = payment_option;
-        obj["emailid"] = user["emailid"]
+          obj["img"] = product["img"];
+          obj["price"] = product["price"];
+          obj["product_id"] = product["product_id"];
+          obj["order_id"] = order_id;
+          obj["order_date"] = newdate;
+          obj["payment_option"] = payment_option;
+          obj["emailid"] = user["emailid"];
 
-        order.push(obj);
-        localStorage.setItem("order", JSON.stringify(order));
+          order.push(obj);
+          localStorage.setItem("order", JSON.stringify(order));
+        } else {
+          cart.find((element) => {
+            if (element.emailid == user.emailid) {
+              let obj = {};
+
+              obj["img"] = element["img"];
+              obj["price"] = element["price"];
+              obj["product_id"] = element["product_id"];
+              obj["order_id"] = order_id;
+              obj["order_date"] = newdate;
+              obj["payment_option"] = payment_option;
+              obj["emailid"] = user["emailid"];
+
+              order.push(obj);
+              localStorage.setItem("order", JSON.stringify(order));
+            }
+          });
+        }
 
         window.location.href = "Order.html";
       });
