@@ -56,7 +56,7 @@
           name="paymethod"
           value="wallet"
           required
-        />
+        /> 
         <label for="paytm">Wallet/Postpaid</label><br />
         <hr />
         <input
@@ -156,6 +156,7 @@
         obj["order_id"] = order_id;
         obj["order_date"] = newdate;
         obj["payment_option"] = payment_option;
+        obj["emailid"] = user["emailid"]
 
         order.push(obj);
         localStorage.setItem("order", JSON.stringify(order));
