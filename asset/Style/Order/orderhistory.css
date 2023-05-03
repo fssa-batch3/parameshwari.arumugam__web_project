@@ -112,6 +112,7 @@ table  tr{
 }
 .main_content{
     display: flex;
-    flex-flow:column;
+    flex-flow:column-reverse;
+
 
 }
