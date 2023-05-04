@@ -49,20 +49,34 @@ let image_flower;
 
 let bouquets = JSON.parse(localStorage.getItem("bouquet"));
 
-for (let i = 0; i < 8; i++) {
+let filterdata=bouquets.filter((data)=>{
+
+  if(data.status == true && data.category == "Home"){
+    return true
+  } 
+  else{
+    return false
+  }
+})
+console.log(filterdata);
+
+for (let i = 0; i < filterdata.length; i++) {
+
+  if(bouquets[i]["status"]){
+
   div_main_box = document.createElement("div");
   div_main_box.setAttribute("class", "mixed");
   console.log(div_main_box);
 
   image_flower = document.createElement("img");
   image_flower.setAttribute("id", "flower");
-  image_flower.setAttribute("src", bouquets[i]["img"]);
+  image_flower.setAttribute("src", filterdata[i]["img"]);
   image_flower.setAttribute("alt", "image");
   div_main_box.append(image_flower);
 
   
   h2 = document.createElement("h2");
-  h2.innerText = bouquets[i]["tittle"];
+  h2.innerText = filterdata[i]["tittle"];
   div_main_box.append(h2);
 
 
@@ -103,8 +117,9 @@ let search = document.getElementById("name");
           element.style.display="none"
         }
       })
-
+    
     })
+  };
 
 
     // let select="admin"
