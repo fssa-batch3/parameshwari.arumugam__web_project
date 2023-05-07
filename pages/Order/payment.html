@@ -167,11 +167,15 @@
           obj["order_id"] = order_id;
           obj["order_date"] = newdate;
           obj["payment_option"] = payment_option;
+          obj["address"] = product["address"];
+          obj["tittle"] = product["tittle"];
           obj["emailid"] = user["emailid"];
+          
 
           order.push(obj);
           localStorage.setItem("order", JSON.stringify(order));
-        } else {
+        } 
+        else {
           cart.find((element) => {
             if (element.emailid == user.emailid) {
               let obj = {};
@@ -182,6 +186,8 @@
               obj["order_id"] = order_id;
               obj["order_date"] = newdate;
               obj["payment_option"] = payment_option;
+              obj["address"] = element["address"];
+              obj["tittle"] = element["tittle"];
               obj["emailid"] = user["emailid"];
 
               order.push(obj);

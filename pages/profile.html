@@ -22,9 +22,9 @@
         <input name="date_of_birth" type="date" placeholder="DOB" id="date_of_birth"/><br/><br/>
         <input type="tel" id="phone_number" name="phone"  placeholder="phone number" pattern="[789][0-9]{9}" required><br><br>
         <input type="text" name="text" placeholder="address" id="address" class="text"/><br><br>
-        <input type="text" name="text" placeholder="city" id="city" class="text" /><br><br>
-        <input type="text" name="text" placeholder="state" id="state" class="text"/><br><br>
-        <input type="number" name="text" placeholder="pincode" id="pincode" class="text"  pattern="[0-9]{8}"/><br><br>
+        <input type="text" name="text" placeholder="city" id="city" class="text"  pattern="[A-Za-z]{1,24}"/><br><br>
+        <input type="text" name="text" placeholder="state" id="state" class="text"  pattern="[A-Za-z]{1,30}"/><br><br>
+        <input type="text" name="pin" placeholder="pincode" id="pincode" class="text" pattern="[0-9]{6}"  maxlength="6"/><br><br>
       </div>
         <button type="submit">save</button>
         <button type="button" onclick="delete_profile()">Delete</button>

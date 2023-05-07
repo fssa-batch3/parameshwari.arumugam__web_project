@@ -92,6 +92,7 @@ table{
   
 }
 table  tr{
+    font-size:25px;
     text-align: center;
     border: 2px solid black;
     width:1480px;
@@ -101,13 +102,17 @@ table  tr{
    justify-content: space-around;
 }
 #flower{
-    width: 100px;
-    height: 100px;
+    width:100px;
+    height:100px;
+   position: relative;
+   bottom:15px;
+   
 }
 .content{
     display: flex;
     justify-content: space-around; 
     align-items: center;
+   
     
 }
 .main_content{
@@ -115,4 +120,24 @@ table  tr{
     flex-flow:column-reverse;
 
 
+}
+#order_date{
+    position: relative;
+    left:70px;
+    font-size:30px;
+}
+#orderid{
+    position: relative;
+    left:45px;
+    font-size: 30px;
+}
+.rupees{
+    font-size:30px; 
+    position: relative;
+    left:40px;
+}
+h6{
+    font-size:25px;
+    position: relative;
+    left:80px;
 }
