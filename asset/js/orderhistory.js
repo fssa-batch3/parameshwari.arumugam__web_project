@@ -16,7 +16,7 @@ let activeuser = JSON.parse(localStorage.getItem("active_user"));
 //     order_date:"23/04/2023",
 //     price:"2500",
 //     address:"No2,Thayagi sathya moorthi street kandanchavadi"
-      
+
 // }
 // ]
 
@@ -44,7 +44,7 @@ order_list.find((el) => {
     h6.setAttribute("class", "title");
     h6.innerText = el["tittle"];
     div_content.append(h6);
-    
+
     h3 = document.createElement("h3");
     h3.setAttribute("id", "order_date");
     h3.setAttribute("class", "orderdate");
@@ -58,11 +58,11 @@ order_list.find((el) => {
     div_content.append(h2);
     console.log(h2);
 
-    // h5 = document.createElement("h5");
-    // h5.setAttribute("id", "adress");
-    // h5.setAttribute("class", "deli_address");
-    // h5.innerText = el["address"];
-    // div_content.append(h5);
+    h5 = document.createElement("h5");
+    h5.setAttribute("id", "address");
+    h5.setAttribute("class", "deliaddress");
+    h5.innerHTML = `${el["firstname"]},<br>${el["address"]}<br>${el["city"]}&nbsp-${el["pincode"]}<br>${el["Phone_number"]}`;
+    div_content.append(h5);
 
     document.querySelector("div.main_content").append(div_content);
     // document.querySelector("div.content").append(h3);

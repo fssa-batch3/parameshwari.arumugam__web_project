@@ -122,8 +122,8 @@ let search = document.getElementById("name");
   };
 
 
-    // let select="admin"
-    // let user=JSON.parse(localStorage.getItem("active_user"))
+    let select="admin"
+    let user=JSON.parse(localStorage.getItem("active_user"))
     console.log(user)
         let admin_page=document.getElementById("admin")
        

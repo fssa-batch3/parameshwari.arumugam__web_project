@@ -117,7 +117,6 @@
       let bouquets = JSON.parse(localStorage.getItem("bouquet"));
       let cart = JSON.parse(localStorage.getItem("Cart"));
 
-
       const url = window.location.search;
       console.log(url);
       const urlparams = new URLSearchParams(url);
@@ -133,14 +132,13 @@
           if (e["product_id"] == urlserached_value) {
             product = e;
             return;
-          } 
+          }
         });
-      } 
-      else {
+      } else {
         let bouquet = cart.find((e) => {
           if (e["emailid"] == urlserached_value) {
             product = e;
-          } 
+          }
         });
       }
 
@@ -167,15 +165,17 @@
           obj["order_id"] = order_id;
           obj["order_date"] = newdate;
           obj["payment_option"] = payment_option;
-          obj["address"] = product["address"];
+          obj["address"] = user["address"];
+          obj["firstname"] = user["firstname"];
+          obj["city"] = user["city"];
+          obj["pincode"] = user["pincode"];
+          obj["Phone_number"] = user["Phone_number"];
           obj["tittle"] = product["tittle"];
           obj["emailid"] = user["emailid"];
-          
 
           order.push(obj);
           localStorage.setItem("order", JSON.stringify(order));
-        } 
-        else {
+        } else {
           cart.find((element) => {
             if (element.emailid == user.emailid) {
               let obj = {};
@@ -186,7 +186,11 @@
               obj["order_id"] = order_id;
               obj["order_date"] = newdate;
               obj["payment_option"] = payment_option;
-              obj["address"] = element["address"];
+              obj["address"] = user["address"];
+              obj["firstname"] = user["firstname"];
+              obj["city"] = user["city"];
+              obj["pincode"] = user["pincode"];
+              obj["Phone_number"] = user["Phone_number"];
               obj["tittle"] = element["tittle"];
               obj["emailid"] = user["emailid"];
 

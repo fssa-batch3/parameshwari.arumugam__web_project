@@ -1,3 +1,5 @@
+
+
 header{
     display: flex;
     justify-content: space-between;
@@ -23,9 +25,7 @@ h5{
     color: black;
    
 }
-#flower{
-    margin-top: 30px;
-}
+
 input{
     width: 500px;
     height: 30px;
@@ -106,6 +106,7 @@ table  tr{
     height:100px;
    position: relative;
    bottom:15px;
+   left:20px;
    
 }
 .content{
@@ -123,21 +124,29 @@ table  tr{
 }
 #order_date{
     position: relative;
-    left:70px;
+    left:130px;
     font-size:30px;
 }
 #orderid{
     position: relative;
-    left:45px;
+    left:150px;
     font-size: 30px;
 }
 .rupees{
     font-size:30px; 
     position: relative;
-    left:40px;
+    left:70px;
 }
 h6{
+    width:250px;
     font-size:25px;
     position: relative;
-    left:80px;
+    left:140px;
+
+}
+#address{
+  width:300px;
+   position: relative;
+   left:120px;
+    
 }
