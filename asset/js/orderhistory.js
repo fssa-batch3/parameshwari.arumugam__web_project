@@ -48,8 +48,9 @@ order_list.find((el) => {
     h3 = document.createElement("h3");
     h3.setAttribute("id", "order_date");
     h3.setAttribute("class", "orderdate");
-    h3.innerText = el["order_date"];
+    h3.innerHTML= `${el["date"]}<br>${el["time"]}`;
     div_content.append(h3);
+
 
     h2 = document.createElement("h2");
     // document.querySelector("div.content").append(h2);

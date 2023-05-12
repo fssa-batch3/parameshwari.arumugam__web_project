@@ -28,7 +28,6 @@ profilepage.addEventListener("submit", function(){
   for (let i = 0; i < bio.length; i++) {
     if (document.getElementById("email").value == bio[i]["emailid"]) {
       bio[i].firstname = document.getElementById("first_name").value;
-      bio[i].lastname = document.getElementById("last_name").value;
       bio[i].date_of_birth = document.getElementById("date_of_birth").value;
       bio[i].Phone_number = document.getElementById("phone_number").value;
       bio[i].address = document.getElementById("address").value;

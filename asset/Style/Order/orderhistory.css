@@ -29,8 +29,8 @@ h5{
 input{
     width: 500px;
     height: 30px;
-    border-color: hotpink;   
-    background-color: hotpink;
+    border-color:black;   
+    background-color:white;
      
 }
 .navbar{
@@ -125,28 +125,30 @@ table  tr{
 #order_date{
     position: relative;
     left:130px;
-    font-size:30px;
+    font-size:20px;
+    bottom:3px;
 }
 #orderid{
     position: relative;
-    left:150px;
-    font-size: 30px;
+    left:120px;
+    font-size: 25px;
+    top:7px
 }
 .rupees{
     font-size:30px; 
     position: relative;
-    left:70px;
+    left:90px;
 }
 h6{
     width:250px;
     font-size:25px;
     position: relative;
-    left:140px;
+    left:155px;
 
 }
 #address{
   width:300px;
    position: relative;
-   left:120px;
+   left:90px;
     
 }

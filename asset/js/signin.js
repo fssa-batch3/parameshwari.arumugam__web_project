@@ -45,6 +45,7 @@ user["pincode"] = "";
 
 
 
+
 let user_information = JSON.parse(localStorage.getItem("user_list")) ?? records;
 
 let success = true;

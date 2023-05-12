@@ -1,6 +1,4 @@
-body{
-  overflow: hidden;
-}
+
 header{
     display: flex;
     justify-content: space-between;
@@ -9,16 +7,20 @@ header{
     height: 80px;
     border-radius: 15px;
 }
-.search img{
-    position: absolute;
-    margin-top:10px;
-    margin-left:14%; 
-}
 h5{
     font-size: 19px;
     margin-left: 10px;
    position: relative;
    
+}
+#continue_btn{
+    width: 130px;
+    height: 40px;
+    margin-left:60%;
+    background-color: deepskyblue;
+    border-radius: 10px;
+    position: relative;
+    bottom:195px;
 }
 .search{
     margin-top: 20px;
@@ -42,28 +44,33 @@ h5{
 .cart i{
     font-size:30px;
 }
-.for input{
+.selectoption{
+    width:200px;
+    height:50px;
+}
+.details input{
  background-color: white;
  border: 2px solid black;
  margin-left:10%;
 
 }
-.for{
+.details{
     margin-left:5%;
     font-size: larger;
     position: relative;
-    top: 35px;
+    top: 55px;
     font-family:cursive;  
 }
 
-button{
+
+.edit{
     width: 130px;
-    height: 40px;
-    margin-left:60%;
-    background-color: deepskyblue;
+    height: 40px; 
+    margin-left:30%;
+    background-color: rgb(238, 241, 242);
     border-radius: 10px;
-    position: relative;
-    bottom:170px;
+ position: relative;
+    top:50px;
 }
 button a{
     text-decoration:none; 
@@ -78,40 +85,46 @@ label{
     width: 250px;
     height: 40px;
     position: relative;
-    margin-left:49px;
+    margin-left:65px;
+}
+#email{
+        width: 250px;
+        height: 40px;
+        position: relative;
+        margin-left:98px;
 }
 #ntext{
     width: 250px;
     height: 40px;
-    margin-left:125px;
-}
-#quantity{
-    width: 250px;
-    height: 40px;
-    margin-left:95px;
+    margin-left:145px;
 }
 #cnumber{
-    width: 250px;
+    width:254px;
     height: 40px;
-    margin-left:35px;
+    margin-left:115px;
+}
+#date{
+    width: 253px;
+    height: 40px;
+    margin-left:65px;  
 }
 #stext{
-    width: 250px;
+    width: 253px;
     height: 40px;
-    margin-left:56px;
+    margin-left:135px;
    
 }
 #text{
     width: 250px;
     height: 40px;
-    margin-left:65px;
+    margin-left:152px;
    
 }
 #aname{
     width: 250px;
     height: 60px;
     position: relative;
-    margin-left:100px;
+    margin-left:116px;
 }
 p{
     margin-left:15%;
@@ -122,29 +135,23 @@ h1{
     margin-left:15%;
     margin-top:40px;
 }
-.details label{
-    position: relative;
-    top:60px;
-    margin-left:12%;
-    display:flex;
-    font-size: large;
-    /* color: white; */
-     
-}
-.details input{
-   position: relative;
-   bottom: 10px;
-   margin-left:105px;  
-   border: 2px solid black;
-   
 
+
+form{
+    padding-bottom: 50px;
+    height: max-content;
 }
 
 #buynow{
-    margin-left:15%;
-    border: 2px solid black;
-    width:1100px;
-    height:870px;
+    margin-left:5%;
+    border: 2px solid rgb(5, 4, 4);
+    width:800px;
+    height:900px;
+    margin-top:50PX;
+}
+#buynow:hover{
+    box-shadow: rgba(10, 10, 40, 0.2) 0px 10px 39px 10px;
+   
 }
 .total{
     margin-left:-150px;
@@ -161,13 +168,13 @@ h1{
     bottom:230px;
    
 }
-.price{
-   margin-left:700px;
+#order_amount{
+   left:115%;
    position: relative;
-   top:18px;
+   bottom:1100px;
    border: 2px solid black;
    width: 380px;
-   height:200px;
+   height:250px;
    background-color: rgb(248, 219, 166);
 }
 .order p{
@@ -202,12 +209,54 @@ h2{
 
 }
 .red{
-    border: 2px solid black;
-    margin-left:-20px;
+    border: 2px solid rgb(12, 11, 11);
+    right:90px;
     width:400px;
     height:180px;
     position: relative;
-    bottom:1000px;
+    bottom:1450px;
+
+}
+
+
+
+html{
+    overflow-x: hidden;
+}
+.prodiv{
+    position: relative;
+    left: 990px;
+    top:250px;  
+}
+
+#selectopt{
+    margin-left:180px;
+    width:264px;
+    border: 2px solid black;
+}
+.pay{
+    margin-top: 50%;
+    display: flex;
+    margin-left:30px;
+}
+.pay label{
+    border: 2px solid black;
+    width: 230px;
+    height:40px;
+    margin-top:15px;
+    margin-left:15px;
+    font-size:20px;
+}
+.pay input{
+    position: relative;
+    left:-40px;
+    width:25px;
+    bottom:10px;
+}
+#google1{
+    position: relative;
+    left: 40%;
+    margin-top:10px;
 }
 
 

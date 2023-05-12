@@ -21,44 +21,105 @@
   <body>
     <!--main start-->
 
+  
     <form id="buynow">
       <div>
         <div class="main">
           <h1>Place your Order Now</h1>
         </div>
-        <div class="for">
-          <label for="name">Name<input type="text" id="ntext" /></label
-          ><br /><br />
-          <label for="number"
-            >Phone Number<input type="pnumber" id="pnumber" /></label
-          ><br /><br />
-          <label for="name">Address<input type="text" id="aname" /></label
-          ><br /><br />
-        </div>
         <div class="details">
-          <label for="text">City<input type="text" id="text" /></label
+          <div class="main1">
+              <label for="name">Name<input type="text" id="ntext" value="name" required /></label
+              ><br /><br />
+              <label for="name">User Email<input type="email" id="email" value="UserEmail" required /></label
+              ><br /><br />
+          </div>
+         <div class="main2">
+          <label for="number"
+            >Phone Number<input type="pnumber" id="pnumber" value="phone_number" required /></label
           ><br /><br />
-          <label for="text">state<input type="text" id="stext" /></label
-          ><br /><br />
-          <label for="number">Pincode<input type="number" id="cnumber" /></label
+          <label for="name">Address<input type="text" id="aname" value="address" required /></label
           ><br /><br />
         </div>
-      </div>
-      <div id="total_price">
-        <div class="price">
-          <h2>Price Details(1 item)</h2>
-          <div class="total">
-            <p id="total_count"></p>
-          </div>
-          <div class="order">
-            <p id="total_count1"></p>
-          </div>
-          <button>
-            <a id="order_detail"> Continue </a>
-          </button>
+          <label for="number">Delivery Date<input type="date" id="date" value="date" required /></label
+            ><br /><br />
+            <label for="text">City<input type="text" id="text" value="city" required/></label
+              ><br /><br />
+              <label for="text">state<input type="text" id="stext" value="state" required /></label
+              ><br /><br />
+              <label for="number">Pincode<input type="number" id="cnumber" value="pincode" required /></label
+              ><br /><br />
+           
+          <!-- <p>Delivery Time</p> -->
+            <select class="selectoption" id="selectopt" required>
+              <option value="">Delivery Time</option>
+              <option value="7:00 AM-8:00 AM">7:00 AM-8:00 AM</option>
+              <optio  value="8:00 AM-9:00 AM">8:00 AM-9:00 AM</option>
+              <option value="9:00 AM-10:00 AM">9:00 AM-10:00 AM</option>
+              <option value="10:00 AM-11:00 AM">10:00 AM-11:00 AM</option>
+              <option value="11:00 AM-12:00 PM">11:00 AM-12:00 PM</option>
+              <option value="1:00 PM-2:00 PM">1:00 PM-2:00 PM</option>
+              <option value="2:00 PM-3:00 PM">2:00 PM-3:00 PM</option>
+              <option value="3:00 PM-4:00 PM">3:00 PM-4:00 PM</option>
+              <option value="4:00 PM-5:00 PM">4:00 PM-5:00 PM</option>
+              <option value="5:00 PM-6:00 PM">5:00 PM-6:00 PM</option>
+              <option value="6:00 PM-7:00 PM">6:00 PM-7:00 PM</option>
+              <option value="7:00 PM-8:00 PM">7:00 PM-8:00 PM</option>
+              <option value="8:00 PM-9:00 PM">8:00 PM-9:00 PM</option>
+              <option value="10:00 PM-11:00 PM">10:00 PM-11:00 PM</option>
+              <option value="11:00 PM-12:00 AM">11:00 PM-12:00 AM</option>
+            </select>
         </div>
+        </div>
+      <div class="pay">
+        <!-- <img
+              id="google1"
+              src="../../asset/IMG/index/google-pay (1).png"
+              width="50px"
+            /><br /> -->
+          <h3>Payment Method</h3>
+        <label for="gpay">UPI</label>
+        <input
+              class="payment_option"
+              type="radio"
+              id="gpay"
+              name="paymethod"
+              value="gpay"
+              required
+            />
+            <label for="delivery">Cash on delivery</label>
+            <input
+              class="payment_option"
+              type="radio"
+              id="delivery"
+              name="paymethod"
+              value="cash-on-delivery"
+              required
+            />
       </div>
-    </form>
+   
+       <div class="maincont">
+          <div class="prodiv">
+
+          </div>
+        </div>
+        <!-- </div> -->
+     
+            <div id="total_price">
+              <div class="price" id="order_amount">
+                <h2>Price Details(1 item)</h2>
+                <div class="total">
+                  <p id="total_count"></p>
+                </div>
+                <div class="order">
+                  <p id="total_count1"></p>
+                </div>
+                <button id="continue_btn" type="submit">
+                   Place Order
+                </button>
+              </div>
+            </div>
+          </form>
     <!-- main end -->
 
     <script src="../../asset/js/buy_now.js"></script>

@@ -99,7 +99,7 @@ for (let i = 0; i < cart_sample.length; i++) {
         ) {
           cart_sample.splice(i, 1);
           localStorage.setItem("Cart", JSON.stringify(cart_sample));
-          alert("Confirm you remove cart");
+          confirm("Are you sure you would like to remove this item from the shopping cart?");
           location.reload();
           break;
         }

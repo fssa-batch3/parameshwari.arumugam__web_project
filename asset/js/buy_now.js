@@ -1,3 +1,6 @@
+let order_id = Date.now();
+console.log(order_id);
+
 let bouquets = JSON.parse(localStorage.getItem("bouquet"));
 
 const url = window.location.search;
@@ -6,10 +9,9 @@ const urlserached_value = urlparams.get("id");
 console.log(urlserached_value);
 
 let count = 0;
+let result;
 
 if (urlserached_value == Number(urlserached_value)) {
-  let result;
-
   bouquet = bouquets.find(function (e) {
     if (e["product_id"] == urlserached_value) {
       return (result = e);
@@ -46,7 +48,7 @@ if (urlserached_value == Number(urlserached_value)) {
   h6.innerText = "₹" + result["price"];
   div_cart_page.append(h6);
 
-  document.querySelector(".price").append(div_cart_page);
+  document.querySelector(".prodiv").append(div_cart_page);
 } else {
   let Cart = JSON.parse(localStorage.getItem("Cart"));
   let active_user = JSON.parse(localStorage.getItem("active_user"));
@@ -81,7 +83,7 @@ if (urlserached_value == Number(urlserached_value)) {
       h6.innerText = "₹" + el["price"];
       div_cart_page.append(h6);
 
-      document.querySelector(".price").append(div_cart_page);
+      document.querySelector(".prodiv").append(div_cart_page);
     }
   });
 }
@@ -95,6 +97,7 @@ let activeuser = JSON.parse(localStorage.getItem("active_user"));
 for (let i = 0; i < bio.length; i++) {
   if (activeuser["emailid"] == bio[i]["emailid"]) {
     document.getElementById("ntext").value = bio[i]["firstname"];
+    document.getElementById("email").value = bio[i]["emailid"];
     document.getElementById("pnumber").value = bio[i]["Phone_number"];
     document.getElementById("aname").value = bio[i]["address"];
     document.getElementById("text").value = bio[i]["city"];
@@ -103,16 +106,79 @@ for (let i = 0; i < bio.length; i++) {
   }
 }
 
-let order = document.getElementById("order_detail");
+// for date
+let date = document.getElementById("date");
+console.log(date);
+//let today = new Date().toISOString().split("T")[0];
+let today = new Date(Date.now() - new Date().getTimezoneOffset() * 60000)
+  .toISOString()
+  .split("T")[0];
+date.setAttribute("min", today);
 
-order.setAttribute(
-  "href",
-  "../../pages/Order/payment.html?id=" + urlserached_value
-);
+let form = document.getElementById("buynow");
 
-// let order_btn = document.getElementById("order_btn")
-// order_btn.addEventListener("click", function(){
+form.addEventListener("submit", function (el) {
+  el.preventDefault();
 
-//   window.location.href = "../../pages/Order/payment.html";
+  let payment_option = document.querySelector(".payment_option:checked").value;
+  let time=document.querySelector(".selectoption").value;
+  let date=document.querySelector("#date").value;
 
-// })
+  let user = JSON.parse(localStorage.getItem("active_user"));
+  let order_history = JSON.parse(localStorage.getItem("order")) ?? [];
+
+  if (urlserached_value == Number(urlserached_value)) {
+    let obj = {};
+
+    obj["img"] = result["img"];
+    obj["price"] = result["price"];
+    obj["product_id"] = result["product_id"];
+    obj["order_id"] = order_id;
+    obj["payment_option"] = payment_option;
+    obj["date"] = date;
+    obj["time"] = time;
+    obj["address"] = user["address"];
+    obj["firstname"] = user["firstname"];
+    obj["city"] = user["city"];
+    obj["pincode"] = user["pincode"];
+    obj["Phone_number"] = user["Phone_number"];
+    obj["tittle"] = result["tittle"];
+    obj["emailid"] = user["emailid"];
+
+    order_history.push(obj);
+    localStorage.setItem("order", JSON.stringify(order_history));
+    window.location.href = "Order.html";
+  } 
+  else {
+
+    let Cart = JSON.parse(localStorage.getItem("Cart"));
+    let active_user = JSON.parse(localStorage.getItem("active_user"));
+
+    Cart.find((e) => {
+      if (e.emailid == active_user.emailid) {
+        let obj = {};
+
+        obj["price"] = e["price"];
+        obj["product_id"] = e["product_id"];
+        obj["order_id"] = order_id;
+        obj["payment_option"] = payment_option;
+        obj["date"] = date;
+        obj["time"] = time;
+        obj["address"] = user["address"];
+        obj["firstname"] = user["firstname"];
+        obj["city"] = user["city"];
+        obj["pincode"] = user["pincode"];
+        obj["Phone_number"] = user["Phone_number"];
+        obj["tittle"] = e["tittle"];
+        obj["emailid"] = user["emailid"];
+        obj["img"] = e["img"];
+
+
+        order_history.push(obj);
+        localStorage.setItem("order", JSON.stringify(order_history));
+        window.location.href = "Order.html";
+      }
+    });
+  }
+
+});

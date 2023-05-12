@@ -95,9 +95,7 @@
         <a href="../../pages/Home.html"
           ><button type="button">Cancel</button></a
         >
-        <a href="../../pages/Order/Order.html"
-          ><button type="submit" id="order">Place Order</button>
-        </a>
+        <a><button type="submit" id="order">Place Order</button> </a>
       </div>
     </form>
 
@@ -116,7 +114,7 @@
 
       let bouquets = JSON.parse(localStorage.getItem("bouquet"));
       let cart = JSON.parse(localStorage.getItem("Cart"));
-
+ 
       const url = window.location.search;
       console.log(url);
       const urlparams = new URLSearchParams(url);
@@ -154,6 +152,7 @@
         console.log(payment_option);
 
         let user = JSON.parse(localStorage.getItem("active_user"));
+        
         let order = JSON.parse(localStorage.getItem("order")) ?? [];
 
         if (Number(urlserached_value) == urlserached_value) {
@@ -171,11 +170,16 @@
           obj["pincode"] = user["pincode"];
           obj["Phone_number"] = user["Phone_number"];
           obj["tittle"] = product["tittle"];
+          // obj["date"] = buyer["date"];
+          // obj["time"] = buyer["time"];
+          // console.log(buyer["time"],"param");
+          // console.log(obj["time"],"yogi");
           obj["emailid"] = user["emailid"];
 
           order.push(obj);
           localStorage.setItem("order", JSON.stringify(order));
-        } else {
+        } 
+        else {
           cart.find((element) => {
             if (element.emailid == user.emailid) {
               let obj = {};
@@ -192,6 +196,8 @@
               obj["pincode"] = user["pincode"];
               obj["Phone_number"] = user["Phone_number"];
               obj["tittle"] = element["tittle"];
+              // obj["date"] = buyer["date"];
+              // obj["time"] = buyer["time"];
               obj["emailid"] = user["emailid"];
 
               order.push(obj);

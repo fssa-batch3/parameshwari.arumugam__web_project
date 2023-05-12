@@ -1,0 +1,98 @@
+/* header{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid rgb(204, 211, 211);
+    background-color: rgb(204, 218, 218);
+    height: 80px;
+    border-radius: 15px;
+}
+h5{
+    font-size: 19px;
+    margin-left: 10px;
+   position: relative;
+   
+} */
+form{
+    width:550px;
+    height:650px;
+    border:2px solid black;
+    margin-left:35%;
+    margin-top:10%;
+}
+
+.for input{
+    background-color: white;
+    border: 2px solid black;
+   
+   
+ }
+ h1{
+    margin-left:25%;
+    margin-top:20px;
+}
+.for{
+  margin-left:7%;
+  font-size: larger;
+  position: relative;
+  top: 35px;
+  font-family:cursive;  
+}
+#pnumber{
+    width: 250px;
+    height: 40px;
+    position: relative;
+    margin-left:49px;
+}
+#ntext{
+    width: 250px;
+    height: 40px;
+    margin-left:125px;
+}
+#cnumber{
+    width: 250px;
+    height: 40px;
+    margin-left:35px;
+}
+#stext{
+    width: 250px;
+    height: 40px;
+    margin-left:56px;
+   
+}
+#text{
+    width: 250px;
+    height: 40px;
+    margin-left:65px;
+   
+}
+#aname{
+    width: 250px;
+    height: 60px;
+    position: relative;
+    margin-left:100px;
+}
+.details label{
+    position: relative;
+    top:60px;
+    margin-left:21%;
+    display:flex;
+    font-size: large;
+    /* color: white; */
+     
+}
+.details input{
+   position: relative;
+   bottom: 10px;
+   margin-left:105px;  
+   border: 2px solid black;
+   
+
+}
+button{
+    width: 130px;
+    height: 40px;
+    margin-left:65%;
+    background-color: deepskyblue;
+    border-radius: 10px;
+   margin-top:30px;
+}
