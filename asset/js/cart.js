@@ -15,26 +15,23 @@ let icon1;
 //     price: 1100,
 //   }
 
-let cart_sample = JSON.parse(localStorage.getItem("Cart"));
-let user = JSON.parse(localStorage.getItem("active_user"));
+const cart_sample = JSON.parse(localStorage.getItem("Cart"));
+const user = JSON.parse(localStorage.getItem("active_user"));
 
 let total = 0;
-
-
-
 
 // cart_sample.find((e) => {
 
 for (let i = 0; i < cart_sample.length; i++) {
-  if (user["emailid"] == cart_sample[i]["emailid"]) {
-    total += Number(cart_sample[i]["price"]);
+  if (user.emailid == cart_sample[i].emailid) {
+    total += Number(cart_sample[i].price);
 
     div_cart_page = document.createElement("div");
     div_cart_page.setAttribute("class", "align_flex");
 
     image_flower = document.createElement("img");
     image_flower.setAttribute("id", "flower");
-    image_flower.setAttribute("src", cart_sample[i]["img"]);
+    image_flower.setAttribute("src", cart_sample[i].img);
     // image_flower.setAttribute("alt", cart_sample["alt"]);
     div_cart_page.prepend(image_flower);
 
@@ -43,14 +40,14 @@ for (let i = 0; i < cart_sample.length; i++) {
     div_cart_page.append(div_text);
 
     h1 = document.createElement("h1");
-    h1.innerText = cart_sample[i]["tittle"];
+    h1.innerText = cart_sample[i].tittle;
     div_text.append(h1);
 
     h6 = document.createElement("h2");
-    h6.innerText = "₹" + cart_sample[i]["price"];
-    h6.setAttribute("data-keyword", cart_sample[i]["price"])
-    h6.setAttribute("id", "rs")
-    h6.setAttribute("id", "rs")
+    h6.innerText = `₹${cart_sample[i].price}`;
+    h6.setAttribute("data-keyword", cart_sample[i].price);
+    h6.setAttribute("id", "rs");
+    h6.setAttribute("id", "rs");
     div_text.append(h6);
 
     for (let i = 1; i <= 5; i++) {
@@ -60,7 +57,7 @@ for (let i = 0; i < cart_sample.length; i++) {
       div_text.append(icon);
     }
 
-    let br = document.createElement("br");
+    const br = document.createElement("br");
     div_text.append(br);
 
     label = document.createElement("label");
@@ -70,7 +67,7 @@ for (let i = 0; i < cart_sample.length; i++) {
 
     quantity = document.createElement("input");
     quantity.setAttribute("type", "number");
-    quantity.setAttribute("class", "qty")
+    quantity.setAttribute("class", "qty");
     quantity.setAttribute("min", "1");
     quantity.setAttribute("max", "10");
     quantity.setAttribute("value", "1");
@@ -89,17 +86,17 @@ for (let i = 0; i < cart_sample.length; i++) {
 
     document.querySelector("div.black").append(div_cart_page);
 
-    
-
     button.addEventListener("click", (e) => {
       for (let j = 0; j < cart_sample.length; j++) {
         if (
-          user["emailid"] == cart_sample[i]["emailid"] &&
-          cart_sample[i]["tittle"] == cart_sample[j]["tittle"]
+          user.emailid == cart_sample[i].emailid &&
+          cart_sample[i].tittle == cart_sample[j].tittle
         ) {
           cart_sample.splice(i, 1);
           localStorage.setItem("Cart", JSON.stringify(cart_sample));
-          confirm("Are you sure you would like to remove this item from the shopping cart?");
+          confirm(
+            "Are you sure you would like to remove this item from the shopping cart?"
+          );
           location.reload();
           break;
         }
@@ -111,39 +108,15 @@ for (let i = 0; i < cart_sample.length; i++) {
 }
 // });
 
-let totalAmount = document.getElementById("total_count");
+const totalAmount = document.getElementById("total_count");
 
 totalAmount.innerText = total;
 
-let totalAmount1 = document.getElementById("total_count1");
+const totalAmount1 = document.getElementById("total_count1");
 
 totalAmount1.innerText = total;
 
-
-let continue_btn =  document.getElementById("continue")
-continue_btn.addEventListener("click", function(){
-
-  window.location.href = "../../pages/Order/Buy Now.html?id=" + user.emailid
-
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const continue_btn = document.getElementById("continue");
+continue_btn.addEventListener("click", () => {
+  window.location.href = `../../pages/Order/Buy Now.html?id=${user.emailid}`;
+});

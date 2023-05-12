@@ -101,19 +101,19 @@
 
     <script>
       let newdate;
-      let dateObj = new Date();
-      let month = dateObj.getUTCMonth() + 1; //months from 1-12
-      let day = dateObj.getUTCDate();
-      let year = dateObj.getUTCFullYear();
-      newdate = day + "/" + month + "/" + year;
+      const dateObj = new Date();
+      const month = dateObj.getUTCMonth() + 1; //months from 1-12
+      const day = dateObj.getUTCDate();
+      const year = dateObj.getUTCFullYear();
+      newdate = `${day  }/${  month  }/${  year}`;
       console.log(newdate);
 
       // orders id code
-      let order_id = Date.now();
+      const order_id = Date.now();
       console.log(order_id);
 
-      let bouquets = JSON.parse(localStorage.getItem("bouquet"));
-      let cart = JSON.parse(localStorage.getItem("Cart"));
+      const bouquets = JSON.parse(localStorage.getItem("bouquet"));
+      const cart = JSON.parse(localStorage.getItem("Cart"));
  
       const url = window.location.search;
       console.log(url);
@@ -126,55 +126,55 @@
       let product;
 
       if (Number(urlserached_value) == urlserached_value) {
-        let bouquet = bouquets.find((e) => {
-          if (e["product_id"] == urlserached_value) {
-            product = e;
-            return;
-          }
-        });
+        const bouquet = bouquets.find((e) => {
+    if (e.product_id == urlserached_value) {
+product = e;
+
+    }
+  });
       } else {
-        let bouquet = cart.find((e) => {
-          if (e["emailid"] == urlserached_value) {
-            product = e;
-          }
-        });
+        const bouquet = cart.find((e) => {
+    if (e.emailid == urlserached_value) {
+      product = e;
+    }
+  });
       }
 
       console.log(product);
 
-      let form = document.getElementById("form");
-      form.addEventListener("submit", function (el) {
+      const form = document.getElementById("form");
+      form.addEventListener("submit", (el) => {
         el.preventDefault();
 
-        let payment_option = document.querySelector(
-          ".payment_option:checked"
-        ).value;
+        const payment_option = document.querySelector(
+    ".payment_option:checked"
+  ).value;
         console.log(payment_option);
 
-        let user = JSON.parse(localStorage.getItem("active_user"));
+        const user = JSON.parse(localStorage.getItem("active_user"));
         
-        let order = JSON.parse(localStorage.getItem("order")) ?? [];
+        const order = JSON.parse(localStorage.getItem("order")) ?? [];
 
         if (Number(urlserached_value) == urlserached_value) {
-          let obj = {};
+          const obj = {};
 
-          obj["img"] = product["img"];
-          obj["price"] = product["price"];
-          obj["product_id"] = product["product_id"];
-          obj["order_id"] = order_id;
-          obj["order_date"] = newdate;
-          obj["payment_option"] = payment_option;
-          obj["address"] = user["address"];
-          obj["firstname"] = user["firstname"];
-          obj["city"] = user["city"];
-          obj["pincode"] = user["pincode"];
-          obj["Phone_number"] = user["Phone_number"];
-          obj["tittle"] = product["tittle"];
+          obj.img = product.img;
+          obj.price = product.price;
+          obj.product_id = product.product_id;
+          obj.order_id = order_id;
+          obj.order_date = newdate;
+          obj.payment_option = payment_option;
+          obj.address = user.address;
+          obj.firstname = user.firstname;
+          obj.city = user.city;
+          obj.pincode = user.pincode;
+          obj.Phone_number = user.Phone_number;
+          obj.tittle = product.tittle;
           // obj["date"] = buyer["date"];
           // obj["time"] = buyer["time"];
           // console.log(buyer["time"],"param");
           // console.log(obj["time"],"yogi");
-          obj["emailid"] = user["emailid"];
+          obj.emailid = user.emailid;
 
           order.push(obj);
           localStorage.setItem("order", JSON.stringify(order));
@@ -182,23 +182,23 @@
         else {
           cart.find((element) => {
             if (element.emailid == user.emailid) {
-              let obj = {};
+              const obj = {};
 
-              obj["img"] = element["img"];
-              obj["price"] = element["price"];
-              obj["product_id"] = element["product_id"];
-              obj["order_id"] = order_id;
-              obj["order_date"] = newdate;
-              obj["payment_option"] = payment_option;
-              obj["address"] = user["address"];
-              obj["firstname"] = user["firstname"];
-              obj["city"] = user["city"];
-              obj["pincode"] = user["pincode"];
-              obj["Phone_number"] = user["Phone_number"];
-              obj["tittle"] = element["tittle"];
+              obj.img = element.img;
+              obj.price = element.price;
+              obj.product_id = element.product_id;
+              obj.order_id = order_id;
+              obj.order_date = newdate;
+              obj.payment_option = payment_option;
+              obj.address = user.address;
+              obj.firstname = user.firstname;
+              obj.city = user.city;
+              obj.pincode = user.pincode;
+              obj.Phone_number = user.Phone_number;
+              obj.tittle = element.tittle;
               // obj["date"] = buyer["date"];
               // obj["time"] = buyer["time"];
-              obj["emailid"] = user["emailid"];
+              obj.emailid = user.emailid;
 
               order.push(obj);
               localStorage.setItem("order", JSON.stringify(order));

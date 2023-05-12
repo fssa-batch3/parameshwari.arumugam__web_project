@@ -12,13 +12,12 @@ checklogin.onsubmit = function (e) {
 
   localdata.find((el) => {
     if (el.emailid === email && el.password === password) {
-      let active_user = el;
+      const active_user = el;
       console.log(active_user);
       localStorage.setItem("active_user", JSON.stringify(active_user));
       return (success = 1);
-    } else {
-      return (success = 0);
     }
+    return (success = 0);
   });
 
   if (success == 1) {

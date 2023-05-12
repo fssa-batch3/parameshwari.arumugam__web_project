@@ -104,15 +104,15 @@ let icon;
 
 //     ]
 
-let search = document.getElementById("name");
+const search = document.getElementById("name");
 
 search.addEventListener("keyup", (e) => {
-  let words = e.target.value.toLowerCase();
+  const words = e.target.value.toLowerCase();
 
-  let letter = document.querySelectorAll(".red");
+  const letter = document.querySelectorAll(".red");
 
   letter.forEach((element) => {
-    let content = element.children[1].textContent.toLowerCase();
+    const content = element.children[1].textContent.toLowerCase();
 
     if (content.includes(words)) {
       element.style.display = "block";
@@ -136,8 +136,8 @@ search.addEventListener("keyup", (e) => {
 // let count = document.getElementById("cartcount");
 // count.innerText = cartCount.length;
 
-let Cart = JSON.parse(localStorage.getItem("Cart"));
-let user = JSON.parse(localStorage.getItem("active_user"));
+const Cart = JSON.parse(localStorage.getItem("Cart"));
+const user = JSON.parse(localStorage.getItem("active_user"));
 
 // let cartCount = [];
 
@@ -150,19 +150,18 @@ let user = JSON.parse(localStorage.getItem("active_user"));
 // let count = document.getElementById("cartcount");
 // count.innerText = cartCount.length;
 
-let bouquets = JSON.parse(localStorage.getItem("bouquet"));
+const bouquets = JSON.parse(localStorage.getItem("bouquet"));
 
-let filterdata = bouquets.filter((data) => {
+const filterdata = bouquets.filter((data) => {
   if (data.status == true && data.category == "BirthdayBouquetCake") {
     return true;
-  } else {
-    return false;
   }
+  return false;
 });
 
 for (let i = 0; i < filterdata.length; i++) {
   console.log("hello");
-  if (bouquets[i]["status"]) {
+  if (bouquets[i].status) {
     div_main_content = document.createElement("div");
     div_main_content.setAttribute("class", "red");
     console.log(div_main_content);
@@ -170,26 +169,25 @@ for (let i = 0; i < filterdata.length; i++) {
     a = document.createElement("a");
     a.setAttribute(
       "href",
-      "../../pages/Anniversary/Red Rose bouquet.html?id=" +
-        filterdata[i]["product_id"]
+      `../../pages/Anniversary/Red Rose bouquet.html?id=${filterdata[i].product_id}`
     );
     div_main_content.prepend(a);
     // console.log(a);
 
     image_flower = document.createElement("img");
     image_flower.setAttribute("id", "flower");
-    image_flower.setAttribute("src", filterdata[i]["img"]);
-    image_flower.setAttribute("alt", filterdata[i]["alt"]);
+    image_flower.setAttribute("src", filterdata[i].img);
+    image_flower.setAttribute("alt", filterdata[i].alt);
     a.append(image_flower);
 
     h2 = document.createElement("h2");
-    h2.innerText = filterdata[i]["tittle"];
+    h2.innerText = filterdata[i].tittle;
     h2.setAttribute("class", "product-title");
     div_main_content.append(h2);
 
     h3 = document.createElement("h3");
     h3.setAttribute("class", "price");
-    h3.innerText = "₹" + filterdata[i]["price"];
+    h3.innerText = `₹${filterdata[i].price}`;
     div_main_content.append(h3);
 
     for (let i = 1; i <= 5; i++) {

@@ -1,4 +1,4 @@
-let bouquets = JSON.parse(localStorage.getItem("bouquet"));
+const bouquets = JSON.parse(localStorage.getItem("bouquet"));
 
 const url = window.location.search;
 const urlparams = new URLSearchParams(url);
@@ -7,16 +7,15 @@ console.log(urlserached_value);
 
 let result;
 
-bouquets.find(function (e) {
-  if (e["product_id"] == urlserached_value) {
+bouquets.find((e) => {
+  if (e.product_id == urlserached_value) {
     return (result = e);
-  } else {
-    return (result = 0);
   }
+  return (result = 0);
 });
 
-let Cart = JSON.parse(localStorage.getItem("Cart"));
-let user = JSON.parse(localStorage.getItem("active_user"));
+const Cart = JSON.parse(localStorage.getItem("Cart"));
+const user = JSON.parse(localStorage.getItem("active_user"));
 
 // let cartCount = [];
 
@@ -50,17 +49,17 @@ console.log(div_cart_page);
 
 image_flower = document.createElement("img");
 image_flower.setAttribute("id", "flower");
-image_flower.setAttribute("src", result["img"]);
-image_flower.setAttribute("alt", result["alt"]);
+image_flower.setAttribute("src", result.img);
+image_flower.setAttribute("alt", result.alt);
 div_cart_page.append(image_flower);
 
 h1 = document.createElement("h1");
-h1.innerText = result["tittle"];
+h1.innerText = result.tittle;
 div_cart_page.append(h1);
 
 h6 = document.createElement("h6");
 h6.setAttribute("class", "price");
-h6.innerText = "₹" + result["price"];
+h6.innerText = `₹${result.price}`;
 div_cart_page.append(h6);
 
 for (let i = 1; i <= 5; i++) {
@@ -75,13 +74,9 @@ button1.setAttribute("id", "buy_now");
 button1.innerText = ["Add to cart"];
 div_cart_page.append(button1);
 
-
-
 a2 = document.createElement("a");
-a2.setAttribute("href", "../Order/Buy Now.html?id=" + result.product_id);
+a2.setAttribute("href", `../Order/Buy Now.html?id=${result.product_id}`);
 div_cart_page.append(a2);
-
-
 
 button2 = document.createElement("button");
 button2.setAttribute("id", "buy_now");
@@ -91,35 +86,31 @@ a2.append(button2);
 
 document.querySelector("legend").append(div_cart_page);
 
-let btn_cart = document.getElementById("buy_now");
+const btn_cart = document.getElementById("buy_now");
 btn_cart.addEventListener("click", (el) => {
-  let user = JSON.parse(localStorage.getItem("active_user"));
-  let addCart = JSON.parse(localStorage.getItem("Cart")) ?? [];
+  const user = JSON.parse(localStorage.getItem("active_user"));
+  const addCart = JSON.parse(localStorage.getItem("Cart")) ?? [];
 
   let check;
 
   addCart.find((e) => {
-    if (
-      e["product_id"] == result["product_id"] &&
-      e["emailid"] == user["emailid"]
-    ) {
+    if (e.product_id == result.product_id && e.emailid == user.emailid) {
       return (check = 1);
-    } else {
-      return (check = 0);
     }
+    return (check = 0);
   });
 
   if (check == 1) {
     alert("already added");
   } else {
-    let item = {};
+    const item = {};
 
-    item["img"] = result["img"];
-    item["price"] = result["price"];
-    item["product_id"] = result["product_id"];
-    item["rating"] = result["rating"];
-    item["tittle"] = result["tittle"];
-    item["emailid"] = user["emailid"];
+    item.img = result.img;
+    item.price = result.price;
+    item.product_id = result.product_id;
+    item.rating = result.rating;
+    item.tittle = result.tittle;
+    item.emailid = user.emailid;
 
     addCart.push(item);
     localStorage.setItem("Cart", JSON.stringify(addCart));

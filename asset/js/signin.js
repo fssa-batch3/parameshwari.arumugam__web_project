@@ -1,78 +1,66 @@
-let userform = document.getElementById("signupform");
+const userform = document.getElementById("signupform");
 
-let firstName = document.getElementById("first_name");
+const firstName = document.getElementById("first_name");
 
-let lastname = document.getElementById("last_name");
+const lastname = document.getElementById("last_name");
 
-let email = document.getElementById("email");
+const email = document.getElementById("email");
 
-let password = document.getElementById("password");
+const password = document.getElementById("password");
 
-let user_records = JSON.parse(localStorage.getItem("user_list"));
+const user_records = JSON.parse(localStorage.getItem("user_list"));
 
-userform.addEventListener("submit", e => {
-e.preventDefault();
+userform.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-validateform();
+  validateform();
 });
 
-function validateform(){
+function validateform() {
+  const firstnamevalue = first_name.value.trim();
 
+  const lastnamevalue = last_name.value.trim();
 
-let firstnamevalue = first_name.value.trim();
+  const emailvalue = email.value.trim();
 
+  const passwordvalue = password.value.trim();
 
-let lastnamevalue = last_name.value.trim();
+  const records = [];
 
-let emailvalue = email.value.trim();
+  const user = {};
 
-let passwordvalue = password.value.trim();
+  user.firstname = firstnamevalue;
+  user.lastname = lastnamevalue;
+  user.emailid = emailvalue;
+  user.password = passwordvalue;
+  user.date_of_birth = "";
+  user.Phone_number = "";
+  user.address = "";
+  user.city = "";
+  user.state = "";
+  user.pincode = "";
 
-let records = [];
+  const user_information =
+    JSON.parse(localStorage.getItem("user_list")) ?? records;
 
-let user = {};
+  let success = true;
 
-user["firstname"] = firstnamevalue;
-user["lastname"] = lastnamevalue;
-user["emailid"] = emailvalue;
-user["password"] = passwordvalue;
-user["date_of_birth"] = "";
-user["Phone_number"] = "";
-user["address"] = "";
-user["city"] = "";
-user["state"] = "";
-user["pincode"] = "";
-
-
-
-
-let user_information = JSON.parse(localStorage.getItem("user_list")) ?? records;
-
-let success = true;
-
-if (user_information != null) {
- for ( let i = 0; i < user_information.length; i++){    
-
- if (user_information[i].emailid == emailvalue) {
-  success = false;
-  break;
+  if (user_information != null) {
+    for (let i = 0; i < user_information.length; i++) {
+      if (user_information[i].emailid == emailvalue) {
+        success = false;
+        break;
+      }
+    }
   }
- }
-}
 
+  if (success) {
+    user_information.push(user);
+    localStorage.setItem("user_list", JSON.stringify(user_information));
+    alert("account create successfuly");
 
-if(success) {
-
-user_information.push(user);
-localStorage.setItem("user_list",JSON.stringify(user_information));
-alert("account create successfuly");
-
-window.location.href = "pages/login.html"
-
-}
-
-else{
-  alert("Already you have an account")
-}
-
+    window.location.href = "pages/login.html";
+  } else {
+    alert("Already you have an account");
+  }
 }

@@ -47,87 +47,72 @@ let image_flower;
 
 // ]
 
-let bouquets = JSON.parse(localStorage.getItem("bouquet"));
+const bouquets = JSON.parse(localStorage.getItem("bouquet"));
 
-let filterdata=bouquets.filter((data)=>{
-
-  if(data.status == true && data.category == "Home"){
-    return true
-  } 
-  else{
-    return false
+const filterdata = bouquets.filter((data) => {
+  if (data.status == true && data.category == "Home") {
+    return true;
   }
-})
+  return false;
+});
 console.log(filterdata);
 
 for (let i = 0; i < filterdata.length; i++) {
+  if (bouquets[i].status) {
+    div_main_box = document.createElement("div");
+    div_main_box.setAttribute("class", "mixed");
+    console.log(div_main_box);
 
-  if(bouquets[i]["status"]){
+    image_flower = document.createElement("img");
+    image_flower.setAttribute("id", "flower");
+    image_flower.setAttribute("src", filterdata[i].img);
+    image_flower.setAttribute("alt", "image");
+    div_main_box.append(image_flower);
+    h2 = document.createElement("h2");
+    h2.innerText = filterdata[i].tittle;
+    div_main_box.append(h2);
 
-  div_main_box = document.createElement("div");
-  div_main_box.setAttribute("class", "mixed");
-  console.log(div_main_box);
+    document.querySelector("div.main_box").append(div_main_box);
+  }
 
-  image_flower = document.createElement("img");
-  image_flower.setAttribute("id", "flower");
-  image_flower.setAttribute("src", filterdata[i]["img"]);
-  image_flower.setAttribute("alt", "image");
-  div_main_box.append(image_flower);
+  const Cart = JSON.parse(localStorage.getItem("Cart"));
+  const user = JSON.parse(localStorage.getItem("active_user"));
 
-  
-  h2 = document.createElement("h2");
-  h2.innerText = filterdata[i]["tittle"];
-  div_main_box.append(h2);
+  const cartCount = [];
 
+  Cart.forEach((e) => {
+    if (e.emailid == user.emailid) {
+      cartCount.push(e);
+    }
+  });
 
-  document.querySelector("div.main_box").append(div_main_box);
+  const count = document.getElementById("cartcount");
+  count.innerText = cartCount.length;
+
+  const search = document.getElementById("name");
+
+  search.addEventListener("keyup", (e) => {
+    const words = e.target.value.toLowerCase();
+
+    const letter = document.querySelectorAll(".mixed");
+
+    letter.forEach((element) => {
+      const content = element.children[1].textContent.toLowerCase();
+
+      if (content.includes(words)) {
+        element.style.display = "block";
+      } else {
+        element.style.display = "none";
+      }
+    });
+  });
 }
 
-let Cart = JSON.parse(localStorage.getItem("Cart"));
-let user = JSON.parse(localStorage.getItem("active_user"));
+const select = "admin";
+const user = JSON.parse(localStorage.getItem("active_user"));
+console.log(user);
+const admin_page = document.getElementById("admin");
 
-let cartCount = [];
-
-Cart.forEach((e) => {
-  if (e["emailid"] == user["emailid"]) {
-    cartCount.push(e);
-  }
-});
-
-let count = document.getElementById("cartcount");
-count.innerText = cartCount.length;
-
-
-let search = document.getElementById("name");
-
-    search.addEventListener("keyup", (e) =>{
-       
-      let words = e.target.value.toLowerCase();
-
-      let letter = document.querySelectorAll(".mixed");
-
-      letter.forEach(element =>{
-
-        let content = element.children[1].textContent.toLowerCase();
-
-        if(content.includes(words)){
-          element.style.display="block"
-        }
-        else{
-          element.style.display="none"
-        }
-      })
-    
-    })
-  };
-
-
-    let select="admin"
-    let user=JSON.parse(localStorage.getItem("active_user"))
-    console.log(user)
-        let admin_page=document.getElementById("admin")
-       
-    
-          if(user.emailid=="admin@gmail.com"){
-          admin_page.innerText="admin"
-          }
+if (user.emailid == "admin@gmail.com") {
+  admin_page.innerText = "admin";
+}
