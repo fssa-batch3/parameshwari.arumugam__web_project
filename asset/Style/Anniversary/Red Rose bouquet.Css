@@ -3,7 +3,7 @@ header{
     justify-content: space-between;
     border: 2px solid rgb(204, 211, 211);
     background-color: rgb(204, 218, 218);
-    height: 80px;
+    height:100px;
     border-radius: 15px;
 }
 .search img{
@@ -38,8 +38,8 @@ h6{
 input{
     width: 500px;
     height: 30px;
-    border-color: hotpink;   
-    background-color: hotpink;
+    border-color: white;   
+    background-color: white;
 }
 .navbar{
     display: flex;
@@ -182,7 +182,7 @@ footer{
     justify-content: space-around;
     background-color: lightslategray;
     margin-top: 80px;
-    height: 400px;
+    height:300px;
     border-radius: 15px;
     color:black;
 }

@@ -91,19 +91,19 @@ let a;
 //     },
 //  ]
 
-const Cart = JSON.parse(localStorage.getItem("Cart"));
+const Cart = JSON.parse(localStorage.getItem("Cart")) ?? [];
 const user = JSON.parse(localStorage.getItem("active_user"));
 
-// let cartCount = [];
+let cartCount = [];
 
-// Cart.forEach((e) => {
-//   if (e["emailid"] == user["emailid"]) {
-//     cartCount.push(e);
-//   }
-// });
+Cart.forEach((e) => {
+  if (e["emailid"] == user["emailid"]) {
+    cartCount.push(e);
+  }
+});
 
-// let count = document.getElementById("cartcount");
-// count.innerText = cartCount.length;
+let count = document.getElementById("cartcount");
+count.innerText = cartCount.length;
 
 const bouquets = JSON.parse(localStorage.getItem("bouquet"));
 // document.querySelector(".selectoption").value;
@@ -175,18 +175,4 @@ search.addEventListener("keyup", (e) => {
   });
 });
 
-//  let Cart = JSON.parse(localStorage.getItem("Cart"))
-//  let user = JSON.parse(localStorage.getItem("active_user"));
 
-//  let cartCount = [];
-
-//  Cart.forEach( e => {
-
-//  if(e["emailid"] == user["emailid"]){
-//      cartCount.push(e)
-//  }
-
-//  })
-
-//   let count = document.getElementById("cartcount")
-//   count.innerText = cartCount.length;

@@ -1,10 +1,12 @@
 header{
-    display: flex;
-    justify-content: space-between;
-    border: 2px solid rgb(204, 211, 211);
-    background-color: rgb(204, 218, 218);
-    height: 80px;
-    border-radius: 15px;
+    
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(204, 218, 218);
+        height: 100px;
+        border-radius:  0px  0px 15px 15px ;
+        margin: 0px;
+    
 }
 .search img{
     position: absolute;
@@ -29,8 +31,8 @@ h5{
 input{
     width: 500px;
     height: 30px;
-    border-color: hotpink;   
-    background-color: hotpink;
+    border-color: white;   
+    background-color:white;
      
 }
 .navbar{
@@ -63,10 +65,11 @@ input{
 }
 .dropdown-menu{
     display: none;
-    position: absolute;
-    background-color: white;
+    position: absolute; 
     min-width:160px;
     z-index: 1;
+    background-color: white;
+    border-radius:30px;
 }
 .dropdown-menu a{
     color: black;
@@ -192,7 +195,7 @@ footer{
     justify-content: space-around;
     background-color: lightslategray;
     margin-top: 30px;
-    height: 400px;
+    height:250px;
     border-radius: 15px;
 }
  .links a{

@@ -5,7 +5,7 @@ let h4;
 let image_flower;
 
 const order_list = JSON.parse(localStorage.getItem("order"));
-const activeuser = JSON.parse(localStorage.getItem("active_user"));
+
 
 // let order_sample=[
 // {
@@ -19,6 +19,9 @@ const activeuser = JSON.parse(localStorage.getItem("active_user"));
 
 // }
 // ]
+
+const activeuser = JSON.parse(localStorage.getItem("active_user"));
+
 
 order_list.find((el) => {
   if (activeuser.emailid === el.emailid) {

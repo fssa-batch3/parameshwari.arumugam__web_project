@@ -66,11 +66,11 @@ h5{
 .edit{
     width: 130px;
     height: 40px; 
-    margin-left:30%;
+    margin-left:80%;
     background-color: rgb(238, 241, 242);
     border-radius: 10px;
- position: relative;
-    top:50px;
+    position: relative;
+    top:-70px;
 }
 button a{
     text-decoration:none; 
@@ -78,7 +78,7 @@ button a{
 }
 label{
     position: relative;
-    bottom:1px;
+    bottom:50px;
     font-family:cursive; 
 }
 #pnumber{
@@ -146,8 +146,8 @@ form{
     margin-left:5%;
     border: 2px solid rgb(5, 4, 4);
     width:800px;
-    height:900px;
-    margin-top:50PX;
+    height:700px;
+    margin-top:-70PX;
 }
 #buynow:hover{
     box-shadow: rgba(10, 10, 40, 0.2) 0px 10px 39px 10px;
@@ -171,7 +171,7 @@ form{
 #order_amount{
    left:115%;
    position: relative;
-   bottom:1100px;
+   bottom:1340px;
    border: 2px solid black;
    width: 380px;
    height:250px;
@@ -208,6 +208,9 @@ h2{
     top:30px;
 
 }
+h3{
+    font-size: 30px;
+}
 .red{
     border: 2px solid rgb(12, 11, 11);
     right:90px;
@@ -218,46 +221,82 @@ h2{
 
 }
 
-
-
 html{
     overflow-x: hidden;
 }
 .prodiv{
     position: relative;
     left: 990px;
-    top:250px;  
+   top:70px;
 }
 
 #selectopt{
     margin-left:180px;
     width:264px;
     border: 2px solid black;
+    position: relative;
+    bottom:60px;
 }
 .pay{
-    margin-top: 50%;
+    margin-top:39%;
     display: flex;
-    margin-left:30px;
+    flex-flow:column;
+    margin-left:-5px;
+    border: 2px solid black;
+    width:800px;
+    height:250px;
 }
 .pay label{
-    border: 2px solid black;
     width: 230px;
     height:40px;
-    margin-top:15px;
-    margin-left:15px;
+    margin-top:120px;
+    margin-left:60px;
     font-size:20px;
+    
+    
 }
 .pay input{
     position: relative;
-    left:-40px;
-    width:25px;
-    bottom:10px;
+    top:-145px;
+    right:355px;
+   
+  
+}
+.pay2 input{
+    position: relative;
+    top:-400px;
+    right:185px;
+   
+  
+}
+#upi{
+    position: relative;
+    top:-120px;
+}
+#cashdelivery{
+    position: relative;
+    top:-400px;
+    margin-left:60px;
+    font-size:20px;  
+}
+hr{
+    border: 1px solid black;
+    position: relative;
+    bottom:435px;
 }
 #google1{
     position: relative;
-    left: 40%;
-    margin-top:10px;
-}
+    top:890px;
+    margin-left:800px;
+ }
+ #delivery1{
+    position: relative;
+    top:950px;
+    margin-left:800px;
+ }
+
+
+
 
 
 

@@ -49,6 +49,9 @@ input{
     font-size: 25px;
     color:black;
 }
+#rs{
+    font-size:25px;
+}
 
 #name{
     text-align: center;

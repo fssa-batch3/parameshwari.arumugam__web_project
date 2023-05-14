@@ -20,27 +20,32 @@
   </head>
   <body>
     <!--main start-->
-
-  
+    <img
+    id="google1"
+    src="../../asset/IMG/index/google-pay (1).png"
+    width="50px"
+  /><br />
+  <img
+          id="delivery1"
+          src="../../asset/IMG/index/cash-on-delivery (1).png"
+          width="50px"
+        />
     <form id="buynow">
       <div>
         <div class="main">
           <h1>Place your Order Now</h1>
         </div>
         <div class="details">
-          <div class="main1">
+          
               <label for="name">Name<input type="text" id="ntext" value="name" required /></label
               ><br /><br />
               <label for="name">User Email<input type="email" id="email" value="UserEmail" required /></label
               ><br /><br />
-          </div>
-         <div class="main2">
-          <label for="number"
+             <label for="number"
             >Phone Number<input type="pnumber" id="pnumber" value="phone_number" required /></label
           ><br /><br />
           <label for="name">Address<input type="text" id="aname" value="address" required /></label
           ><br /><br />
-        </div>
           <label for="number">Delivery Date<input type="date" id="date" value="date" required /></label
             ><br /><br />
             <label for="text">City<input type="text" id="text" value="city" required/></label
@@ -49,7 +54,6 @@
               ><br /><br />
               <label for="number">Pincode<input type="number" id="cnumber" value="pincode" required /></label
               ><br /><br />
-           
           <!-- <p>Delivery Time</p> -->
             <select class="selectoption" id="selectopt" required>
               <option value="">Delivery Time</option>
@@ -71,14 +75,12 @@
             </select>
         </div>
         </div>
+       <a href="../../pages/Order/edit_buynow.html"><button  class="edit" type="button">
+          Edit
+       </button></a>
       <div class="pay">
-        <!-- <img
-              id="google1"
-              src="../../asset/IMG/index/google-pay (1).png"
-              width="50px"
-            /><br /> -->
           <h3>Payment Method</h3>
-        <label for="gpay">UPI</label>
+        <label for="gpay" id="upi">UPI</label>
         <input
               class="payment_option"
               type="radio"
@@ -87,7 +89,10 @@
               value="gpay"
               required
             />
-            <label for="delivery">Cash on delivery</label>
+      </div>
+      <hr>
+      <div class="pay2">
+           <label for="delivery" id="cashdelivery">Cash on delivery</label>
             <input
               class="payment_option"
               type="radio"
@@ -96,8 +101,7 @@
               value="cash-on-delivery"
               required
             />
-      </div>
-   
+          </div>
        <div class="maincont">
           <div class="prodiv">
 

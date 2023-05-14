@@ -23,6 +23,7 @@ if (urlserached_value == Number(urlserached_value)) {
   let h1;
   let h6;
   let image_flower;
+  
 
   count = Number(result.price);
 
@@ -47,8 +48,11 @@ if (urlserached_value == Number(urlserached_value)) {
   h6.innerText = `₹${result.price}`;
   div_cart_page.append(h6);
 
+  
+
   document.querySelector(".prodiv").append(div_cart_page);
-} else {
+} 
+else {
   const Cart = JSON.parse(localStorage.getItem("Cart"));
   const active_user = JSON.parse(localStorage.getItem("active_user"));
 

@@ -75,7 +75,7 @@ for (let i = 0; i < filterdata.length; i++) {
     document.querySelector("div.main_box").append(div_main_box);
   }
 
-  const Cart = JSON.parse(localStorage.getItem("Cart"));
+  const Cart = JSON.parse(localStorage.getItem("Cart")) ?? [];
   const user = JSON.parse(localStorage.getItem("active_user"));
 
   const cartCount = [];

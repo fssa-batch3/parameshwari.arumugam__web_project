@@ -46,9 +46,14 @@ for (let i = 0; i < cart_sample.length; i++) {
     h6 = document.createElement("h2");
     h6.innerText = `₹${cart_sample[i].price}`;
     h6.setAttribute("data-keyword", cart_sample[i].price);
-    h6.setAttribute("id", "rs");
-    h6.setAttribute("id", "rs");
+    h6.setAttribute("id", "rupee");
     div_text.append(h6);
+
+    h2 = document.createElement("h2");
+    h2.innerText = `₹${cart_sample[i].price}`;
+    h2.setAttribute("data-keyword", cart_sample[i].price);
+    h2.setAttribute("id", "rs");
+    div_text.append(h2);
 
     for (let i = 1; i <= 5; i++) {
       icon = document.createElement("i");
@@ -108,6 +113,8 @@ for (let i = 0; i < cart_sample.length; i++) {
 }
 // });
 
+// total product amound count code 
+
 const totalAmount = document.getElementById("total_count");
 
 totalAmount.innerText = total;
@@ -119,4 +126,20 @@ totalAmount1.innerText = total;
 const continue_btn = document.getElementById("continue");
 continue_btn.addEventListener("click", () => {
   window.location.href = `../../pages/Order/Buy Now.html?id=${user.emailid}`;
+});
+const quantityIn = document.getElementById("qnumber");
+let price = h2.innerText.replace("₹", "");
+console.log(price);
+let quantityvalue;
+quantityIn.addEventListener("change", () => {
+  // alert(quantity.value)
+  quantityvalue = quantity.value;
+  let rate = price;
+  let norate = Number(rate);
+  console.log(norate);
+  let multipleno = norate * Number(quantityvalue);
+  console.log(multipleno);
+  h2.innerText = "₹" + multipleno;
+  //  console.log(okdan);
+  // console.log(quantityvalue);
 });

@@ -61,10 +61,11 @@ input{
 }
 .dropdown-menu{
     display: none;
-    position: absolute;
-    background-color:pink;
+    position: absolute; 
     min-width:160px;
     z-index: 1;
+    background-color: white;
+    border-radius:30px;
 }
 .dropdown-menu a{
     color: black;
