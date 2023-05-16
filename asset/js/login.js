@@ -22,7 +22,7 @@ checklogin.onsubmit = function (e) {
 
   if (success == 1) {
     alert("login successful");
-    window.location.href = "../pages/Home.html";
+    window.location.href = "../pages/profile.html";
   } else {
     alert("login fail");
   }

@@ -251,3 +251,33 @@ footer{
     bottom:65px;
     
 }
+
+.qty_label{
+    display: flex;
+    align-items: center;
+}
+
+.minus{
+    padding: 0px 5px;
+    margin: 5px;
+    margin-left: 20px;
+    background-color: rgb(214, 214, 214);
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.qty_value{
+    margin: 5px;
+    padding: 0px 5px;
+    background-color: rgb(233, 233, 233);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.plues{
+    margin: 5px;
+    padding: 0px 5px;
+    background-color: rgb(214, 214, 214);
+    font-weight: bold;
+    font-size: 40px;
+}

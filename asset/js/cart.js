@@ -19,6 +19,7 @@ const cart_sample = JSON.parse(localStorage.getItem("Cart"));
 const user = JSON.parse(localStorage.getItem("active_user"));
 
 let total = 0;
+let quantityvalue = 1;
 
 // cart_sample.find((e) => {
 
@@ -28,6 +29,7 @@ for (let i = 0; i < cart_sample.length; i++) {
 
     div_cart_page = document.createElement("div");
     div_cart_page.setAttribute("class", "align_flex");
+    div_cart_page.setAttribute("data-value", cart_sample[i].product_id);
 
     image_flower = document.createElement("img");
     image_flower.setAttribute("id", "flower");
@@ -67,17 +69,33 @@ for (let i = 0; i < cart_sample.length; i++) {
 
     label = document.createElement("label");
     label.setAttribute("for", "quality");
+    label.setAttribute("class", "qty_label");
     label.innerText = "Quantity";
     div_text.append(label);
 
-    quantity = document.createElement("input");
-    quantity.setAttribute("type", "number");
-    quantity.setAttribute("class", "qty");
-    quantity.setAttribute("min", "1");
-    quantity.setAttribute("max", "10");
-    quantity.setAttribute("value", "1");
-    quantity.setAttribute("id", "qnumber");
-    label.append(quantity);
+    // quantity = document.createElement("input");
+    // quantity.setAttribute("type", "number");
+    // quantity.setAttribute("class", "qty");
+    // quantity.setAttribute("min", "1");
+    // quantity.setAttribute("max", "10");
+    // quantity.setAttribute("value", "1");
+    // quantity.setAttribute("id", "qnumber");
+    // label.append(quantity);
+
+    let p_minus = document.createElement("p");
+    p_minus.setAttribute("class", "minus");
+    p_minus.innerText = "-";
+    label.append(p_minus);
+
+    let qty_value = document.createElement("p");
+    qty_value.setAttribute("class", "qty_value");
+    qty_value.innerText = quantityvalue;
+    label.append(qty_value);
+
+    let p_plues = document.createElement("p");
+    p_plues.setAttribute("class", "plues");
+    p_plues.innerText = "+";
+    label.append(p_plues);
 
     button = document.createElement("button");
     button.setAttribute("id", "remove1");
@@ -113,7 +131,7 @@ for (let i = 0; i < cart_sample.length; i++) {
 }
 // });
 
-// total product amound count code 
+// total product amound count code
 
 const totalAmount = document.getElementById("total_count");
 
@@ -123,23 +141,74 @@ const totalAmount1 = document.getElementById("total_count1");
 
 totalAmount1.innerText = total;
 
+const quantityIn = document.querySelectorAll(".qty_value");
+const plues = document.querySelectorAll(".plues");
+const minus = document.querySelectorAll(".minus");
+const rs = document.querySelectorAll("#rs");
+const align_flex = document.querySelectorAll(".align_flex");
+
+// let price = h2.innerText.replace("₹", "");
+// console.log(price);
+
+for (let i = 0; i < plues.length; i++) {
+  plues[i].addEventListener("click", function () {
+    if (quantityIn[i].innerText < 10) {
+      quantityIn[i].innerText++;
+      // console.log("working")
+
+      // product full price
+      const full_price =
+        parseFloat(rs[i].dataset.keyword) * parseFloat(quantityIn[i].innerText);
+      // console.log(full_price);
+      rs[i].innerText = `₹${full_price}`;
+
+      total += parseFloat(rs[i].dataset.keyword);
+
+      document.getElementById("total_count").innerText = total;
+      document.getElementById("total_count1").innerText = total;
+    }
+  });
+}
+for (let i = 0; i < minus.length; i++) {
+  minus[i].addEventListener("click", function () {
+    if (quantityIn[i].innerText > 1) {
+      quantityIn[i].innerText--;
+
+      const full_price =
+        parseFloat(rs[i].dataset.keyword) * parseFloat(quantityIn[i].innerText);
+      console.log(full_price);
+      rs[i].innerText = `₹${full_price}`;
+
+      total -= parseFloat(rs[i].dataset.keyword);
+
+      document.getElementById("total_count").innerText = total;
+      document.getElementById("total_count1").innerText = total;
+    }
+  });
+}
+
 const continue_btn = document.getElementById("continue");
 continue_btn.addEventListener("click", () => {
+  cart_sample.find((e) => {
+    if (e.emailid === user.emailid) {
+      for (let i = 0; i < quantityIn.length; i++) {
+      // console.log(quantityIn[i].innerText)
+      console.log(align_flex[i].dataset.value)
+      console.log(e.product_id)
+
+        if (Number(e.product_id) === Number(align_flex[i].dataset.value)) {
+
+
+
+          e.quantity = Number(quantityIn[i].innerText);
+
+          localStorage.setItem("Cart", JSON.stringify(cart_sample))
+
+          break;
+        }
+      }
+    }
+  });
+
   window.location.href = `../../pages/Order/Buy Now.html?id=${user.emailid}`;
-});
-const quantityIn = document.getElementById("qnumber");
-let price = h2.innerText.replace("₹", "");
-console.log(price);
-let quantityvalue;
-quantityIn.addEventListener("change", () => {
-  // alert(quantity.value)
-  quantityvalue = quantity.value;
-  let rate = price;
-  let norate = Number(rate);
-  console.log(norate);
-  let multipleno = norate * Number(quantityvalue);
-  console.log(multipleno);
-  h2.innerText = "₹" + multipleno;
-  //  console.log(okdan);
-  // console.log(quantityvalue);
 });

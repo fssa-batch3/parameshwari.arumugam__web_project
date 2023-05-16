@@ -111,6 +111,8 @@ btn_cart.addEventListener("click", (el) => {
     item.rating = result.rating;
     item.tittle = result.tittle;
     item.emailid = user.emailid;
+    item.quantity = "";
+    
 
     addCart.push(item);
     localStorage.setItem("Cart", JSON.stringify(addCart));

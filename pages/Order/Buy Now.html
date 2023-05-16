@@ -37,25 +37,25 @@
         </div>
         <div class="details">
           
-              <label for="name">Name<input type="text" id="ntext" value="name" required /></label
+              <label for="name">Name<input type="text" id="ntext" value="name" disabled required /></label
               ><br /><br />
-              <label for="name">User Email<input type="email" id="email" value="UserEmail" required /></label
+              <label for="name">User Email<input type="email" id="email" value="UserEmail" disabled required /></label
               ><br /><br />
              <label for="number"
-            >Phone Number<input type="pnumber" id="pnumber" value="phone_number" required /></label
+            >Phone Number<input type="pnumber" id="pnumber" value="phone_number" disabled required /></label
           ><br /><br />
-          <label for="name">Address<input type="text" id="aname" value="address" required /></label
+          <label for="name">Address<input type="text" id="aname" value="address" disabled required /></label
           ><br /><br />
           <label for="number">Delivery Date<input type="date" id="date" value="date" required /></label
             ><br /><br />
-            <label for="text">City<input type="text" id="text" value="city" required/></label
+            <label for="text">City<input type="text" id="text" value="city" disabled required/></label
               ><br /><br />
-              <label for="text">state<input type="text" id="stext" value="state" required /></label
+              <label for="text">state<input type="text" id="stext" value="state" disabled required /></label
               ><br /><br />
-              <label for="number">Pincode<input type="number" id="cnumber" value="pincode" required /></label
+              <label for="number">Pincode<input type="number" id="cnumber" value="pincode" disabled required /></label
               ><br /><br />
           <!-- <p>Delivery Time</p> -->
-            <select class="selectoption" id="selectopt" required>
+            <!-- <select class="selectoption" id="selectopt" required>
               <option value="">Delivery Time</option>
               <option value="7:00 AM-8:00 AM">7:00 AM-8:00 AM</option>
               <optio  value="8:00 AM-9:00 AM">8:00 AM-9:00 AM</option>
@@ -72,10 +72,10 @@
               <option value="8:00 PM-9:00 PM">8:00 PM-9:00 PM</option>
               <option value="10:00 PM-11:00 PM">10:00 PM-11:00 PM</option>
               <option value="11:00 PM-12:00 AM">11:00 PM-12:00 AM</option>
-            </select>
+            </select> -->
         </div>
         </div>
-       <a href="../../pages/Order/edit_buynow.html"><button  class="edit" type="button">
+       <a id="edit_btn"><button  class="edit" type="button">
           Edit
        </button></a>
       <div class="pay">
@@ -87,7 +87,7 @@
               id="gpay"
               name="paymethod"
               value="gpay"
-              required
+              requiredz
             />
       </div>
       <hr>

@@ -1,8 +1,4 @@
 
-*{
-    margin-top: 0%;
-    
-}
 header{
     display: flex;
     justify-content: space-between;
@@ -193,6 +189,6 @@ footer{
     border-radius:15px;
     width:20px;
     position: relative;
-    bottom:50px;
+    bottom:65px;
     
 }
