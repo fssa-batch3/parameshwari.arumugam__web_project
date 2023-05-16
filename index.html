@@ -14,16 +14,16 @@
     <img src="asset/IMG/index/back3.jpg" alt="" width="1470px">
     <div class="login">
       <h2>Sing up</h2>
-      <input type="text" name="first_name" id="first_name" pattern="[A-Za-z]{1,24}" title="username is cannot contain space" placeholder=" FirstName" required>
+      <input type="text" name="first_name" id="first_name" pattern="[A-Za-z]{1,24}" title=" username is cannot contain space" placeholder=" FirstName" required>
 <br >
 <br >
       <input type="text" name="last_name" id="last_name" pattern="[A-Za-z]{1,24}" title="username is cannot contain space" placeholder=" LastName" required>
 <br >
 <br >
-      <input type="email" name="email" id="email" placeholder="E-mail" pattern="^[a-zA-Z0-9][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+      <input type="email" name="email" id="email" placeholder="E-mail" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,4}$" required>
 <br >
 <br >
-      <input type="password" name="password" id="password" placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,20}$" required>
+      <input type="password" name="password" id="password" placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$" minlength="8" maxlength="16" required>
 <br >
 <br >
 <p>
