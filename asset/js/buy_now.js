@@ -189,110 +189,110 @@ form.addEventListener("submit", (el) => {
   }
 });
 
-let timeoption={
-  time0:"7:00 AM-8:00 AM",
-  time1:"8:00 AM-9:00 AM",
-  time2:"9:00 AM-10:00 AM",
-  time3:"10:00 AM-11:00 AM",
-  time4:"11:00 AM-12:00 PM",
-  time5:"1:00 PM-2:00 PM",
-  time6:"2:00 PM-3:00 PM",
-  time7:"3:00 PM-4:00 PM",
-  time8:"4:00 PM-5:00 PM",
-  time9:"5:00 PM-6:00 PM",
-  time10:"6:00 PM-7:00 PM",
-  time11:"7:00 PM-8:00 PM",
-  time12:"8:00 PM-9:00 PM",
-  time13:"9:00 PM-10:00 PM",
-  time14:"10:00 PM-11:00 PM",
-  time15:"11:00 PM-12:00 AM",
-}
-console.log(timeoption);
-// timing
+// let timeoption={
+//   time0:"7:00 AM-8:00 AM",
+//   time1:"8:00 AM-9:00 AM",
+//   time2:"9:00 AM-10:00 AM",
+//   time3:"10:00 AM-11:00 AM",
+//   time4:"11:00 AM-12:00 PM",
+//   time5:"1:00 PM-2:00 PM",
+//   time6:"2:00 PM-3:00 PM",
+//   time7:"3:00 PM-4:00 PM",
+//   time8:"4:00 PM-5:00 PM",
+//   time9:"5:00 PM-6:00 PM",
+//   time10:"6:00 PM-7:00 PM",
+//   time11:"7:00 PM-8:00 PM",
+//   time12:"8:00 PM-9:00 PM",
+//   time13:"9:00 PM-10:00 PM",
+//   time14:"10:00 PM-11:00 PM",
+//   time15:"11:00 PM-12:00 AM",
+// }
+// console.log(timeoption);
+// // timing
 
-select_time = document.createElement("select");
-select_time.setAttribute("class","selectoption");
-select_time.setAttribute("id","selectopt");
-select_time.setAttribute("required","");
-document.querySelector(".details").append(select_time);
+// select_time = document.createElement("select");
+// select_time.setAttribute("class","selectoption");
+// select_time.setAttribute("id","selectopt");
+// select_time.setAttribute("required","");
+// document.querySelector(".details").append(select_time);
 
-let date1=document.getElementById("date")
+// let date1=document.getElementById("date")
 
-date1.addEventListener("input",timeupdate);
+// date1.addEventListener("input",timeupdate);
 
-function timeupdate(){
+// function timeupdate(){
 
-let selectdate = date1.value;
-console.log(selectdate);
-select_time.innerHTML = "";
+// let selectdate = date1.value;
+// console.log(selectdate);
+// select_time.innerHTML = "";
 
-let opt0=document.createElement("option");
-opt0.innerText="select timing";
-opt0.value="";
-select_time.append(opt0);
+// let opt0=document.createElement("option");
+// opt0.innerText="select timing";
+// opt0.value="";
+// select_time.append(opt0);
 
-let current_date = new Date();
-let hour = current_date.getHours();
-let minute = current_date.getMinutes();
-let current_time = hour * 60 + minute;
-console.log(current_time);
+// let current_date = new Date();
+// let hour = current_date.getHours();
+// let minute = current_date.getMinutes();
+// let current_time = hour * 60 + minute;
+// console.log(current_time);
 
 
-let currentdate = `${current_date.getFullYear()}-${(current_date.getMonth() + 1).toString().padStart(2,"0")}-${current_date.getDate().toString().padStart(2,"0")}`;
-console.log(current_date);
+// let currentdate = `${current_date.getFullYear()}-${(current_date.getMonth() + 1).toString().padStart(2,"0")}-${current_date.getDate().toString().padStart(2,"0")}`;
+// console.log(current_date);
 
-for(const opttime in timeoption ){
-  console.log(opttime);
+// for(const opttime in timeoption ){
+//   console.log(opttime);
 
-  optitime=document.createElement("option");
-  optitime.innerText=timeoption[opttime];
+//   optitime=document.createElement("option");
+//   optitime.innerText=timeoption[opttime];
  
 
-  let option = timeoption[opttime].split("-")[0].trim();
+//   let option = timeoption[opttime].split("-")[0].trim();
 
-  // console.log(option);
-  let option1 = option.split(/:|\s/);
-  console.log(option1);
-  let option2 = option1[2];
-  // console.log(option2);
-  let optionhour = parseInt(option1[0]);
-  // console.log(optionhour);
-  let optiontrim = parseInt(option1[1]);
-  // console.log(optiontrim);
-  if(option2 === "PM" && optionhour !==12){
-    optionhour += 12;
-  }
-  else if (option2 === "AM" && optionhour === 12){
-    optionhour = 0;
-  }
-  let optiontime = optionhour * 60 + optiontrim;
+//   // console.log(option);
+//   let option1 = option.split(/:|\s/);
+//   console.log(option1);
+//   let option2 = option1[2];
+//   // console.log(option2);
+//   let optionhour = parseInt(option1[0]);
+//   // console.log(optionhour);
+//   let optiontrim = parseInt(option1[1]);
+//   // console.log(optiontrim);
+//   if(option2 === "PM" && optionhour !==12){
+//     optionhour += 12;
+//   }
+//   else if (option2 === "AM" && optionhour === 12){
+//     optionhour = 0;
+//   }
+//   let optiontime = optionhour * 60 + optiontrim;
 
   
-  let optionend = timeoption[opttime].split("-")[1].trim();
-  let optionend1 = optionend.split(/:|\s/);
-  let optionend2 = optionend1[2];
-  let optionendhour = parseInt(optionend1[0]);
-  let optionendminute = parseInt(optionend1[1]);
-  if(optionend2 === "PM" && optionendhour !==12){
-    optionendhour += 12;
-  }
-  else if (optionend2 === "AM" && optionendhour === 12){
-    optionendhour = 0;
-  }
-  let optionendtime = optionendhour * 60 + optionendminute;
+//   let optionend = timeoption[opttime].split("-")[1].trim();
+//   let optionend1 = optionend.split(/:|\s/);
+//   let optionend2 = optionend1[2];
+//   let optionendhour = parseInt(optionend1[0]);
+//   let optionendminute = parseInt(optionend1[1]);
+//   if(optionend2 === "PM" && optionendhour !==12){
+//     optionendhour += 12;
+//   }
+//   else if (optionend2 === "AM" && optionendhour === 12){
+//     optionendhour = 0;
+//   }
+//   let optionendtime = optionendhour * 60 + optionendminute;
 
 
-  if(selectdate===currentdate && optionendtime < current_time){
+//   if(selectdate===currentdate && optionendtime < current_time){
     
-    optitime.setAttribute("disabled","true")
-  }
+//     optitime.setAttribute("disabled","true")
+//   }
 
 
-  select_time.append(optitime)
+//   select_time.append(optitime)
 
-}
+// }
 
-}
+// }
 
 let edit = document.getElementById("edit_btn");
 
