@@ -3,9 +3,9 @@ let h2;
 let h3;
 let h4;
 let image_flower;
+let button1;
 
 const order_list = JSON.parse(localStorage.getItem("order"));
-
 
 // let order_sample=[
 // {
@@ -21,7 +21,6 @@ const order_list = JSON.parse(localStorage.getItem("order"));
 // ]
 
 const activeuser = JSON.parse(localStorage.getItem("active_user"));
-
 
 order_list.find((el) => {
   if (activeuser.emailid === el.emailid) {
@@ -66,6 +65,11 @@ order_list.find((el) => {
     h5.setAttribute("class", "deliaddress");
     h5.innerHTML = `${el.firstname},<br>${el.address}<br>${el.city}&nbsp-${el.pincode}<br>${el.Phone_number}`;
     div_content.append(h5);
+
+    // button1 = document.createElement("button");
+    // button1.setAttribute("id", "cancel");
+    // button1.innerText = ["Cancel"];
+    // div_content.append(button1);
 
     document.querySelector("div.main_content").append(div_content);
     // document.querySelector("div.content").append(h3);

@@ -45,15 +45,7 @@ form.addEventListener("submit", (ele) => {
       el.pincode=document.getElementById("cnumber").value;
   
       localStorage.setItem("user_list", JSON.stringify(bio));
-
-      // activeuser.firstname= document.getElementById("ntext").value;
-      // activeuser.Phone_number=document.getElementById("pnumber").value;
-      // activeuser.address=document.getElementById("aname").value;
-      // activeuser.city= document.getElementById("text").value;
-      // activeuser.state=document.getElementById("stext").value;
-      // activeuser.pincode=document.getElementById("cnumber").value;
-  
-      // localStorage.setItem("active_user", JSON.stringify(bio));
+      localStorage.setItem("active_user",JSON.stringify(el))
   
     }
 
