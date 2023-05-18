@@ -40,6 +40,7 @@ input{
     text-decoration: none;
     margin-top:0px;
     height: 40px;
+    
 }
 .navbar a{
     text-decoration: none;
@@ -64,9 +65,11 @@ input{
 }
 .dropdown-menu{
     display: none;
-    position: absolute;  
+    position: absolute; 
     min-width:160px;
     z-index: 1;
+    background-color: white;
+    border-radius:30px;
 }
 .dropdown-menu a{
     color: black;
@@ -98,7 +101,7 @@ table  tr{
     background-color: #fec5bb;
     width:1480px;
     height:50px;
-    margin-top:70px;
+    margin-top:5%;
    display: flex;
    justify-content: space-around;
    padding-top:25px;
@@ -126,26 +129,27 @@ table  tr{
 }
 #order_date{
     position: relative;
-    left:130px;
+    left:100px;
     font-size:20px;
     bottom:3px;
 }
 #orderid{
     position: relative;
-    left:120px;
+    left:100px;
     font-size: 25px;
-    top:7px
+    top:5px
 }
 .rupees{
     font-size:30px; 
     position: relative;
-    left:90px;
+    left:80px;
 }
 h6{
     width:250px;
     font-size:25px;
     position: relative;
-    left:155px;
+    left:145px;
+    bottom:1px;
 
 }
 #address{

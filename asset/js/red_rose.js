@@ -117,5 +117,6 @@ btn_cart.addEventListener("click", (el) => {
     addCart.push(item);
     localStorage.setItem("Cart", JSON.stringify(addCart));
     alert("added");
+    location.reload(1)
   }
 });
