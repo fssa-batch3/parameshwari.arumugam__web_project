@@ -18,6 +18,17 @@ let icon1;
 const cart_sample = JSON.parse(localStorage.getItem("Cart"));
 const user = JSON.parse(localStorage.getItem("active_user"));
 
+let cartCount = [];
+
+cart_sample.forEach((e) => {
+  if (e["emailid"] == user["emailid"]) {
+    cartCount.push(e);
+  }
+});
+
+let count = document.getElementById("cartcount");
+count.innerText = cartCount.length;
+
 let total = 0;
 let quantityvalue = 1;
 
@@ -212,3 +223,7 @@ continue_btn.addEventListener("click", () => {
 
   window.location.href = `../../pages/Order/Buy Now.html?id=${user.emailid}`;
 });
+
+
+
+ 

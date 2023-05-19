@@ -20,6 +20,20 @@ const order_list = JSON.parse(localStorage.getItem("order"));
 // }
 // ]
 
+const Cart = JSON.parse(localStorage.getItem("Cart")) ?? [];
+const user = JSON.parse(localStorage.getItem("active_user"));
+
+let cartCount = [];
+
+Cart.forEach((e) => {
+  if (e["emailid"] == user["emailid"]) {
+    cartCount.push(e);
+  }
+});
+
+let count = document.getElementById("cartcount");
+count.innerText = cartCount.length;
+
 const activeuser = JSON.parse(localStorage.getItem("active_user"));
 
 order_list.find((el) => {
@@ -66,10 +80,10 @@ order_list.find((el) => {
     h5.innerHTML = `${el.firstname},<br>${el.address}<br>${el.city}&nbsp-${el.pincode}<br>${el.Phone_number}`;
     div_content.append(h5);
 
-    // button1 = document.createElement("button");
-    // button1.setAttribute("id", "cancel");
-    // button1.innerText = ["Cancel"];
-    // div_content.append(button1);
+    button1 = document.createElement("button");
+    button1.setAttribute("id", "cancel");
+    button1.innerText = ["Cancel"];
+    div_content.append(button1);
 
     document.querySelector("div.main_content").append(div_content);
     // document.querySelector("div.content").append(h3);

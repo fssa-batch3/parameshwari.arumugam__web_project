@@ -23,7 +23,6 @@ if (urlserached_value == Number(urlserached_value)) {
   let h1;
   let h6;
   let image_flower;
-  
 
   count = Number(result.price);
 
@@ -48,11 +47,8 @@ if (urlserached_value == Number(urlserached_value)) {
   h6.innerText = `₹${result.price}`;
   div_cart_page.append(h6);
 
-  
-
   document.querySelector(".prodiv").append(div_cart_page);
-} 
-else {
+} else {
   const Cart = JSON.parse(localStorage.getItem("Cart"));
   const active_user = JSON.parse(localStorage.getItem("active_user"));
 
@@ -86,8 +82,6 @@ else {
       h6.innerText = `₹${el.price}`;
       div_cart_page.append(h6);
 
-
-
       document.querySelector(".prodiv").append(div_cart_page);
     }
   });
@@ -119,7 +113,7 @@ console.log(date);
 const today = new Date(Date.now() - new Date().getTimezoneOffset() * 60000)
   .toISOString()
   .split("T")[0];
-  console.log(today);
+console.log(today);
 date.setAttribute("min", today);
 
 const form = document.getElementById("buynow");
@@ -186,6 +180,19 @@ form.addEventListener("submit", (el) => {
         window.location.href = "Order.html";
       }
     });
+
+    const Cartitem = JSON.parse(localStorage.getItem("Cart"));
+    const useract = JSON.parse(localStorage.getItem("active_user"));
+    //this filter for delete the cart which buy by user
+    let cart_obj = Cartitem.filter(function (obj) {
+      if (obj["emailid"] === useract["emailid"]) {
+        return false;
+      } else {
+        return true;
+      }
+    });
+
+    localStorage.setItem("Cart", JSON.stringify(cart_obj));
   }
 });
 
@@ -237,7 +244,6 @@ form.addEventListener("submit", (el) => {
 // let current_time = hour * 60 + minute;
 // console.log(current_time);
 
-
 // let currentdate = `${current_date.getFullYear()}-${(current_date.getMonth() + 1).toString().padStart(2,"0")}-${current_date.getDate().toString().padStart(2,"0")}`;
 // console.log(current_date);
 
@@ -246,7 +252,6 @@ form.addEventListener("submit", (el) => {
 
 //   optitime=document.createElement("option");
 //   optitime.innerText=timeoption[opttime];
- 
 
 //   let option = timeoption[opttime].split("-")[0].trim();
 
@@ -267,7 +272,6 @@ form.addEventListener("submit", (el) => {
 //   }
 //   let optiontime = optionhour * 60 + optiontrim;
 
-  
 //   let optionend = timeoption[opttime].split("-")[1].trim();
 //   let optionend1 = optionend.split(/:|\s/);
 //   let optionend2 = optionend1[2];
@@ -281,12 +285,10 @@ form.addEventListener("submit", (el) => {
 //   }
 //   let optionendtime = optionendhour * 60 + optionendminute;
 
-
 //   if(selectdate===currentdate && optionendtime < current_time){
-    
+
 //     optitime.setAttribute("disabled","true")
 //   }
-
 
 //   select_time.append(optitime)
 
@@ -297,5 +299,20 @@ form.addEventListener("submit", (el) => {
 let edit = document.getElementById("edit_btn");
 
 edit.addEventListener("click", (e) => {
-  window.location.href=`../../pages/order/edit_buynow.html?id=${urlserached_value}`;
+  window.location.href = `../../pages/order/edit_buynow.html?id=${urlserached_value}`;
 });
+
+// const Cart = JSON.parse(localStorage.getItem("Cart"));
+// const user = JSON.parse(localStorage.getItem("active_user"));
+//  //this filter for delete the cart which buy by user
+//  let cart_obj =  Cart.filter(function (obj) {
+//     if (obj["emailid"] === user["emailid"]) {
+//       return false
+//     }
+//     else{
+//       return true
+//     }
+
+//  })
+
+//  localStorage.setItem("Cart",JSON.stringify(cart_obj))
