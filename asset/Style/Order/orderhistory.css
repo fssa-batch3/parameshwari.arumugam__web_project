@@ -131,13 +131,13 @@ table  tr{
 }
 #order_date{
     position: relative;
-    left:180px;
+    left:190px;
     font-size:20px;
     bottom:3px;
 }
 #orderid{
     position: relative;
-    left:185px;
+    left:205px;
     font-size: 25px;
     top:5px
 }
@@ -157,13 +157,19 @@ h6{
 #address{
   width:300px;
    position: relative;
-   left:190px;
+   left:220px;
     
 }
 #cancel{
-    margin-top:120px;
+    margin-top:160px;
 }
-
+#cancled{
+    margin-top:150px;
+    font-size:23px;
+    color: red;
+    font-weight: bold;
+   
+}
 #cartcount{
     margin-left:95px;
     text-align: center;

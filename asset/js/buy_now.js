@@ -1,5 +1,5 @@
-const order_id = Date.now();
-console.log(order_id);
+
+// console.log(order_id);
 
 const bouquets = JSON.parse(localStorage.getItem("bouquet"));
 
@@ -132,6 +132,7 @@ form.addEventListener("submit", (el) => {
   const order_history = JSON.parse(localStorage.getItem("order")) ?? [];
 
   if (urlserached_value == Number(urlserached_value)) {
+    const order_id = Date.now();
     const obj = {};
 
     obj.img = result.img;
@@ -157,6 +158,7 @@ form.addEventListener("submit", (el) => {
     const active_user = JSON.parse(localStorage.getItem("active_user"));
 
     Cart.find((e) => {
+      const order_id = Date.now();
       if (e.emailid == active_user.emailid) {
         const obj = {};
 

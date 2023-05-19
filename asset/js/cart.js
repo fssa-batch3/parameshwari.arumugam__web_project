@@ -62,18 +62,18 @@ for (let i = 0; i < cart_sample.length; i++) {
     h6.setAttribute("id", "rupee");
     div_text.append(h6);
 
-    h2 = document.createElement("h2");
-    h2.innerText = `₹${cart_sample[i].price}`;
-    h2.setAttribute("data-keyword", cart_sample[i].price);
-    h2.setAttribute("id", "rs");
-    div_text.append(h2);
+    // h2 = document.createElement("h2");
+    // h2.innerText = `₹${cart_sample[i].price}`;
+    // h2.setAttribute("data-keyword", cart_sample[i].price);
+    // h2.setAttribute("id", "rs");
+    // div_text.append(h2);
 
-    for (let i = 1; i <= 5; i++) {
-      icon = document.createElement("i");
-      icon.setAttribute("id", "star");
-      icon.setAttribute("class", "fa-regular fa-star");
-      div_text.append(icon);
-    }
+    // for (let i = 1; i <= 5; i++) {
+    //   icon = document.createElement("i");
+    //   icon.setAttribute("id", "star");
+    //   icon.setAttribute("class", "fa-regular fa-star");
+    //   div_text.append(icon);
+    // }
 
     const br = document.createElement("br");
     div_text.append(br);
@@ -155,7 +155,7 @@ totalAmount1.innerText = total;
 const quantityIn = document.querySelectorAll(".qty_value");
 const plues = document.querySelectorAll(".plues");
 const minus = document.querySelectorAll(".minus");
-const rs = document.querySelectorAll("#rs");
+const rs = document.querySelectorAll("#rupee");
 const align_flex = document.querySelectorAll(".align_flex");
 
 // let price = h2.innerText.replace("₹", "");

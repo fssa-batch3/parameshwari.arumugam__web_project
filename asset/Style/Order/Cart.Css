@@ -50,7 +50,7 @@ input{
     color:black;
 }
 #rs{
-    font-size:25px;
+    font-size:20px;
 }
 
 #name{
@@ -255,6 +255,8 @@ footer{
 .qty_label{
     display: flex;
     align-items: center;
+    position: relative;
+    bottom:30px;
 }
 
 .minus{
