@@ -94,6 +94,8 @@ let a;
 const Cart = JSON.parse(localStorage.getItem("Cart")) ?? [];
 const user = JSON.parse(localStorage.getItem("active_user"));
 
+// cart count 
+
 let cartCount = [];
 
 Cart.forEach((e) => {
@@ -105,8 +107,9 @@ Cart.forEach((e) => {
 let count = document.getElementById("cartcount");
 count.innerText = cartCount.length;
 
+// create product category 
+
 const bouquets = JSON.parse(localStorage.getItem("bouquet"));
-// document.querySelector(".selectoption").value;
 
 const filterdata = bouquets.filter((data) => {
   if (data.status == true && data.category == "AnniversaryBouquet") {
@@ -114,6 +117,8 @@ const filterdata = bouquets.filter((data) => {
   }
   return false;
 });
+
+// product append code
 
 for (let i = 0; i < filterdata.length; i++) {
   console.log("hello");
@@ -156,6 +161,8 @@ for (let i = 0; i < filterdata.length; i++) {
     document.querySelector("div.content_box").append(div_content_box);
   }
 }
+
+// search feature
 
 const search = document.getElementById("name");
 

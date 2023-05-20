@@ -109,7 +109,7 @@ for (let i = 0; i < bio.length; i++) {
 // for date
 const date = document.getElementById("date");
 console.log(date);
-// let today = new Date().toISOString().split("T")[0];
+
 const today = new Date(Date.now() - new Date().getTimezoneOffset() * 60000)
   .toISOString()
   .split("T")[0];
@@ -185,6 +185,7 @@ form.addEventListener("submit", (el) => {
 
     const Cartitem = JSON.parse(localStorage.getItem("Cart"));
     const useract = JSON.parse(localStorage.getItem("active_user"));
+
     //this filter for delete the cart which buy by user
     let cart_obj = Cartitem.filter(function (obj) {
       if (obj["emailid"] === useract["emailid"]) {
@@ -298,23 +299,11 @@ form.addEventListener("submit", (el) => {
 
 // }
 
+
 let edit = document.getElementById("edit_btn");
 
 edit.addEventListener("click", (e) => {
   window.location.href = `../../pages/order/edit_buynow.html?id=${urlserached_value}`;
 });
 
-// const Cart = JSON.parse(localStorage.getItem("Cart"));
-// const user = JSON.parse(localStorage.getItem("active_user"));
-//  //this filter for delete the cart which buy by user
-//  let cart_obj =  Cart.filter(function (obj) {
-//     if (obj["emailid"] === user["emailid"]) {
-//       return false
-//     }
-//     else{
-//       return true
-//     }
 
-//  })
-
-//  localStorage.setItem("Cart",JSON.stringify(cart_obj))

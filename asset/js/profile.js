@@ -1,8 +1,5 @@
 
 
-
-
-
 let bio = JSON.parse(localStorage.getItem("user_list"));
 let activeuser=JSON.parse(localStorage.getItem("active_user"));
 for (let i = 0; i < bio.length; i++) {
@@ -20,6 +17,7 @@ for (let i = 0; i < bio.length; i++) {
   }
 }
 
+// profile edit 
 
 let profilepage = document.getElementById("profilepage")
 profilepage.addEventListener("submit", function(){
@@ -43,7 +41,7 @@ profilepage.addEventListener("submit", function(){
 
 })
 
-
+// profile delete
 function delete_profile(){
 let bio = JSON.parse(localStorage.getItem("user_list"));
       confirm("Are you sure want to delete your account?")
@@ -55,6 +53,8 @@ let bio = JSON.parse(localStorage.getItem("user_list"));
       window.location.href = "../pages/Home.html"
       }
   }
+
+  // account logout
 
   function logout(){
     let log_out = JSON.parse(localStorage.getItem("active_user"));
