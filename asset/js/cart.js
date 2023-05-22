@@ -29,7 +29,7 @@ cart_sample.forEach((e) => {
 let count = document.getElementById("cartcount");
 count.innerText = cartCount.length;
 
-let total = 0;
+let total;
 let quantityvalue = 1;
 
 // cart_sample.find((e) => {
@@ -57,7 +57,8 @@ for (let i = 0; i < cart_sample.length; i++) {
     div_text.append(h1);
 
     h6 = document.createElement("h2");
-    h6.innerText = `₹${cart_sample[i].price}`;
+    h6.setAttribute("class", "total_tag");
+    h6.innerText = `₹ ${cart_sample[i].price * cart_sample[i]["quantity"]}`;
     h6.setAttribute("data-keyword", cart_sample[i].price);
     h6.setAttribute("id", "rupee");
     div_text.append(h6);
@@ -100,7 +101,7 @@ for (let i = 0; i < cart_sample.length; i++) {
 
     let qty_value = document.createElement("p");
     qty_value.setAttribute("class", "qty_value");
-    qty_value.innerText = quantityvalue;
+    qty_value.innerText = cart_sample[i]["quantity"];
     label.append(qty_value);
 
     let p_plues = document.createElement("p");
@@ -119,6 +120,8 @@ for (let i = 0; i < cart_sample.length; i++) {
     button.append(icon1);
 
     document.querySelector("div.black").append(div_cart_page);
+
+    // total2 += cart_sample[i].price * cart_sample[i]["quantity"]
 
     button.addEventListener("click", (e) => {
       for (let j = 0; j < cart_sample.length; j++) {
@@ -140,17 +143,10 @@ for (let i = 0; i < cart_sample.length; i++) {
     // console.log(button);
   }
 }
+
 // });
 
 // total product amound count code
-
-const totalAmount = document.getElementById("total_count");
-
-totalAmount.innerText = total;
-
-const totalAmount1 = document.getElementById("total_count1");
-
-totalAmount1.innerText = total;
 
 const quantityIn = document.querySelectorAll(".qty_value");
 const plues = document.querySelectorAll(".plues");
@@ -177,6 +173,8 @@ for (let i = 0; i < plues.length; i++) {
 
       document.getElementById("total_count").innerText = total;
       document.getElementById("total_count1").innerText = total;
+      getQty();
+      check_total();
     }
   });
 }
@@ -194,36 +192,57 @@ for (let i = 0; i < minus.length; i++) {
 
       document.getElementById("total_count").innerText = total;
       document.getElementById("total_count1").innerText = total;
+      getQty();
+      check_total();
     }
   });
 }
 
 const continue_btn = document.getElementById("continue");
 continue_btn.addEventListener("click", () => {
+  window.location.href = `../../pages/Order/Buy Now.html?id=${user.emailid}`;
+});
+
+function getQty() {
   cart_sample.find((e) => {
     if (e.emailid === user.emailid) {
       for (let i = 0; i < quantityIn.length; i++) {
-      // console.log(quantityIn[i].innerText)
-      console.log(align_flex[i].dataset.value)
-      console.log(e.product_id)
+        // console.log(quantityIn[i].innerText)
+        console.log(align_flex[i].dataset.value);
+        console.log(e.product_id);
 
         if (Number(e.product_id) === Number(align_flex[i].dataset.value)) {
-
-
-
           e.quantity = Number(quantityIn[i].innerText);
 
-          localStorage.setItem("Cart", JSON.stringify(cart_sample))
+          localStorage.setItem("Cart", JSON.stringify(cart_sample));
 
           break;
         }
       }
     }
   });
+}
 
-  window.location.href = `../../pages/Order/Buy Now.html?id=${user.emailid}`;
-});
+const totalAmount = document.getElementById("total_count");
 
+const totalAmount1 = document.getElementById("total_count1");
 
+function check_total() {
 
- 
+  let sum = 0;
+
+  let total_tag = document.querySelectorAll(".total_tag");
+
+  for (let i = 0; i < total_tag.length; i++) {
+    
+    let split_rs = total_tag[i].innerHTML.split("₹");
+
+    sum += Number(split_rs[1]);
+
+    totalAmount.innerText = sum;
+
+    totalAmount1.innerText = sum;
+  }
+}
+
+check_total();

@@ -6,7 +6,7 @@ header{
     justify-content: space-between;
     border: 2px solid rgb(204, 211, 211);
     background-color: rgb(204, 218, 218);
-    height: 80px;
+    height:100px;
     border-radius: 15px;
 }
 .search img{
@@ -15,10 +15,10 @@ header{
     margin-left:14%; 
 }
 h5{
-   font-size:19px;
+   font-size:23px;
    margin-left: 10px;
    position: relative;
-   bottom: 9px;
+   bottom:10px;
 }
 .search{
     margin-top: 20px;
@@ -32,8 +32,8 @@ h5{
 input{
     width: 500px;
     height: 30px;
-    border-color: hotpink;   
-    background-color: hotpink;
+    border-color: white;   
+    background-color:white;
      
 }
 .navbar{
@@ -202,7 +202,7 @@ footer{
     justify-content: space-around;
     background-color: lightslategray;
     margin-top: 70px;
-    height:280px;
+    height:250px;
     border-radius: 15px;
 }
  .links a{

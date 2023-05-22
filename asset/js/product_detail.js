@@ -105,13 +105,16 @@ btn_cart.addEventListener("click", (el) => {
   } else {
     const item = {};
 
+    let id =  Math.floor(Math.random() * 1000);
+
     item.img = result.img;
     item.price = result.price;
     item.product_id = result.product_id;
     item.rating = result.rating;
     item.tittle = result.tittle;
     item.emailid = user.emailid;
-    item.quantity = "";
+    item.quantity = 1;
+    item.cart_id = id;
     
 
     addCart.push(item);

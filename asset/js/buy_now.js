@@ -2,6 +2,8 @@
 // console.log(order_id);
 
 const bouquets = JSON.parse(localStorage.getItem("bouquet"));
+let cart_sample = JSON.parse(localStorage.getItem("Cart"))
+let active_user = JSON.parse(localStorage.getItem("active_user"));
 
 const url = window.location.search;
 const urlparams = new URLSearchParams(url);
@@ -48,11 +50,20 @@ if (urlserached_value == Number(urlserached_value)) {
   div_cart_page.append(h6);
 
   document.querySelector(".prodiv").append(div_cart_page);
+
+  document.getElementById(
+    "total_count1"
+  ).innerText = `Total Product Price:${result.price}`;
+  document.getElementById("total_count").innerText = `Order Total:${result.price}`;
+
+ 
 } else {
+
   const Cart = JSON.parse(localStorage.getItem("Cart"));
   const active_user = JSON.parse(localStorage.getItem("active_user"));
 
   const cart_items = Cart.find((el) => {
+
     if (el.emailid == active_user.emailid) {
       count += Number(el.price);
 
@@ -79,18 +90,21 @@ if (urlserached_value == Number(urlserached_value)) {
       h6 = document.createElement("h6");
       h6.setAttribute("id", "rupees");
       h6.setAttribute("class", "rupees");
-      h6.innerText = `₹${el.price}`;
+      h6.innerText = `₹${el.price} x ${el.quantity}`;
       div_cart_page.append(h6);
 
+    
+
       document.querySelector(".prodiv").append(div_cart_page);
+
+      
     }
   });
+  get_total();
+  
 }
 
-document.getElementById(
-  "total_count1"
-).innerText = `Total Product Price:${count}`;
-document.getElementById("total_count").innerText = `Order Total:${count}`;
+
 
 const bio = JSON.parse(localStorage.getItem("user_list"));
 const activeuser = JSON.parse(localStorage.getItem("active_user"));
@@ -305,5 +319,29 @@ let edit = document.getElementById("edit_btn");
 edit.addEventListener("click", (e) => {
   window.location.href = `../../pages/order/edit_buynow.html?id=${urlserached_value}`;
 });
+
+
+function get_total(){
+
+  let sum =0;
+
+ for(let i=0; i < cart_sample.length; i++){
+
+  if(cart_sample[i].emailid == active_user.emailid){
+
+    let get_rs = Number(cart_sample[i].quantity) * Number(cart_sample[i].price)
+
+    sum+=get_rs;
+    
+  }
+ }
+ document.getElementById(
+  "total_count1"
+).innerText = `Total Product Price: ${sum}`;
+document.getElementById("total_count").innerText = `Order Total: ${sum}`;
+
+
+}
+
 
 
