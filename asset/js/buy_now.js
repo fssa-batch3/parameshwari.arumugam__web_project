@@ -1,8 +1,19 @@
+// let number = document.getElementById("pnumber").value;
+
+//   if (number === "") {
+    
+//     document.getElementById("pnumber").disabled = false;
+//     document.getElementById("text").disabled = false;
+//     document.getElementById("stext").disabled = false;
+//     document.getElementById("cnumber").disabled = false;
+//     document.getElementById("aname").disabled = false;
+//   }
+
 
 // console.log(order_id);
 
 const bouquets = JSON.parse(localStorage.getItem("bouquet"));
-let cart_sample = JSON.parse(localStorage.getItem("Cart"))
+let cart_sample = JSON.parse(localStorage.getItem("Cart"));
 let active_user = JSON.parse(localStorage.getItem("active_user"));
 
 const url = window.location.search;
@@ -54,16 +65,14 @@ if (urlserached_value == Number(urlserached_value)) {
   document.getElementById(
     "total_count1"
   ).innerText = `Total Product Price:${result.price}`;
-  document.getElementById("total_count").innerText = `Order Total:${result.price}`;
-
- 
+  document.getElementById(
+    "total_count"
+  ).innerText = `Order Total:${result.price}`;
 } else {
-
   const Cart = JSON.parse(localStorage.getItem("Cart"));
   const active_user = JSON.parse(localStorage.getItem("active_user"));
 
   const cart_items = Cart.find((el) => {
-
     if (el.emailid == active_user.emailid) {
       count += Number(el.price);
 
@@ -93,18 +102,11 @@ if (urlserached_value == Number(urlserached_value)) {
       h6.innerText = `₹${el.price} x ${el.quantity}`;
       div_cart_page.append(h6);
 
-    
-
       document.querySelector(".prodiv").append(div_cart_page);
-
-      
     }
   });
   get_total();
-  
 }
-
-
 
 const bio = JSON.parse(localStorage.getItem("user_list"));
 const activeuser = JSON.parse(localStorage.getItem("active_user"));
@@ -134,6 +136,8 @@ const form = document.getElementById("buynow");
 
 form.addEventListener("submit", (el) => {
   el.preventDefault();
+
+  
 
   const payment_option = document.querySelector(
     ".payment_option:checked"
@@ -313,35 +317,25 @@ form.addEventListener("submit", (el) => {
 
 // }
 
-
 let edit = document.getElementById("edit_btn");
 
 edit.addEventListener("click", (e) => {
   window.location.href = `../../pages/order/edit_buynow.html?id=${urlserached_value}`;
 });
 
+function get_total() {
+  let sum = 0;
 
-function get_total(){
+  for (let i = 0; i < cart_sample.length; i++) {
+    if (cart_sample[i].emailid == active_user.emailid) {
+      let get_rs =
+        Number(cart_sample[i].quantity) * Number(cart_sample[i].price);
 
-  let sum =0;
-
- for(let i=0; i < cart_sample.length; i++){
-
-  if(cart_sample[i].emailid == active_user.emailid){
-
-    let get_rs = Number(cart_sample[i].quantity) * Number(cart_sample[i].price)
-
-    sum+=get_rs;
-    
+      sum += get_rs;
+    }
   }
- }
- document.getElementById(
-  "total_count1"
-).innerText = `Total Product Price: ${sum}`;
-document.getElementById("total_count").innerText = `Order Total: ${sum}`;
-
-
+  document.getElementById(
+    "total_count1"
+  ).innerText = `Total Product Price: ${sum}`;
+  document.getElementById("total_count").innerText = `Order Total: ${sum}`;
 }
-
-
-

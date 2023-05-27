@@ -67,11 +67,19 @@ h5{
     width: 130px;
     height: 40px; 
     margin-left:80%;
-    background-color: rgb(238, 241, 242);
+    background-color: rgb(217, 224, 227);
     border-radius: 10px;
     position: relative;
     top:-70px;
+    animation-name: example;
+    animation-duration: 4s;
 }
+
+/* @keyframes example {
+    from {background-color: rgb(30, 0, 255);}
+    to {background-color: rgb(241, 245, 25);}
+} */
+
 button a{
     text-decoration:none; 
     color: black;
@@ -86,6 +94,7 @@ label{
     height: 40px;
     position: relative;
     margin-left:65px;
+    /* pointer-events: none; */
 }
 #email{
         width: 250px;
