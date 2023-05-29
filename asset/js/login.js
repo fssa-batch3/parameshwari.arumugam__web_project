@@ -24,6 +24,6 @@ checklogin.onsubmit = function (e) {
     alert("login successful");
     window.location.href = "../pages/profile.html";
   } else {
-    alert("login fail");
+    alert("incorrect email or password");
   }
 };

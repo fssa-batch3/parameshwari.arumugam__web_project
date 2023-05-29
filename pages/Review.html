@@ -17,14 +17,16 @@
             <input type="name" placeholder="Search" id="name">
         </div> 
         <div class="cart">
-           <span class="material-symbols-outlined">
-            account_circle
-           </span>
-           <a href="../pages/Order/Cart.html">
-<span class="material-symbols-outlined">
-            add_shopping_cart
-            </span></a>
-        </div>
+         <a href="../pages/Order/orderhistory.html">
+           <i class="fa-solid fa-lock"></i>
+         </a>
+         <a href="../../pages/profile.html">
+           <i class="fa-solid fa-user"></i>
+        </a>
+         <a href="./Order/Cart.html">
+           <i class="fa-solid fa-cart-plus"></i>
+         </a>
+         <p id="cartcount"></p>
     </header>
     <div class="navbar">
         <a href="Home.html">Home</a>
@@ -118,5 +120,27 @@
        <p>Safe and fast delivery. Cake condition is also good.thank you Flower Bouquet and specially thanks to San (delivery guy) Who delivered the cake safely.</p>
      </div>
    </div>
+
+ 
+ 
+  <script>
+
+ // cart count show code
+
+ 
+const Cart = JSON.parse(localStorage.getItem("Cart")) ?? [];
+  const user = JSON.parse(localStorage.getItem("active_user"));
+
+  const cartCount = [];
+
+  Cart.forEach((e) => {
+    if (e.emailid == user.emailid) {
+      cartCount.push(e);
+    }
+  });
+
+  const count = document.getElementById("cartcount");
+  count.innerText = cartCount.length;
+   </script>
 </body>
 </html>

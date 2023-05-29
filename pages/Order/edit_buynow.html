@@ -25,10 +25,10 @@
             <h1>Place your Order Now</h1>
           </div>
           <div class="for">
-            <label for="name">Name<input type="text" id="ntext" pattern="[A-Za-z]{1,24}"   /></label
+            <label for="name">Name<input type="text" id="ntext" pattern="[A-Za-z]{1,24}" title=" username is cannot contain space"   /></label
             ><br /><br />
             <label for="number"
-              >Phone Number<input type="pnumber" id="pnumber"pattern="^[6-9][0-9]{9}$" /></label
+              >Phone Number<input type="pnumber" id="pnumber" pattern="^[6-9][0-9]{9}$" maxlength="10" /></label
             ><br /><br />
             <label for="name">Address<input type="text" id="aname" pattern="[a-zA-Z0-9\s\-\,\#]+" /></label
             ><br /><br />
@@ -38,7 +38,7 @@
             ><br /><br />
             <label for="text">state<input type="text" id="stext"  pattern="[A-Za-z]{1,30}"/></label
             ><br /><br />
-            <label for="number">Pincode<input type="number" id="cnumber" pattern="[0-9]{6}" maxlength="6"/></label
+            <label for="number">Pincode<input type="tel" id="cnumber" pattern="[0-9]{6}" maxlength="6"/></label
             ><br /><br />
           </div>
         </div>

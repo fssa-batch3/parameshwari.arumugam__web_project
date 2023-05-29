@@ -55,9 +55,14 @@ input{
 
 }
 .cart{
-    margin-top: 20px;
+    margin-top: 10px;
     display: inline-block;
-    padding: 2px 10px; 
+    padding: 10px 10px 10px 10px; 
+}
+.cart i{
+    font-size:30px;
+    color:black;
+    padding: 2px 3px; 
 }
 .dropdown-menu{
     display: none;
@@ -150,4 +155,16 @@ p{
 }
 h6{
     font-size: 30px;
+}
+#cartcount{
+    margin-left:95px;
+    text-align: center;
+    font-size:20px;
+    border: 2px solid rgb(6, 6, 6);
+    background-color:rgb(227, 202, 41);
+    border-radius:15px;
+    width:20px;
+    position: relative;
+    bottom:65px;
+    
 }
