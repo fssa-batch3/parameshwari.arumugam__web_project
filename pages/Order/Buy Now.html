@@ -1,84 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../../asset/Style/Order/Buy Now.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
-</head>
-<body>
- <!-- header start-->
-    <!-- <header>
-        <h5>Flowery Bouquet</h5> 
-        <div class="search">
-            <img src="../../asset/IMG/home page/search.png" alt="" width="13px" height="13px">
-            <input type="name" placeholder="Search" id="name"/>
-        </div> 
-        <div class="cart">
-          <i class="fa-solid fa-user"></i>
-          <a href="../Order/Cart.html"><i class="fa-solid fa-cart-plus"></i></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flowery Bouquet Online Shopping</title>
+    <link rel="stylesheet" href="../../asset/Style/Order/Buy Now.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+  </head>
+  <body>
+    <!--main start-->
+    <img
+    id="google1"
+    src="../../asset/IMG/index/google-pay (1).png"
+    width="50px"
+  /><br />
+  <img
+          id="delivery1"
+          src="../../asset/IMG/index/cash-on-delivery (1).png"
+          width="50px"
+        />
+    <form id="buynow">
+      <div>
+        <div class="main">
+          <h1>Place your Order Now</h1>
         </div>
-    </header> -->
-  <!--header end -->
- 
- <!--main start-->
-    <div class="main">
-       <h1>Place your Order Now</h1>
-     <div class="for">
-      <label for="name"> Name<input type="text" id="ntext"></label><br><br>
-	    <label for="email">Email<input type="email" id="email" ></label><br><br>
-	    <label for="number">Phone Number<input type="pnumber" id="pnumber"></label><br><br>
-	    <label for="name">Address<input type="text" id="aname"></label><br><br>
-      <div class="details">
-        <label for="text">Country<input type="text" id="text"  ></label><br><br>
-	      <label for="text">state<input type="text" id="stext"required></label><br><br>
-        <label for="number">Pincode<input type="text" id="cnumber"required></label><br><br>
+        <div class="details">
+          
+              <label for="name">Name<input type="text" id="ntext" placeholder="name" disabled required /></label
+              ><br /><br />
+              <label for="name">User Email<input type="email" id="email" placeholder="UserEmail" disabled required /></label
+              ><br /><br />
+             <label for="number"
+            >Phone Number<input type="pnumber" id="pnumber" placeholder="PhoneNumber" disabled required /></label
+          ><br /><br />
+          <label for="name">Address<input type="text" id="aname" placeholder="address" disabled required /></label
+          ><br /><br />
+          <label for="number">Delivery Date<input type="date" id="date" placeholder="date" required /></label
+            ><br /><br />
+            <label for="text">City<input type="text" id="text" placeholder="city" disabled required/></label
+              ><br /><br />
+              <label for="text">state<input type="text" id="stext" placeholder="state" disabled required /></label
+              ><br /><br />
+              <label for="number">Pincode<input type="number" id="cnumber" placeholder="pincode" disabled required /></label
+              ><br /><br />
+          <!-- <p>Delivery Time</p> -->
+            <!-- <select class="selectoption" id="selectopt" required>
+              <option value="">Delivery Time</option>
+              <option value="7:00 AM-8:00 AM">7:00 AM-8:00 AM</option>
+              <optio  value="8:00 AM-9:00 AM">8:00 AM-9:00 AM</option>
+              <option value="9:00 AM-10:00 AM">9:00 AM-10:00 AM</option>
+              <option value="10:00 AM-11:00 AM">10:00 AM-11:00 AM</option>
+              <option value="11:00 AM-12:00 PM">11:00 AM-12:00 PM</option>
+              <option value="1:00 PM-2:00 PM">1:00 PM-2:00 PM</option>
+              <option value="2:00 PM-3:00 PM">2:00 PM-3:00 PM</option>
+              <option value="3:00 PM-4:00 PM">3:00 PM-4:00 PM</option>
+              <option value="4:00 PM-5:00 PM">4:00 PM-5:00 PM</option>
+              <option value="5:00 PM-6:00 PM">5:00 PM-6:00 PM</option>
+              <option value="6:00 PM-7:00 PM">6:00 PM-7:00 PM</option>
+              <option value="7:00 PM-8:00 PM">7:00 PM-8:00 PM</option>
+              <option value="8:00 PM-9:00 PM">8:00 PM-9:00 PM</option>
+              <option value="10:00 PM-11:00 PM">10:00 PM-11:00 PM</option>
+              <option value="11:00 PM-12:00 AM">11:00 PM-12:00 AM</option>
+            </select> -->
+        </div>
+        </div>
+       <a id="edit_btn"><button  class="edit" type="button">
+          Edit
+       </button></a>
+      <div class="pay">
+          <h3>Payment Method</h3>
+        <label for="gpay" id="upi">UPI</label>
+        <input
+              class="payment_option"
+              type="radio"
+              id="gpay"
+              name="paymethod"
+              value="gpay"
+              requiredz
+            />
       </div>
-    </div>
-      <p>Payment method</p>
-        <input type="radio" id="gpay" name="paymethod">
-        <label for="gpay">G pay</label><br>
-        <input type="radio" id="paytm" name="paymethod" >
-        <label for="paytm">Paytm</label><br>
-        <input type="radio" id="phonepay" name="paymethod" >
-        <label for="phonepay">Phone pay</label><br>
-        <input type="radio" id="delivery" name="paymethod">
-        <label for="delivery">Cash on delivery</label><br><br><br>
-	      <button type="button" onclick="buynow()">Buy Now</button>
-    </div>
-  <!-- main end --> 
+      <hr>
+      <div class="pay2">
+           <label for="delivery" id="cashdelivery">Cash on delivery</label>
+            <input
+              class="payment_option"
+              type="radio"
+              id="delivery"
+              name="paymethod"
+              value="cash-on-delivery"
+              required
+            />
+          </div>
+       <div class="maincont">
+          <div class="prodiv">
 
-  <script>
-  function buynow(){
-    const email= document.getElementById("email").value
-    const name= document.getElementById("ntext").value
-    const phonenumber= document.getElementById("pnumber").value
-    const addres= document.getElementById("aname").value
-    const countery= document.getElementById("text").value
-    const state= document.getElementById("stext").value
-    const pincode= document.getElementById("cnumber").value
+          </div>
+        </div>
+        <!-- </div> -->
+     
+            <div id="total_price">
+              <div class="price" id="order_amount">
+                <h2>Price Details(1 item)</h2>
+                <div class="total">
+                  <p id="total_count"></p>
+                </div>
+                <div class="order">
+                  <p id="total_count1"></p>
+                </div>
+                <button id="continue_btn" type="submit">
+                   Place Order
+                </button>
+              </div>
+            </div>
+          </form>
+    <!-- main end -->
 
-    console.log(email)
-    console.log(name)
-    console.log(phonenumber)
-    console.log(addres)
-    console.log(countery)
-    console.log(state)
-    console.log(pincode)
-    
-
-    window.location.href="../Order/Order.html"
-
-   
-  }
-  </script>
-
-
-
-
-</body>
+    <script src="../../asset/js/buy_now.js"></script>
+  </body>
 </html>

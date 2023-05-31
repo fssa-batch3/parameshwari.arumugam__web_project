@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../asset/Style/Order/edit_buynow.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+</head>
+<body>
+    <form id="buynow">
+        <div>
+          <div class="main">
+            <h1>Place your Order Now</h1>
+          </div>
+          <div class="for">
+            <label for="name">Name<input type="text" id="ntext" pattern="[A-Za-z]{1,24}" title=" username is cannot contain space" required/></label
+            ><br /><br />
+            <label for="number"
+              >Phone Number<input type="pnumber" id="pnumber" pattern="^[6-9][0-9]{9}$" maxlength="10" /></label
+            ><br /><br />
+            <label for="name">Address<input type="text" id="aname" pattern="[a-zA-Z0-9\s\-\,\#]+" /></label
+            ><br /><br />
+          </div>
+          <div class="details">
+            <label for="text">City<input type="text" id="text"  pattern="[A-Za-z]{1,30}"    /></label
+            ><br /><br />
+            <label for="text">state<input type="text" id="stext"  pattern="[A-Za-z]{1,30}"/></label
+            ><br /><br />
+            <label for="number">Pincode<input type="tel" id="cnumber" pattern="[0-9]{6}" maxlength="6"/></label
+            ><br /><br />
+          </div>
+        </div>
+     <!-- <a id="sumbit_btn"> -->
+      <button type="submit">Save</button>
+    <!-- </a> -->
+    </form>
+    <script src="../../asset/js/edit_buynow.js"></script>
+</body>
+</html>

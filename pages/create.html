@@ -4,77 +4,56 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Flowery Bouquet Online Shopping</title>
     <link rel="stylesheet" href="../asset/Style/create.css" />
   </head>
   <body>
     <div class="no">
       <form action="">
-        <label for="img">Imagesource<input type="text" id="img" /></label
+        <select class="selectoption" id="selectopt">
+          <option value="">Select By Category</option>
+          <option value="Home">Home</option>
+          <option value="AnniversaryBouquet">AnniBouquet</option>
+          <option value="AnniversaryBouquetCake">AnniversaryBouquetCake</option>
+          <option value="BirthdayBouquet">BirthdayBouquet</option>
+          <option value="BirthdayBouquetCake">BirthdayBouquetCake</option>
+          <option value="RedFlowers">RedFlowers</option>
+          <option value="PinkFlowers">PinkFlowers</option>
+          <option value="YellowFlowers">YellowFlowers</option>
+          <option value="MixedFlowers">MixedFlowers</option>
+        </select>
+        <br>
+        <label for="img">Imagesource<input type="text" id="img" required /></label
         ><br /><br />
-        <label for="Tittle"> Title<input type="text" id="tittle" /></label
+        <label for="Tittle"> Title<input type="text" id="tittle" required /></label
         ><br /><br />
-        <label for="price">Price<input type="number" id="price" /></label
+        <label for="price">Price<input type="number" id="price" required /></label
         ><br /><br />
-        <label for="rate">Rating<input type="text" id="rating" /></label
+        <label for="rate">Rating<input type="text" id="rating" required /></label
         ><br /><br />
         <div class="btn">
           <button onclick="createproduct()">Create</button><br /><br />
-          <button onclick="updateproduct()">Update</button><br /><br />
-          <button onclick="deleteproduct()">Delete</button><br /><br />
+          <button onclick="updatenew()">update</button>
+          <button onclick="deleteproduct()">Delete</button>
         </div>
       </form>
     </div>
 
-    <script>
-      const productid= Math.floor(Math.random()*100);
-      function createproduct() {
-        let bouquet = {};
+    <table aria-label="productList">
 
-        let bouquets = JSON.parse(localStorage.getItem("bouquet")) ?? [];
+      <thead>
+        <th>Product id</th>
+        <th>image</th>
+        <th>Title</th>
+        <th>Price</th>
+      </thead>
 
-        const image = document.getElementById("img").value;
-        const tittle = document.getElementById("tittle").value;
-        const price = document.getElementById("price").value;
-        const rating = document.getElementById("rating").value;
-        bouquet["product_id"]=productid; 
-        bouquet["img"] = image;
-        bouquet["tittle"] = tittle;
-        bouquet["price"] = price;
-        bouquet["rating"] = rating;
+      <tbody class="table-body">
+       
+      </tbody>
 
-        bouquets.push(bouquet);
+    </table>
 
-        localStorage.setItem("bouquet", JSON.stringify(bouquets));
-      }
-
-      // function updateproduct() {
-      //   // event.preventDefault();
-
-      //   let bouquets = JSON.parse(localStorage.getItem("bouquet"));
-      //   // for (let i = 0; i < bouquets.length; i++) {
-      //   bouquet.forEach((e) => {
-      //     if (document.getElementById("tittle").value == bouquets[i]["tittle"]) {
-      //       // username[i].number= document.getElementById(number).value
-      //       localStorage.setItem("bouquet", JSON.stringify(bouquets));
-      //     }
-      //   });
-      // }
-      // // }
-
-      function deleteproduct() {
-        let bouquets = JSON.parse(localStorage.getItem("bouquet"));
-        // confirm("Are you sure want to delete your account?")
-        for (let i = 0; i < bouquets.length; i++) {
-          if (
-            document.getElementById("tittle").value == bouquets[i]["tittle"]
-          ) {
-            confirm("Are you sure want to delete your account?");
-            bouquets.splice(i, 1);
-            localStorage.setItem("bouquet", JSON.stringify(bouquets));
-          }
-        }
-      }
-    </script>
+    <script src="../asset/js/create.js"></script>
   </body>
 </html>

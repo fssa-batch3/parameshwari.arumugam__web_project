@@ -2,95 +2,41 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="./asset/Style/Index.css"/>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flowery Bouquet Online Shopping</title>
+  <link rel="stylesheet" href="./asset/Style/Index.css">
 </head>
 
 <body>
   <form action="./pages/login.html" id="signupform">
-    <img src="asset/IMG/index/back3.jpg" alt="" width="1470px" />
+    <img id="flo" src="asset/IMG/index/sign up.jpg" alt="">
     <div class="login">
-      <h2>Sing up</h2>
-      <input type="text" name="user_name" id="user_name" pattern="[A-Za-z]{1,24}" title="username is cannot contain space" placeholder=" Name" required /><br /><br />
-      <input type="email" name="email" id="email" placeholder="E-mail" required /><br /><br />
-      <input type="password" name="password" id="password" placeholder="Password" pattern="[A-Za-z]{1,8}" required /><br /><br />
-      <p>Already have a account?<a href="pages/login.html">login</a></p>
+      <h2>Sign up</h2>
+      <input type="text" name="first_name" id="first_name" pattern="[A-Za-z]{1,24}" title=" username is cannot contain space" placeholder=" FirstName" required>
+<br >
+<br >
+      <input type="text" name="last_name" id="last_name" pattern="[A-Za-z]{1,24}" title="username is cannot contain space" placeholder=" LastName" required>
+<br >
+<br >
+      <input type="email" name="email" id="email" placeholder="E-mail" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,4}$" required>
+<br >
+<br >
+      <input type="password" name="password" id="password" placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$" minlength="8" maxlength="16" required>
+<br >
+<br >
+<p>
+Already have a account?<a href="pages/login.html">login</a>
+</p>
       <button type="submit">Sign up</button>
     </div>
   </form>
 
-  <script>
-   
-    let userform = document.getElementById("signupform");
+  <script src="asset/js/signin.js"></script>
+  <script src="asset/js/main.js"></script>
 
-    let username = document.getElementById("user_name");
-
-    let email = document.getElementById("email");
-
-    let password = document.getElementById("password");
-
-    let user_records = JSON.parse(localStorage.getItem("user_list"));
-
-    userform.addEventListener("submit", e => {
-    e.preventDefault();
-
-    validateform();
-    });
- 
-   function validateform(){
-
-    
-    let namevalue = username.value.trim();
- 
-    let emailvalue = email.value.trim();
-
-    let passwordvalue = password.value.trim();
-
-    let records = [];
-
-    let user = {};
-
-    user["name"] = namevalue;
-    user["emailid"] = emailvalue;
-    user["password"] = passwordvalue;
-    user["date_of_birth"] = "";
-    user["Phone_number"] = "";
-    user["address"] = "";
-
-   
-    let user_information = JSON.parse(localStorage.getItem("user_list")) ?? records;
- 
-    let success = true;
-
-    if (user_information != null) {
-     for ( let i = 0; i < user_information.length; i++){    
-
-     if (user_information[i].emailid == emailvalue) {
-      success = false;
-      break;
-      }
-     }
-    }
-
-    if(success) {
-
-    user_information.push(user);
-    localStorage.setItem("user_list",JSON.stringify(user_information));
-    alert("account create successfuly");
-
-    window.location.href = "pages/login.html"
-
-    }
-
-    else{
-      alert("Already you have an account")
-    }
-  
-    }
-  </script>
 </body>
 
 </html>
+

@@ -1,7 +1,4 @@
-body{
-    background-image: url("../../IMG/index/flower.webp");
-    background-size: cover;
-}
+
 header{
     display: flex;
     justify-content: space-between;
@@ -10,28 +7,32 @@ header{
     height: 80px;
     border-radius: 15px;
 }
-.search img{
-    position: absolute;
-    margin-top:10px;
-    margin-left:14%; 
-}
 h5{
     font-size: 19px;
     margin-left: 10px;
    position: relative;
-   bottom: 9px;
+   
+}
+#continue_btn{
+    width: 130px;
+    height: 40px;
+    margin-left:60%;
+    background-color: deepskyblue;
+    border-radius: 10px;
+    position: relative;
+    bottom:195px;
 }
 .search{
     margin-top: 20px;
     margin-right:15px; 
     color: black;  
 }
-input{
-    width: 500px;
-    height: 30px;
-    border-color: hotpink;   
-    background-color: hotpink;
+.pay{
+    position: relative;
+    bottom:330px;
+    margin-right:100px;
 }
+
 #name{
     text-align: center;
 }
@@ -43,82 +44,96 @@ input{
 .cart i{
     font-size:30px;
 }
-.for input{
+.selectoption{
+    width:200px;
+    height:50px;
+}
+.details input{
  background-color: white;
  border: 2px solid black;
  margin-left:10%;
- border-radius:15px;
+
 }
-.for{
-    margin-left:17%;
+.details{
+    margin-left:5%;
     font-size: larger;
     position: relative;
-    top: 35px;
+    top: 55px;
     font-family:cursive;  
 }
-#phonepay{
-    width: 50px;
-    margin-left: 22%;
-}
-#gpay{
-    width: 50px;
-    margin-left: 22%;
-    position: relative;
-}
-#paytm{
-    width: 50px;
-    margin-left: 22%;
-}
-#delivery{
-    width: 50px;
-    margin-left: 22%;
-}
-button{
+
+
+.edit{
     width: 130px;
-    height: 40px;
-    margin-left: 30%;
-    background-color: deepskyblue;
+    height: 40px; 
+    margin-left:80%;
+    background-color: rgb(217, 224, 227);
     border-radius: 10px;
+    position: relative;
+    top:-70px;
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+/* @keyframes example {
+    from {background-color: rgb(30, 0, 255);}
+    to {background-color: rgb(241, 245, 25);}
+} */
+
+button a{
+    text-decoration:none; 
+    color: black;
 }
 label{
     position: relative;
-    bottom:1px;
+    bottom:50px;
     font-family:cursive; 
 }
 #pnumber{
     width: 250px;
     height: 40px;
     position: relative;
-    margin-left:40px;
+    margin-left:65px;
+    /* pointer-events: none; */
+}
+#email{
+        width: 250px;
+        height: 40px;
+        position: relative;
+        margin-left:98px;
 }
 #ntext{
     width: 250px;
     height: 40px;
-}
-#email{
-    width: 250px;
-    height: 40px;
-    margin-right: 10px;
+    margin-left:145px;
 }
 #cnumber{
-    width: 250px;
+    width:254px;
     height: 40px;
+    margin-left:115px;
+}
+#date{
+    width: 253px;
+    height: 40px;
+    margin-left:65px;  
 }
 #stext{
-    width: 250px;
+    width: 253px;
     height: 40px;
+    margin-left:135px;
    
 }
 #text{
     width: 250px;
     height: 40px;
+    margin-left:152px;
    
 }
 #aname{
     width: 250px;
     height: 60px;
     position: relative;
-    margin-left:90px;
+    margin-left:116px;
 }
 p{
     margin-left:15%;
@@ -126,19 +141,174 @@ p{
     font-size:25px;
 }
 h1{
-    margin-left: 15%;
+    margin-left:15%;
     margin-top:40px;
 }
-.details{
-    position: relative;
-    bottom: 15px;
+
+
+form{
+    padding-bottom: 50px;
+    height: max-content;
+}
+
+#buynow{
+    margin-left:5%;
+    border: 2px solid rgb(5, 4, 4);
+    width:800px;
+    height:700px;
+    margin-top:-70PX;
+}
+#buynow:hover{
+    box-shadow: rgba(10, 10, 40, 0.2) 0px 10px 39px 10px;
+   
+}
+.total{
+    margin-left:-150px;
     display: flex;
     justify-content: space-around;
+    position: relative;
+    bottom:10px;
+}
+.order{
+    margin-left:-60px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    bottom:230px;
+   
+}
+#order_amount{
+   left:115%;
+   position: relative;
+   bottom:1340px;
+   border: 2px solid black;
+   width: 380px;
+   height:250px;
+   background-color: rgb(248, 219, 166);
+}
+.order p{
+    font-size: 30px;
+}
+.price p{
+    font-size: 30px;
+}
+#flower{
+   width:150px;
+   position: relative;
+   bottom:-20px;
+   right:-10px;
+}
+#tittle{
+    font-size:25px;
+    width:55%;
+    position: relative;
+    bottom:150px;
+    left:120px;
+}
+#rupees{
+    font-size:30px;
+    position: relative;
+    bottom:200px;
+    left:180px;
+}
+h2{
+    margin-left:90px;
+    position: relative;
+    top:30px;
+
+}
+h3{
+    font-size: 30px;
+}
+.red{
+    border: 2px solid rgb(12, 11, 11);
+    right:90px;
+    width:400px;
+    height:180px;
+    position: relative;
+    bottom:1450px;
+
+}
+
+html{
+    overflow-x: hidden;
+}
+.prodiv{
+    position: relative;
+    left: 990px;
+   top:70px;
+}
+
+#selectopt{
+    margin-left:180px;
+    width:264px;
+    border: 2px solid black;
+    position: relative;
+    bottom:60px;
+}
+.pay{
+    margin-top:39%;
+    display: flex;
+    flex-flow:column;
+    margin-left:-5px;
+    border: 2px solid black;
+    width:800px;
+    height:250px;
+}
+.pay label{
+    width: 230px;
+    height:40px;
+    margin-top:120px;
+    margin-left:60px;
+    font-size:20px;
+    
     
 }
-.details input{
-    margin-left: 25px;   
+.pay input{
+    position: relative;
+    top:-145px;
+    right:355px;
+   
+  
 }
+.pay2 input{
+    position: relative;
+    top:-400px;
+    right:185px;
+   
+  
+}
+#upi{
+    position: relative;
+    top:-120px;
+}
+#cashdelivery{
+    position: relative;
+    top:-400px;
+    margin-left:60px;
+    font-size:20px;  
+}
+hr{
+    border: 1px solid black;
+    position: relative;
+    bottom:435px;
+}
+#google1{
+    position: relative;
+    top:890px;
+    margin-left:800px;
+ }
+ #delivery1{
+    position: relative;
+    top:950px;
+    margin-left:800px;
+ }
+ 
+
+
+
+
+
 
 
 @media screen and (max-width: 600px){

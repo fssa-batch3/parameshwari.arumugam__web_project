@@ -1,44 +1,70 @@
 body{
     height:100px;
+    overflow: hidden;
+    /* background-color:rgb(211, 181, 255); */
    
 }
+#flo{
+    margin-left:22%;
+    margin-top:100px;
+    width:430px; 
+    height:670px;
+}
 .login{
-    border: 2px solid black;
-    width: 400px;
-    height: 600px;
+    background-color:white;
+    border: 2px solid rgb(142, 139, 139);
+    width: 430px;
+    height: 667px;
     text-align: center;
     margin-top:10%;
-   margin-left: 65%;
+   margin-left:51%;
    position: relative;
-   bottom:900px;
+   bottom:823px;
 }
 #email{
     margin-top: 30px;
     width:300px;
     height: 40px;
+    border-radius: 6px;
 }
-#user_name{
+#first_name{
     margin-top: 30px;
     width:300px;
-    height: 30px;
+    height: 40px;
+    border-radius: 6px;
+}
+#last_name{
+    margin-top: 30px;
+    width:300px;
+    height: 40px;
+    border-radius: 6px;
 }
 #password{
     margin-top: 30px;
     width:300px;
     height: 40px;  
+    border-radius: 6px;
 }
 a{
     color: deepskyblue;
     text-decoration: none;
     font-size: 20px;
+   
     
 }
 button{
     width: 200px;
-    height: 30px;
-    margin-top: 40px;
+    height:50px;
+    margin-top:35px;
+    border-radius: 6px;
+    background-color: rgb(6, 6, 7);
+    color: white;
+    font-size: 25px;
+   
     
 }
-h1{
-    font-size:50px;
+h2{
+    margin-top:50px;
+    font-size:30px;
+    font-family:monospace;
 }

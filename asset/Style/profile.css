@@ -1,20 +1,21 @@
 body{
-    background-color: rgb(234, 77, 228);
+    background-color:rgb(213, 189, 253);
+    overflow: hidden;
 }
 .profile{
     background-color: rgb(255, 255, 255);
     border: 2px solid black;
     border-radius:5%;
-    width: 1000px;
-    height:750px;
-    margin-left:15%;
-    margin-top:7%;
+    width: 1300px;
+    height:800px;
+    margin-left:6%;
+    margin-top:4%;
 }
 img{
     position: relative;
-    bottom:80%;
-    width:400px;
-    margin-left:10%;
+    top:-980px;
+    width:350px;
+    margin-left:4%;
    
 }
 #back {
@@ -23,69 +24,101 @@ img{
 }
 i{
       position: relative;
-      top: 20px;
+     top:20px;
       margin-left:15px;
       color: black;
+     
 }
 #email{
+    position: relative;
+    bottom:25px;
+    width:300px;
+    height: 40px;
+    margin-left:40%;
+    border-radius:10px;
+}
+#first_name{
     margin-top: 30px;
     width:300px;
     height: 40px;
-    margin-left: 60%;
+    margin-left:40%;
     border-radius:10px;
 }
-#text{
-    margin-top: 30px;
+#last_name{
     width:300px;
     height: 40px;
-    margin-left:60%;
-    border-radius:10px;
-}
-#password{
-    margin-top: 30px;
-    width:300px;
-    height: 40px;  
-    margin-left:60%;
+    position: relative;
+    bottom:80px;
+    margin-left:70%;
     border-radius:10px;
 }
 #date_of_birth{
-
-    margin-top: 30px;
     width:300px;
-    height: 40px;  
-    margin-left:60%;
+    height: 40px;
+    position: relative;
+    bottom:105px;  
+    margin-left:70%;
     border-radius:10px;
 }
 
 #phone_number{
-
-    margin-top: 30px;
     width:300px;
     height: 40px;  
-    margin-left:60%;
+    position: relative;
+    bottom:50px; 
+    margin-left:40%;
     border-radius:10px;
 }
 
 #address{
-
-    margin-top: 30px;
     width:300px;
     height: 50px;  
-    margin-left:60%;
+    position: relative;
+    bottom:140px; 
+    margin-left:70%;
     border-radius:10px;
 }
-
+#city{
+    width:300px;
+    height: 40px;
+    position: relative;
+    bottom:80px;
+    margin-left:40%;
+    border-radius:10px;
+}
+#state{
+    width:300px;
+    height: 40px;
+    position: relative;
+    bottom:162px;
+    margin-left:70%;
+    border-radius:10px;
+}
+#pincode{
+    width:300px;
+    height: 40px;
+    position: relative;
+    bottom:120px;
+    margin-left:54%;
+    border-radius:10px;
+}
+.names input{
+  margin-top:15px;
+}
 button{
+    font-size:20px;
     display: flex;
     width: 200px;
-    height: 35px;
-    margin-top:20px;
-    margin-left:30%;
-    background-color: rgb(223, 125, 238);
+    height: 45px;
+    position: relative;
+    bottom:430px;
+    margin-left:10%;
+    background-color:white;
     border-radius:10px;
+    margin-top:20px;
     
 }
 h1{
-    margin-left:45%;
+    margin-left:50%;
     margin-top:50px;
 }

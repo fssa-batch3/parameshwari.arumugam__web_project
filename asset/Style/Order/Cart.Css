@@ -6,7 +6,7 @@ header{
     justify-content: space-between;
     border: 2px solid rgb(204, 211, 211);
     background-color: rgb(204, 218, 218);
-    height: 80px;
+    height:100px;
     border-radius: 15px;
 }
 .search img{
@@ -15,10 +15,10 @@ header{
     margin-left:14%; 
 }
 h5{
-    font-size:19px;
-    margin-left: 10px;
+   font-size:23px;
+   margin-left: 10px;
    position: relative;
-   bottom: 9px;
+   bottom:10px;
 }
 .search{
     margin-top: 20px;
@@ -32,8 +32,8 @@ h5{
 input{
     width: 500px;
     height: 30px;
-    border-color: hotpink;   
-    background-color: hotpink;
+    border-color: white;   
+    background-color:white;
      
 }
 .navbar{
@@ -49,6 +49,9 @@ input{
     font-size: 25px;
     color:black;
 }
+#rs{
+    font-size:20px;
+}
 
 #name{
     text-align: center;
@@ -57,7 +60,12 @@ input{
 .cart{
     margin-top: 20px;
     display: inline-block;
-    padding: 2px 10px; 
+    padding: 2px 5px; 
+}
+.cart i{
+    font-size:30px;
+    color: black;
+    padding: 2px 3px; 
 }
 .dropdown-menu{
     display: none;
@@ -76,6 +84,12 @@ input{
    display: inline-block;
    position: relative;
 }
+
+.align_flex{
+    display: flex;
+    flex-direction: row;
+}
+
 .dropbtn{ 
  color:black;
  padding:16px;
@@ -90,6 +104,11 @@ input{
     margin-top:10%;
     margin-left:15%;
     border-radius: 10px;
+    width: 300px;
+    height: 300px;
+}
+.black{
+    margin-top:80px;
 }
 #star{
     color:goldenrod;   
@@ -101,7 +120,11 @@ input{
 }
 .black{
     display: flex;
-    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    /* position: relative; */
+
+    /* flex-wrap: wrap; */
 }
 .txt{
     margin-top:10%;
@@ -110,7 +133,7 @@ input{
 }
 .txt1{
     margin-top:3%;
-    margin-left: 30px;
+    margin-left: 50px;
     font-size:20px;
 }
 .pink img{
@@ -155,30 +178,15 @@ hr{
     position: relative;
     top:5px;
 }
-.remove p{
-    font-size:30px;
+#remove1{
+    color: black;
+    background-color: white;
+    border-style: none;
+    margin-left:500px;
+    font-size:25px;
 }
-.remove i{
-    position: relative;
-    top:37px;
-    margin-left: 20px;
-    font-size: 20px;
-}
-.remove_crazy{
-    display: flex;
-    margin-left: 25%;
-    margin-top: 25%;
-    position: relative;
-    bottom: 100px;
-}
-.remove_crazy i{
-    position: relative;
-    top:37px;
-    margin-left: 20px;
-    font-size: 20px;
-}
-.remove_crazy p{
-    font-size:30px;
+#icon{
+   padding: 5px 10px;
 }
 button{
     width:150px;
@@ -187,13 +195,14 @@ button{
     background-color: dodgerblue;
     font-size: 20px;
     border-radius: 20px;
+    cursor: pointer;
 }
 footer{
     display: flex;
     justify-content: space-around;
     background-color: lightslategray;
-    margin-top: 30px;
-    height: 400px;
+    margin-top: 70px;
+    height:250px;
     border-radius: 15px;
 }
  .links a{
@@ -201,7 +210,7 @@ footer{
     text-decoration: none;
     justify-content:space-evenly;
     color: black;
-    line-height:60px;
+    line-height:30px;
    
 }
 .links{
@@ -222,11 +231,55 @@ footer{
 .price{
    margin-left:70%;
    position: relative;
-   bottom: 50px;
+   bottom:5px;
 }
 .order p{
     font-size: 30px;
 }
 .price p{
     font-size: 30px;
+}
+#cartcount{
+    margin-left:95px;
+    text-align: center;
+    font-size:20px;
+    border: 2px solid black;
+    background-color:rgb(227, 202, 41);
+    border-radius:15px;
+    width:20px;
+    position: relative;
+    bottom:65px;
+    
+}
+
+.qty_label{
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom:30px;
+}
+
+.minus{
+    padding: 0px 5px;
+    margin: 5px;
+    margin-left: 20px;
+    background-color: rgb(214, 214, 214);
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.qty_value{
+    margin: 5px;
+    padding: 0px 5px;
+    background-color: rgb(233, 233, 233);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.plues{
+    margin: 5px;
+    padding: 0px 5px;
+    background-color: rgb(214, 214, 214);
+    font-weight: bold;
+    font-size: 40px;
 }
