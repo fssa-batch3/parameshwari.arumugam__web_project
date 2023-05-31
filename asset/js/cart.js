@@ -85,14 +85,7 @@ for (let i = 0; i < cart_sample.length; i++) {
     label.innerText = "Quantity";
     div_text.append(label);
 
-    // quantity = document.createElement("input");
-    // quantity.setAttribute("type", "number");
-    // quantity.setAttribute("class", "qty");
-    // quantity.setAttribute("min", "1");
-    // quantity.setAttribute("max", "10");
-    // quantity.setAttribute("value", "1");
-    // quantity.setAttribute("id", "qnumber");
-    // label.append(quantity);
+    
 
     let p_minus = document.createElement("p");
     p_minus.setAttribute("class", "minus");
@@ -168,9 +161,7 @@ for (let i = 0; i < plues.length; i++) {
         parseFloat(rs[i].dataset.keyword) * parseFloat(quantityIn[i].innerText);
       // console.log(full_price);
       rs[i].innerText = `₹${full_price}`;
-
       total += parseFloat(rs[i].dataset.keyword);
-
       document.getElementById("total_count").innerText = total;
       document.getElementById("total_count1").innerText = total;
       getQty();
@@ -240,7 +231,6 @@ function check_total() {
     sum += Number(split_rs[1]);
 
     totalAmount.innerText = sum;
-
     totalAmount1.innerText = sum;
   }
 }

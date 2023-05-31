@@ -131,7 +131,7 @@ table  tr{
 }
 #order_date{
     position: relative;
-    left:190px;
+    left:165px;
     font-size:20px;
     bottom:3px;
 }
@@ -144,30 +144,40 @@ table  tr{
 .rupees{
     font-size:30px; 
     position: relative;
-    left:110px;
+    left:140px;
+    bottom:20px;
 }
 h6{
     width:250px;
     font-size:25px;
     position: relative;
-    left:195px;
+    left:160px;
     bottom:1px;
 
 }
 #address{
   width:300px;
    position: relative;
-   left:220px;
+   left:240px;
     
 }
 #cancel{
-    margin-top:160px;
+    margin-top:130px;
+    border: 2px solid black;
+    font-size:20px;
+    background-color: black;
+    color: white;
+    width:125px;
 }
 #cancled{
-    margin-top:150px;
+    margin-top:170px;
     font-size:23px;
-    color: red;
+    color:white;
     font-weight: bold;
+    border: 2px solid red;
+    background-color: red;
+    width: 120px;
+    text-align: center;
    
 }
 #cartcount{
@@ -181,4 +191,16 @@ h6{
     position: relative;
     bottom:65px;
     
+}
+.qty_label{
+    margin-top:28px;
+    position: relative;
+    left: 55px;
+    font-size: 20px;
+}
+.quantity{
+    font-size:22px;
+    position: relative;
+    top:16px;
+    left:25px;;
 }

@@ -44,18 +44,34 @@ function cancelOrder() {
       // console.log(div_content);
       // console.log(h2);
   
+      
+
       image_flower = document.createElement("img");
       image_flower.setAttribute("id", "flower");
       image_flower.setAttribute("src", el.img);
       image_flower.setAttribute("alt", el.alt);
       div_content.append(image_flower);
+
+      
   
       h4 = document.createElement("h3");
       h4.setAttribute("id", "rupees");
       h4.setAttribute("class", "rupees");
-      h4.innerText = `₹${el.price}`;
+      h4.innerHTML = `₹${el.price}`;
       div_content.append(h4);
-  
+
+      label = document.createElement("label");
+      label.setAttribute("for", "quality");
+      label.setAttribute("class", "qty_label");
+      label.innerText = "Qty:";
+      div_content.append(label);
+
+      quantity = document.createElement("quantity");
+      quantity.setAttribute("id", "quantity");
+      quantity.setAttribute("class", "quantity");
+      quantity.innerHTML = `${el.quantity}`;
+      div_content.append(quantity);
+    
       h6 = document.createElement("h6");
       h6.setAttribute("id", "title");
       h6.setAttribute("class", "title");
@@ -98,7 +114,7 @@ function cancelOrder() {
         window.location.reload;
         
       }
-     
+      window.location.reload;
   
       document.querySelector("div.main_content").append(div_content);
   
@@ -107,8 +123,9 @@ function cancelOrder() {
       // document.querySelector("div.content").append(h4);
       // document.querySelector("div.content").append(image_flower);
     }
-    
+   
   });
+
   
 }
 
@@ -131,9 +148,14 @@ for (let i = 0; i < btn.length; i++) {
         obj["status"] = "cancelled"
         localStorage.setItem("order",JSON.stringify(order_list))
       }
+      location.reload()
     })
+   
+   
     document.querySelector("div.main_content").innerHTML = ""
     cancelOrder();
   })  
+ 
+
 }
 
