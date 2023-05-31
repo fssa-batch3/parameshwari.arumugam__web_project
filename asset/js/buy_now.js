@@ -176,7 +176,22 @@ form.addEventListener("submit", (el) => {
 
     order_history.push(obj);
     localStorage.setItem("order", JSON.stringify(order_history));
-    window.location.href = "Order.html";
+    
+    let inp = document.querySelectorAll("input")
+    let count = 0
+    for (let i = 0; i < inp.length-2; i++) {
+      
+      if (inp[i].value === "") {
+        alert("please put address")
+        count++
+        break;
+      }
+      
+    }
+    
+    if (count === 0) {
+      window.location.href = "Order.html"
+    }
   } else {
     const Cart = JSON.parse(localStorage.getItem("Cart"));
     const active_user = JSON.parse(localStorage.getItem("active_user"));

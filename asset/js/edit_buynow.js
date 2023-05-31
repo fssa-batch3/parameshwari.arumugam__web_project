@@ -33,9 +33,7 @@ for (let i = 0; i < bio.length; i++) {
 const form = document.getElementById("buynow");
 form.addEventListener("submit", (ele) => {
   ele.preventDefault();
-
   bio.find((el => {
-
     if (activeuser.emailid === el.emailid) {
       el.firstname= document.getElementById("ntext").value;
       el.Phone_number=document.getElementById("pnumber").value;
@@ -50,13 +48,15 @@ form.addEventListener("submit", (ele) => {
     }
 
   }))
+
+  window.location.href=`../../pages/order/Buy Now.html?id=${urlserached_value}`;
  
 });
 
 const bouquets = JSON.parse(localStorage.getItem("bouquet"));
 
-let sumbit = document.getElementById("sumbit_btn");
+// let sumbit = document.getElementById("sumbit_btn");
 
-sumbit.addEventListener("click", (e) => {
-  window.location.href=`../../pages/order/Buy Now.html?id=${urlserached_value}`;
-});
+// sumbit.addEventListener("click", (e) => {
+//   window.location.href=`../../pages/order/Buy Now.html?id=${urlserached_value}`;
+// });
